@@ -7,7 +7,7 @@ import { useState } from 'react'
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <nav className="bg-white px-5 lg:px-20 py-5">
+        <nav className="bg-white px-5 py-3 lg:px-20 lg:py-5 sticky top-0 z-10">
             <div className="flex items-center justify-between">
                 <div className="w-15 relative z-[999]">
                     <Image
