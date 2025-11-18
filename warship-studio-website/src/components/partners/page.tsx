@@ -4,7 +4,7 @@ export default function PartnersRow() {
     return (
         <section className="overflow-hidden whitespace-nowrap">
             <div className="flex w-max animate-scroll">
-                <div className="flex shrink-0">
+                <div className="flex shrink-0 border-0 border-[#E0E0E0] [&>*]:border-r [&>*]:border-b-1 md:[&>*]:border-b-0 [&>*]:border-[#E0E0E0] [&>*:last-child]:border-r-0">
                     <SingleCard image="/partners/optimum.svg" />
                     <SingleCard image="/partners/climaqx.svg" />
                     <SingleCard image="/partners/deterrence.svg" />
@@ -20,7 +20,7 @@ export default function PartnersRow() {
                     <SingleCard image="/partners/chowsafari.svg" />
                 </div>
 
-                <div className="flex shrink-0">
+                <div className="flex shrink-0 border-0 border-[#E0E0E0] [&>*]:border-r [&>*]:border-b-1 md:[&>*]:border-b-0 [&>*]:border-[#E0E0E0] [&>*:last-child]:border-r-0 [&>*:first-child]:border-l-1">
                     <SingleCard image="/partners/optimum.svg" />
                     <SingleCard image="/partners/climaqx.svg" />
                     <SingleCard image="/partners/deterrence.svg" />

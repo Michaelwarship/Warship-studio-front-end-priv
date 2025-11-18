@@ -3,7 +3,7 @@ import LearnMoreCard from '@/components/learn-more/section/page'
 export default function LearnMore() {
     return (
         <section className="">
-            <div className="hidden justify-center items-center md:flex">
+            <div className="hidden justify-center items-center md:flex border border-[#E0E0E0] [&>*]:border-[#E0E0E0] [&>*]:border-r [&>*]:border-t-0 [&>*:first-child]:border-l [&>*:last-child]:border-r-1">
                 <LearnMoreCard
                     subText="01."
                     title={

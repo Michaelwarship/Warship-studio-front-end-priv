@@ -14,7 +14,7 @@ export default function LearnMoreCard({
 }: LearnMoreCardProps) {
     return (
         <section>
-            <div className="md:border-[0.1] md:border-[#E0E0E0] pl-5 pr-10 sm:pl-10 md:w-55 md:pr-0 md:py-2 lg:w-80 lg:pr-10 lg:py-5 xl:w-90 xl:py-5 2xl:w-115 2xl:py-10">
+            <div className=" pl-5 pr-10 sm:pl-10 md:w-55 md:pr-0 md:py-2 lg:w-80 lg:pr-10 lg:py-5 xl:w-90 xl:py-5 2xl:w-115 2xl:py-10">
                 <p className="text-[12px] md:text-[14px] lg:text-[16px] font-geistMono md:mb-10 md:mt-10 lg:mb-30 lg:mt-10 text-[#969696]">
                     {subText}
                 </p>
