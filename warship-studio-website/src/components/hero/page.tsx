@@ -7,7 +7,7 @@ export default function HeroSection() {
     return (
         <section>
             <div className="relative">
-                <div className="w-full h-152 flex items-center z-0 xl:h-160 2xl:h-190">
+                <div className="w-full h-152 flex items-center z-0 sm:h-200 xl:h-160 2xl:h-190">
                     <img
                         src="/hero.png"
                         alt="hero-image"
@@ -17,7 +17,7 @@ export default function HeroSection() {
 
                 {/*TEXT AND BUTTONS*/}
 
-                <div className="absolute top-90 left-0 right-0 px-5 sm:top-70 md:top-70 lg:top-70 lg:px-20 2xl:top-100">
+                <div className="absolute top-90 left-0 right-0 px-5 sm:top-120 md:top-70 lg:top-70 lg:px-20 2xl:top-100">
                     <div>
                         <p className="text-[45px] text-[#0A231D] sm:text-[70px] leading-18 sm:leading-22 md:text-[85px] md:leading-25 lg:text-[70px] xl:text-[85px] 2xl:text-[85px]">
                             Pushing Pixels <br />
