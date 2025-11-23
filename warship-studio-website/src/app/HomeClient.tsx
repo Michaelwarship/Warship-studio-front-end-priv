@@ -6,6 +6,7 @@ import AboutPage from '@/components/about/page'
 import Projects from '@/components/projects/page'
 import Rating from '@/components/rating/page'
 import LetsTalk from '@/components/lets-talk/page'
+import Footer from '@/components/footer/page'
 
 export default function HomeClient() {
     return (
@@ -17,6 +18,7 @@ export default function HomeClient() {
             <Projects />
             <Rating />
             <LetsTalk />
+            <Footer />
         </main>
     )
 }
