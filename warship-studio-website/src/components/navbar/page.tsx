@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaBars, FaXmark } from 'react-icons/fa6'
 import { useState } from 'react'
+import Button from '../button/page'
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
@@ -19,13 +20,11 @@ export default function Navbar() {
                 </div>
 
                 {/*HAMBURGER*/}
-                <div className="lg:hidden flex items-center justify-between space-x-5 relative z-[100]">
-                    <Link
-                        href="/"
-                        className="bg-black text-white px-5 py-2 rounded-3xl"
-                    >
-                        Let's Talk!
-                    </Link>
+                <div className="lg:hidden flex items-center justify-between space-x-5 relative z-[1000]">
+                    <Button
+                        title="Let's Talk!"
+                        className="bg-black text-white"
+                    />
 
                     <button
                         onClick={() => setIsOpen(!isOpen)}
