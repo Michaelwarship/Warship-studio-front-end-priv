@@ -21,3 +21,11 @@ export { default as RatingCard } from "./rating/section/page"
 export { default as SectionHero } from "./(services)/hero/page"
 export { default as ServiceCard } from "./(services)/services/section/page"
 export { default as ServiceSection } from "./(services)/services/page"
+
+// CONTACT US
+
+export { default as ContactHero } from "./(contact)/hero/page"
+export { default as ContactForm } from "./(contact)/form/page"
+export { default as SubmitForm } from "./(contact)/form/submitform/page"
+
+

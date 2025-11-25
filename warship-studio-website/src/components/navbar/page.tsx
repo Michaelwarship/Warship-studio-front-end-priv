@@ -5,12 +5,14 @@ import { FaBars, FaXmark } from 'react-icons/fa6'
 import { useState } from 'react'
 import Button from '../button/page'
 import { Route } from '@/lib/route'
+import { useRouter } from 'next/navigation'
 
 export default function Navbar() {
+    const router = useRouter()
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <nav className="bg-white px-5 py-3 lg:px-20 lg:py-5 sticky top-0 z-10">
-            <div className="flex items-center justify-between">
+        <nav className="bg-white sticky top-0 z-10 [&>*]:border-[#E0E0E0] [&>*]:border-b-1 ">
+            <div className="flex items-center justify-between px-5 py-3 lg:px-20 lg:py-5">
                 <div className="w-15 relative z-[999]">
                     <Image
                         src="./warship.svg"
@@ -23,10 +25,10 @@ export default function Navbar() {
                 {/*HAMBURGER*/}
                 <div className="lg:hidden flex items-center justify-between space-x-5 relative z-[1000]">
                     <Button
+                        onClick={() => router.push(Route.CONTACT)}
                         title="Let's Talk!"
                         className="bg-black text-white"
                     />
-
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="lg:hidden"
@@ -91,13 +93,14 @@ export default function Navbar() {
                     >
                         SHOP
                     </Link>
-                    {/*<Link*/}
-                    {/*    href="/"*/}
-                    {/*    className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"*/}
-                    {/*    onClick={() => setIsOpen(false)}*/}
-                    {/*>*/}
-                    {/*    CONTACT US*/}
-                    {/*</Link>*/}
+
+                    <Link
+                        href={Route.CONTACT}
+                        className="hidden lg:block font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        LET'S TALK
+                    </Link>
                 </div>
             </div>
         </nav>
