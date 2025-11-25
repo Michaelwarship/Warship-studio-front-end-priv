@@ -1,4 +1,4 @@
-import RatingCard from './section/page'
+import { RatingCard } from '@/components'
 
 export default function Rating() {
     return (

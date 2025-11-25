@@ -1,5 +1,4 @@
-import CarouselCard from './carousel-card/page'
-import Button from '../button/page'
+import { Button, CarouselCard } from '@/components'
 import { FaArrowLeftLong, FaArrowRightLong } from 'react-icons/fa6'
 
 export default function Projects() {

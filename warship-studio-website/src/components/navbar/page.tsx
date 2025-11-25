@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { FaBars, FaXmark } from 'react-icons/fa6'
 import { useState } from 'react'
 import Button from '../button/page'
+import { Route } from '@/lib/route'
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
@@ -49,42 +50,42 @@ export default function Navbar() {
                         HOME
                     </Link>
                     <Link
-                        href="/"
+                        href={Route.SERVICES}
                         className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
                         onClick={() => setIsOpen(false)}
                     >
                         SERVICES
                     </Link>
                     <Link
-                        href="/"
+                        href={Route.STUDIO}
                         className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
                         onClick={() => setIsOpen(false)}
                     >
                         STUDIO
                     </Link>
                     <Link
-                        href="/"
+                        href={Route.WORK}
                         className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
                         onClick={() => setIsOpen(false)}
                     >
                         WORK
                     </Link>
                     <Link
-                        href="/"
+                        href={Route.MOCKUP}
                         className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
                         onClick={() => setIsOpen(false)}
                     >
                         MOCKUP
                     </Link>
                     <Link
-                        href="/"
+                        href={Route.BLOG}
                         className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
                         onClick={() => setIsOpen(false)}
                     >
                         BLOG
                     </Link>
                     <Link
-                        href="/"
+                        href={Route.SHOP}
                         className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
                         onClick={() => setIsOpen(false)}
                     >

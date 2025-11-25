@@ -1,0 +1,23 @@
+// HERO
+
+export { default as Navbar } from "./navbar/page"
+export { default as HeroSection } from "./hero/page"
+export { default as LearnMore } from "./learn-more/page"
+export { default as AboutPage } from "./about/page"
+export { default as Projects } from "./projects/page"
+export { default as Rating } from "./rating/page"
+export { default as LetsTalk } from "./lets-talk/page"
+export { default as Footer } from "./footer/page"
+
+export { default as Subscribe } from "./subscribe/page"
+export { default as Button } from "./button/page"
+export { default as LearnMoreCard } from "./learn-more/section/page"
+export { default as PartnersRow } from "./partners/page"
+export { default as CarouselCard } from "./projects/carousel-card/page"
+export { default as RatingCard } from "./rating/section/page"
+
+// SERVICES
+
+export { default as SectionHero } from "./(services)/hero/page"
+export { default as ServiceCard } from "./(services)/services/section/page"
+export { default as ServiceSection } from "./(services)/services/page"

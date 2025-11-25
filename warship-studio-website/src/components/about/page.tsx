@@ -1,5 +1,4 @@
-import Button from '../button/page'
-
+import { Button } from '@/components'
 export default function AboutPage() {
     return (
         <section className="overflow-x-clip  [&>*]:border-[#E0E0E0] md:[&>*]:border-b-1 ">

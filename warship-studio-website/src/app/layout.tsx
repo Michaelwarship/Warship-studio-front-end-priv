@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import { Navbar, Footer } from '@/components'
 
 const satoshi = localFont({
     src: [
@@ -39,7 +40,9 @@ export default async function RootLayout({
             <body
                 className={`${satoshi.variable} ${geistMono.variable} antialiased`}
             >
+                <Navbar />
                 {children}
+                <Footer />
             </body>
         </html>
     )

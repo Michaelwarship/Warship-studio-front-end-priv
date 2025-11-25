@@ -1,5 +1,4 @@
-import LearnMoreCard from '@/components/learn-more/section/page'
-
+import { LearnMoreCard } from '@/components'
 export default function LearnMore() {
     return (
         <section className="">

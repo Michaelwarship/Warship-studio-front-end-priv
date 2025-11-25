@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Button from '../button/page'
-import PartnersRow from '@/components/partners/page'
+import { Button, PartnersRow } from '@/components'
 
 export default function HeroSection() {
     return (

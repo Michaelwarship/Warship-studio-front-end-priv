@@ -1,9 +1,10 @@
 import Link from 'next/link'
-import Subscribe from '../subscribe/page'
+import { Subscribe, LetsTalk } from '@/components'
 
 export default function Footer() {
     return (
         <footer className="px-5 lg:px-10 xl:px-20 py-10">
+            <LetsTalk />
             <div className="mt-40 mb-15 flex flex-col lg:flex-row md:space-x-30 lg:space-x-15 xl:space-x-50 2xl:space-x-70">
                 <div className="space-y-10 md:space-y-15">
                     <div>
@@ -23,7 +24,7 @@ export default function Footer() {
                 </div>
 
                 <div className="space-y-10">
-                    <div className="space-y-5 mt-10">
+                    <div className="space-y-5 mt-10 md:mt:15">
                         <p className="font-geistMono text-[14px] text-[#969696]">
                             GET IN TOUCH
                         </p>

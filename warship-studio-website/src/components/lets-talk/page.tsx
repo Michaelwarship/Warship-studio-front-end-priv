@@ -2,7 +2,7 @@ import Button from '../button/page'
 
 export default function LetsTalk() {
     return (
-        <section className="px-5 lg:px-20 mt-40">
+        <section className="mt-40">
             <div className="flex justify-between">
                 <div className=" ">
                     <Button
@@ -18,7 +18,7 @@ export default function LetsTalk() {
                     />
                 </div>
 
-                <div className="hidden md:block w-20 sm:mt-64 md:mt-60 lg:w-30 lg:mt-53">
+                <div className="hidden md:block w-20 sm:mt-64 md:mt-60 lg:w-30 lg:mt-60 xl:mt-60 2xl:mt-55">
                     <img
                         src="/warship-est.svg"
                         alt="warship-est"
