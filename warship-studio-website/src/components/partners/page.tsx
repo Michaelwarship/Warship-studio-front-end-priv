@@ -1,5 +1,4 @@
-import SingleCard from '@/components/partners/single/page'
-
+import { SingleCard } from '@/components'
 export default function PartnersRow() {
     return (
         <section className="overflow-hidden whitespace-nowrap">

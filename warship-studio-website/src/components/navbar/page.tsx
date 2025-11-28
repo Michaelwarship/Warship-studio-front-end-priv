@@ -31,7 +31,7 @@ export default function Navbar() {
                     />
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="lg:hidden"
+                        className="lg:hidden group"
                     >
                         {isOpen ? (
                             <FaXmark className="text-black text-[20px]" />
@@ -42,7 +42,7 @@ export default function Navbar() {
                 </div>
 
                 <div
-                    className={`${isOpen ? 'block' : 'hidden'} flex flex-col fixed inset-0 z-[50] bg-[#07E272] pt-30 pl-5 overflow-y-auto space-y-5 lg:space-y-0 lg:pt-0 lg:pl-0 lg:flex lg:flex-row lg:mt-0 lg:ml-0 lg:bg-transparent lg:static lg:space-x-10`}
+                    className={`${isOpen ? 'block' : 'hidden'} flex flex-col fixed inset-0 z-[50] bg-[#07E272] pt-30 pl-5 overflow-y-auto space-y-5 lg:space-y-0 lg:pt-0 lg:pl-0 lg:flex lg:flex-row lg:mt-0 lg:ml-0 lg:bg-transparent lg:static lg:space-x-7 xl:space-x-10`}
                 >
                     <Link
                         href="/"

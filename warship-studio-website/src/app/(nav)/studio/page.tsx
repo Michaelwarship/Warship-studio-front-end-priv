@@ -1,8 +1,24 @@
+import {
+    StudioHero,
+    StudioTeam,
+    StudioVisionTeam,
+    StudioCarousel,
+    StudioVision,
+    StudioPartners,
+    Rating,
+} from '@/components'
+
 export default function Studio() {
     return (
         <section>
             <div>
-                <h1>hello studio</h1>
+                <StudioHero />
+                <StudioTeam />
+                <StudioVisionTeam />
+                <StudioCarousel />
+                <StudioVision />
+                <StudioPartners />
+                <Rating />
             </div>
         </section>
     )

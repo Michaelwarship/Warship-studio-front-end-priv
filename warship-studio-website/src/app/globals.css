@@ -13,7 +13,6 @@
     animation: scroll 90s linear infinite;
 }
 
-
 :root {
     --font-satoshi: 'Satoshi', sans-serif;
     --font-geistMono: 'GeistMono', sans-serif;
@@ -33,4 +32,11 @@ body {
     margin: 0;
     box-sizing: border-box;
     background-color: white;
+}
+
+html,
+body {
+    cursor:
+        url('/warship-logo.svg') 8 8,
+        auto;
 }
