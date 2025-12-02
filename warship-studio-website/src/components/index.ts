@@ -40,3 +40,8 @@ export { default as StudioVisionCard } from './(studio)/vision/card/section/page
 export { default as StudioVision } from './(studio)/vision/card/page'
 export { default as StudioPartners } from './(studio)/partners/page'
 export { default as StudioPartnerCard } from './(studio)/partners/single/page'
+
+//Animation
+export { default as AnimateText } from './animate-text/page'
+export { default as StaggeredTextContainer } from './staggered-text-animation/page'
+export { default as AnimatedCounter } from './count-animation/page'

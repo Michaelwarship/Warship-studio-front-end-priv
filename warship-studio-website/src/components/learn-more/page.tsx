@@ -1,8 +1,12 @@
-import { LearnMoreCard } from '@/components'
+import {
+    LearnMoreCard,
+    AnimateText,
+    StaggeredTextContainer,
+} from '@/components'
 export default function LearnMore() {
     return (
         <section className="">
-            <div className="hidden justify-center items-center md:flex border border-[#E0E0E0] [&>*]:border-[#E0E0E0] [&>*]:border-r [&>*]:border-t-0 [&>*:first-child]:border-l [&>*:last-child]:border-r-1">
+            <StaggeredTextContainer className="hidden justify-center items-center md:flex border border-[#E0E0E0] [&>*]:border-[#E0E0E0] [&>*]:border-r [&>*]:border-t-0 [&>*:first-child]:border-l [&>*:last-child]:border-r-1">
                 <LearnMoreCard
                     subText="01."
                     title={
@@ -35,7 +39,7 @@ export default function LearnMore() {
                     }
                     buttonText="[ LEARN MORE ]"
                 />
-            </div>
+            </StaggeredTextContainer>
 
             {/* <div className="hidden md:block w-full h-0.5 bg-[#E0E0E0]"></div> */}
 

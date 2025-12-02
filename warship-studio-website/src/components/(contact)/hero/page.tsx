@@ -1,9 +1,9 @@
-import { Button } from '@/components'
+import { Button, StaggeredTextContainer } from '@/components'
 
 export default function ContactHero() {
     return (
         <section className=" [&>*]:border-[#E0E0E0] [&>*]:border-b-1 ">
-            <div className="px-5 py-15 space-y-5 md:space-y-3 lg:space-y-0 lg:px-20 lg:flex ">
+            <StaggeredTextContainer className="px-5 py-15 space-y-5 md:space-y-3 lg:space-y-0 lg:px-20 lg:flex ">
                 <div className="flex-1">
                     <Button
                         title="KEEP IN TOUCH"
@@ -24,7 +24,7 @@ export default function ContactHero() {
                         </span>
                     </p>
                 </div>
-            </div>
+            </StaggeredTextContainer>
         </section>
     )
 }

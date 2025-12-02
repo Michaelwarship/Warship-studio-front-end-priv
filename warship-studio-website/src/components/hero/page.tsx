@@ -1,12 +1,19 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Button, PartnersRow } from '@/components'
+'use client'
+import {
+    Button,
+    PartnersRow,
+    AnimateText,
+    StaggeredTextContainer,
+} from '@/components'
 
 export default function HeroSection() {
     return (
         <section>
-            <div className="relative">
-                <div className="w-full h-152 flex items-center z-0 sm:h-200 lg:h-150 xl:h-160 2xl:h-190">
+            <StaggeredTextContainer className="relative">
+                <div
+                    data-no-anim
+                    className="w-full h-152 flex items-center z-0 sm:h-200 lg:h-150 xl:h-160 2xl:h-190"
+                >
                     <img
                         src="/hero.png"
                         alt="hero-image"
@@ -18,10 +25,12 @@ export default function HeroSection() {
 
                 <div className="absolute top-95 left-0 right-0 px-5 sm:top-120 md:top-115 lg:top-65 lg:px-20 2xl:top-100">
                     <div>
-                        <p className="text-[45px] text-[#0A231D] sm:text-[70px] leading-14 sm:leading-22 md:text-[85px] md:leading-25 lg:text-[70px] xl:text-[85px] 2xl:text-[85px]">
-                            Pushing Pixels <br />
-                            with precision.
-                        </p>
+                        <AnimateText>
+                            <p className="text-[45px] text-[#0A231D] sm:text-[70px] leading-14 sm:leading-22 md:text-[85px] md:leading-25 lg:text-[70px] xl:text-[85px] 2xl:text-[85px]">
+                                Pushing Pixels <br />
+                                with precision.
+                            </p>
+                        </AnimateText>
                     </div>
 
                     <div className="flex justify-between items-center w-full">
@@ -47,7 +56,7 @@ export default function HeroSection() {
                 <div>
                     <PartnersRow />
                 </div>
-            </div>
+            </StaggeredTextContainer>
         </section>
     )
 }

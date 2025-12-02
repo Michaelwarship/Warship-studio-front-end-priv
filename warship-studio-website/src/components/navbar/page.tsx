@@ -3,9 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaBars, FaXmark } from 'react-icons/fa6'
 import { useState } from 'react'
-import Button from '../button/page'
+import { Button, AnimateText } from '@/components'
 import { Route } from '@/lib/route'
 import { useRouter } from 'next/navigation'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Navbar() {
     const router = useRouter()
@@ -13,91 +14,167 @@ export default function Navbar() {
     return (
         <nav className="bg-white sticky top-0 z-10 [&>*]:border-[#E0E0E0] [&>*]:border-b-1 ">
             <div className="flex items-center justify-between px-5 py-3 lg:px-20 lg:py-5">
-                <div className="w-15 relative z-[999]">
+                <div className="w-15 relative z-[1000]">
                     <Image
                         src="./warship.svg"
                         alt="logo"
                         width={100}
                         height={100}
+                        className="relative z-[1000]"
                     />
                 </div>
 
                 {/*HAMBURGER*/}
                 <div className="lg:hidden flex items-center justify-between space-x-5 relative z-[1000]">
-                    <Button
-                        onClick={() => router.push(Route.CONTACT)}
-                        title="Let's Talk!"
-                        className="bg-black text-white"
-                    />
-                    <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="lg:hidden group"
-                    >
-                        {isOpen ? (
-                            <FaXmark className="text-black text-[20px]" />
-                        ) : (
-                            <FaBars className="text-black text-[20px]" />
-                        )}
-                    </button>
+                    <div>
+                        <AnimateText disabled={true}>
+                            <button
+                                onClick={() => router.push(Route.CONTACT)}
+                                className="bg-black text-white text-[12px] px-5 py-2  rounded-[5px]"
+                            >
+                                Let's Talk!
+                            </button>
+                        </AnimateText>
+                    </div>
+
+                    <div>
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="lg:hidden group"
+                        >
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={isOpen ? 'open' : 'closed'}
+                                    initial={{ rotate: -90, opacity: 0 }}
+                                    animate={{ rotate: 0, opacity: 1 }}
+                                    exit={{ rotate: 0, opacity: 0 }}
+                                    transition={{ duration: 0.25 }}
+                                >
+                                    {isOpen ? (
+                                        <FaXmark className="text-black text-[20px]" />
+                                    ) : (
+                                        <FaBars className="text-black text-[20px]" />
+                                    )}
+                                </motion.div>
+                            </AnimatePresence>
+                        </button>
+                    </div>
                 </div>
 
-                <div
-                    className={`${isOpen ? 'block' : 'hidden'} flex flex-col fixed inset-0 z-[50] bg-[#07E272] pt-30 pl-5 overflow-y-auto space-y-5 lg:space-y-0 lg:pt-0 lg:pl-0 lg:flex lg:flex-row lg:mt-0 lg:ml-0 lg:bg-transparent lg:static lg:space-x-7 xl:space-x-10`}
-                >
+                {/* MOBILE MENU (animated) */}
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.div
+                            initial={{ y: '-100%' }}
+                            animate={{ y: '0%' }}
+                            exit={{ y: '-100%' }}
+                            transition={{ duration: 0.4, ease: 'easeOut' }}
+                            className="flex flex-col fixed inset-0 z-[50] bg-[#07E272] pt-30 pl-5 overflow-y-auto space-y-5 lg:hidden"
+                        >
+                            {/* your links */}
+                            <div>
+                                <Link
+                                    href="/"
+                                    onClick={() => setIsOpen(false)}
+                                    className="font-geistMono text-[50px] sm:text-[90px] font-light"
+                                >
+                                    HOME
+                                </Link>
+                            </div>
+                            <Link
+                                href={Route.SERVICES}
+                                onClick={() => setIsOpen(false)}
+                                className="font-geistMono text-[50px] sm:text-[90px] font-light"
+                            >
+                                SERVICES
+                            </Link>
+                            <Link
+                                href={Route.STUDIO}
+                                onClick={() => setIsOpen(false)}
+                                className="font-geistMono text-[50px] sm:text-[90px] font-light"
+                            >
+                                STUDIO
+                            </Link>
+                            <Link
+                                href={Route.WORK}
+                                onClick={() => setIsOpen(false)}
+                                className="font-geistMono text-[50px] sm:text-[90px] font-light"
+                            >
+                                WORK
+                            </Link>
+                            <Link
+                                href={Route.MOCKUP}
+                                onClick={() => setIsOpen(false)}
+                                className="font-geistMono text-[50px] sm:text-[90px] font-light"
+                            >
+                                MOCKUP
+                            </Link>
+                            <Link
+                                href={Route.BLOG}
+                                onClick={() => setIsOpen(false)}
+                                className="font-geistMono text-[50px] sm:text-[90px] font-light"
+                            >
+                                BLOG
+                            </Link>
+                            <Link
+                                href={Route.SHOP}
+                                onClick={() => setIsOpen(false)}
+                                className="font-geistMono text-[50px] sm:text-[90px] font-light"
+                            >
+                                SHOP
+                            </Link>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+
+                {/* DESKTOP MENU  */}
+
+                <div className="hidden lg:flex lg:flex-row lg:space-x-7 xl:space-x-10">
                     <Link
                         href="/"
-                        className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
-                        onClick={() => setIsOpen(false)}
+                        className="animated-link font-geistMono text-[14px] font-light"
                     >
                         HOME
                     </Link>
                     <Link
                         href={Route.SERVICES}
-                        className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
-                        onClick={() => setIsOpen(false)}
+                        className="animated-link font-geistMono text-[14px] font-light"
                     >
                         SERVICES
                     </Link>
                     <Link
                         href={Route.STUDIO}
-                        className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
-                        onClick={() => setIsOpen(false)}
+                        className="animated-link font-geistMono text-[14px] font-light"
                     >
                         STUDIO
                     </Link>
                     <Link
                         href={Route.WORK}
-                        className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
-                        onClick={() => setIsOpen(false)}
+                        className="animated-link font-geistMono text-[14px] font-light"
                     >
                         WORK
                     </Link>
                     <Link
                         href={Route.MOCKUP}
-                        className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
-                        onClick={() => setIsOpen(false)}
+                        className="animated-link font-geistMono text-[14px] font-light"
                     >
                         MOCKUP
                     </Link>
                     <Link
                         href={Route.BLOG}
-                        className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
-                        onClick={() => setIsOpen(false)}
+                        className="animated-link font-geistMono text-[14px] font-light"
                     >
                         BLOG
                     </Link>
                     <Link
                         href={Route.SHOP}
-                        className="font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
-                        onClick={() => setIsOpen(false)}
+                        className="animated-link font-geistMono text-[14px] font-light"
                     >
                         SHOP
                     </Link>
-
                     <Link
                         href={Route.CONTACT}
-                        className="hidden lg:block font-geistMono text-[50px] sm:text-[90px] lg:text-[14px] font-light"
-                        onClick={() => setIsOpen(false)}
+                        className="animated-link font-geistMono text-[14px] font-light"
                     >
                         LET'S TALK
                     </Link>

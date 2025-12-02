@@ -1,9 +1,9 @@
-import { ServiceCard } from '@/components'
+import { ServiceCard, StaggeredTextContainer } from '@/components'
 
 export default function ServiceSection() {
     return (
         <section>
-            <div>
+            <StaggeredTextContainer>
                 <ServiceCard
                     number="01"
                     title={
@@ -231,7 +231,7 @@ export default function ServiceSection() {
                     }
                     buttonText="[ WATCH REEL ]"
                 />
-            </div>
+            </StaggeredTextContainer>
         </section>
     )
 }

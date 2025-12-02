@@ -1,18 +1,31 @@
+import { AnimateText } from '@/components'
+
 interface ButtonProps {
     title: string
     className: string
     onClick?: () => void
+    hoverColor?: string
 }
 
-export default function Button({ title, className, onClick }: ButtonProps) {
+export default function Button({
+    title,
+    className,
+    onClick,
+    hoverColor = 'bg-[#FAFBD4]',
+}: ButtonProps) {
     return (
         <section>
-            <button
-                onClick={onClick}
-                className={`${className} whitespace-nowrap font-geistMono bg-[#07E272] px-4 py-3 text-[12px] sm:px-7 sm:py-3 sm:text-[14px] rounded-[5px] transform hover:opacity-80 duration-100 cursor-pointer`}
-            >
-                {title}
-            </button>
+            <AnimateText>
+                <button
+                    onClick={onClick}
+                    className={`${className} group relative whitespace-nowrap font-geistMono bg-[#07E272] px-4 py-3 text-[12px] sm:px-7 sm:py-3 sm:text-[14px] rounded-[5px]  cursor-pointer`}
+                >
+                    <span className="relative z-1">{title}</span>
+                    <span
+                        className={`${hoverColor} absolute inset-0 rounded-[4px] scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100`}
+                    ></span>
+                </button>
+            </AnimateText>
         </section>
     )
 }

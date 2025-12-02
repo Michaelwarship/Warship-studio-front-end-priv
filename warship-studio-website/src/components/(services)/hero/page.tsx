@@ -1,4 +1,4 @@
-import { Button } from '@/components'
+import { Button, AnimateText } from '@/components'
 
 export default function ServiceHero() {
     return (
@@ -9,9 +9,12 @@ export default function ServiceHero() {
                     className="text-[#969696] bg-transparent md:!text-[16px] !p-0 "
                 />
 
-                <p className="text-[35px] sm:text-[60px] md:text-[56px] text-[#0A231D] mb-5">
-                    Our Services.
-                </p>
+                <AnimateText>
+                    {' '}
+                    <p className="text-[35px] sm:text-[60px] md:text-[56px] text-[#0A231D] mb-5">
+                        Our Services.
+                    </p>
+                </AnimateText>
 
                 <div className="flex space-x-5">
                     <Button title="HIRE US TODAY" className="" />

@@ -1,4 +1,4 @@
-import { Button } from '@/components'
+import { Button, AnimatedCounter } from '@/components'
 
 export default function StudioHero() {
     return (
@@ -35,9 +35,12 @@ export default function StudioHero() {
                             <p className="absolute left-5 mt-2 md:mt-0 sm:left-10 md:static text-[#969696] mb-5 text-[14px] md:text-[16px]">
                                 01.
                             </p>
-                            <p className="text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]">
-                                200+
-                            </p>
+                            <AnimatedCounter
+                                end={200}
+                                suffix="+"
+                                duration={1000}
+                                className="text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
+                            />
                             <Button
                                 title="PROJECTS"
                                 className="bg-transparent !p-0 !md:text-[16px] !text-[#969696]"
@@ -50,9 +53,12 @@ export default function StudioHero() {
                             <p className="absolute left-5 mt-2 md:mt-0 sm:left-10 md:static text-[#969696] mb-5 text-[14px] md:text-[16px]">
                                 02.
                             </p>
-                            <p className="text-[40px] md:text-[55px] text-[#0A231D] font-satoshi">
-                                6+
-                            </p>
+                            <AnimatedCounter
+                                end={6}
+                                suffix="+"
+                                duration={1000}
+                                className="text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
+                            />
                             <Button
                                 title="EXPERIENCE"
                                 className="bg-transparent !p-0 !md:text-[16px] !text-[#969696]"
@@ -65,9 +71,12 @@ export default function StudioHero() {
                             <p className="absolute left-5 mt-2 md:mt-0 sm:left-10 md:static text-[#969696] mb-5 text-[14px] md:text-[16px]">
                                 03.
                             </p>
-                            <p className="text-[40px] md:text-[55px] text-[#0A231D] font-satoshi">
-                                95.9k
-                            </p>
+                            <AnimatedCounter
+                                end={95.9}
+                                suffix="k"
+                                duration={1000}
+                                className="text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
+                            />
                             <Button
                                 title="OVERALL REVENUE"
                                 className="bg-transparent !p-0 !md:text-[16px] !text-[#969696]"

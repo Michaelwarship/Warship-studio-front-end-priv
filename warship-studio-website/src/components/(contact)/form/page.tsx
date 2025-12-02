@@ -1,10 +1,10 @@
-import { Button, SubmitForm } from '@/components'
+import { Button, SubmitForm, StaggeredTextContainer } from '@/components'
 import Link from 'next/link'
 
 export default function ContactForm() {
     return (
         <section>
-            <div className="px-5 py-15 lg:px-20 lg:py-15">
+            <StaggeredTextContainer className="px-5 py-15 lg:px-20 lg:py-15">
                 <div className="space-y-20 lg:space-y-0  lg:flex lg:justify-between">
                     <div className="space-y-5">
                         <div className="space-y-5">
@@ -70,9 +70,9 @@ export default function ContactForm() {
                         <SubmitForm />
                     </div>
                 </div>
-            </div>
+            </StaggeredTextContainer>
 
-            <div className=" [&>*]:border-[#E0E0E0] [&>*]:border-b-1 ">
+            <StaggeredTextContainer className=" [&>*]:border-[#E0E0E0] [&>*]:border-b-1 ">
                 <div className="flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:space-x-80 px-5 py-10 md:pt-20 lg:px-20 lg:pb-25 lg:py-40">
                     <p className="text-[#969696] text-[14px] md:text-[16px]">
                         //ADDRESS
@@ -108,7 +108,7 @@ export default function ContactForm() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </StaggeredTextContainer>
         </section>
     )
 }

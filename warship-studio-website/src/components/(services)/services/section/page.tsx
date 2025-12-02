@@ -1,4 +1,4 @@
-import { Button } from '@/components'
+import { Button, AnimateText, StaggeredTextContainer } from '@/components'
 import { ReactNode } from 'react'
 
 interface CardProps {
@@ -24,36 +24,50 @@ export default function ServiceCard({
 }: CardProps) {
     return (
         <section className=" [&>*]:border-[#E0E0E0] [&>*]:border-b-1 ">
-            <div className="space-y-10 md:space-y-7 lg:space-y-0 lg:flex justify-between px-5 py-15 lg:px-20 md:py-30">
+            <StaggeredTextContainer className="space-y-10 md:space-y-7 lg:space-y-0 lg:flex justify-between px-5 py-15 lg:px-20 md:py-30">
                 <div className="space-y-5 flex-1">
-                    <p className="text-[14px] text-[#969696]">{number}</p>
-                    <p className="text-[50px] md:text-[60px] lg:text-[35px] xl:text-[55px] text-[#AEAEAE] leading-[1]">
-                        {title}
-                    </p>
+                    <AnimateText>
+                        <p className="text-[14px] text-[#969696]">{number}</p>
+                    </AnimateText>
+                    <AnimateText>
+                        <p className="text-[50px] md:text-[60px] lg:text-[35px] xl:text-[55px] text-[#AEAEAE] leading-[1]">
+                            {title}
+                        </p>
+                    </AnimateText>
                 </div>
 
                 <div className="space-y-7 flex-1">
-                    <p className="hyphens-auto break-words text-[25px] leading-[1] md:text-[30px] lg:text-[25px] xl:text-[30px] text-[#0A231D]">
-                        {description}
-                    </p>
+                    <AnimateText>
+                        <p className="hyphens-auto break-words text-[25px] leading-[1] md:text-[30px] lg:text-[25px] xl:text-[30px] text-[#0A231D]">
+                            {description}
+                        </p>
+                    </AnimateText>
 
                     <div className="space-y-2 md:space-y-7 md:space-y-0">
                         <div className="space-y-2 md:flex md:space-x-5 md:space-y-0">
-                            <p className="text-[14px] md:text-[20px] font-geistMono text-[#969696]">
-                                {serviceOne}
-                            </p>
-                            <p className="text-[14px] md:text-[20px] font-geistMono text-[#969696]">
-                                {serviceTwo}
-                            </p>
+                            <AnimateText>
+                                <p className="text-[14px] md:text-[20px] font-geistMono text-[#969696]">
+                                    {serviceOne}
+                                </p>
+                            </AnimateText>
+                            <AnimateText>
+                                <p className="text-[14px] md:text-[20px] font-geistMono text-[#969696]">
+                                    {serviceTwo}
+                                </p>
+                            </AnimateText>
                         </div>
 
                         <div className="space-y-2 md:flex md:space-x-5 md:space-y-0">
-                            <p className="text-[14px] md:text-[20px] font-geistMono text-[#969696]">
-                                {serviceThree}
-                            </p>
-                            <p className="text-[14px] md:text-[20px] font-geistMono text-[#969696]">
-                                {serviceFour}
-                            </p>
+                            <AnimateText>
+                                <p className="text-[14px] md:text-[20px] font-geistMono text-[#969696]">
+                                    {serviceThree}
+                                </p>
+                            </AnimateText>
+                            <AnimateText>
+                                <p className="text-[14px] md:text-[20px] font-geistMono text-[#969696]">
+                                    {serviceFour}
+                                </p>
+                            </AnimateText>
                         </div>
                     </div>
                     <Button
@@ -61,7 +75,7 @@ export default function ServiceCard({
                         className="text-[#0A231D] bg-transparent !p-0"
                     />
                 </div>
-            </div>
+            </StaggeredTextContainer>
         </section>
     )
 }

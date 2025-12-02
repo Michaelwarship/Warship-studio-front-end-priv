@@ -1,4 +1,4 @@
-import Button from '@/components/button/page'
+import { Button, AnimateText } from '@/components'
 
 interface Cardprops {
     title: string
@@ -18,9 +18,12 @@ export default function CarouselCard({ title, image, description }: Cardprops) {
                     title={description}
                     className="!px-0 !py-0 bg-transparent text-white"
                 />
-                <p className="text-[20px] md:text-[20px] sm:text-[29px] text-white">
-                    {title}
-                </p>
+
+                <AnimateText>
+                    <p className="text-[20px] md:text-[20px] sm:text-[29px] text-white">
+                        {title}
+                    </p>
+                </AnimateText>
             </div>
         </section>
     )
