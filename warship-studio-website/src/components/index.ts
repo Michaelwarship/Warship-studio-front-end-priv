@@ -45,3 +45,6 @@ export { default as StudioPartnerCard } from './(studio)/partners/single/page'
 export { default as AnimateText } from './animate-text/page'
 export { default as StaggeredTextContainer } from './staggered-text-animation/page'
 export { default as AnimatedCounter } from './count-animation/page'
+
+//Cursor
+export { default as Cursor } from './cursor/page'

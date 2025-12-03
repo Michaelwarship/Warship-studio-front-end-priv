@@ -33,7 +33,7 @@ export default function StaggeredTextContainer({
         gsap.from(items, {
             y: 80,
             opacity: 0,
-            stagger: 0.2,
+            stagger: 0.4,
             duration: 1,
             ease: 'power2.out',
             scrollTrigger: {

@@ -35,15 +35,17 @@ export default function StudioHero() {
                             <p className="absolute left-5 mt-2 md:mt-0 sm:left-10 md:static text-[#969696] mb-5 text-[14px] md:text-[16px]">
                                 01.
                             </p>
-                            <AnimatedCounter
-                                end={200}
-                                suffix="+"
-                                duration={1000}
-                                className="text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
-                            />
+                            <div className="relative w-[80px] h-[60px]">
+                                <AnimatedCounter
+                                    end={200}
+                                    suffix="+"
+                                    duration={1000}
+                                    className="text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
+                                />
+                            </div>
                             <Button
                                 title="PROJECTS"
-                                className="bg-transparent !p-0 !md:text-[16px] !text-[#969696]"
+                                className="bg-transparent !p-0 !md:text-[16px] !text-[#969696] md:mt-5"
                             />
                         </div>
 
@@ -53,15 +55,17 @@ export default function StudioHero() {
                             <p className="absolute left-5 mt-2 md:mt-0 sm:left-10 md:static text-[#969696] mb-5 text-[14px] md:text-[16px]">
                                 02.
                             </p>
-                            <AnimatedCounter
-                                end={6}
-                                suffix="+"
-                                duration={1000}
-                                className="text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
-                            />
+                            <div className="relative w-[80px] h-[60px]">
+                                <AnimatedCounter
+                                    end={6}
+                                    suffix="+"
+                                    duration={1000}
+                                    className="text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
+                                />
+                            </div>
                             <Button
                                 title="EXPERIENCE"
-                                className="bg-transparent !p-0 !md:text-[16px] !text-[#969696]"
+                                className="bg-transparent !p-0 !md:text-[16px] !text-[#969696] md:mt-5"
                             />
                         </div>
 
@@ -71,15 +75,17 @@ export default function StudioHero() {
                             <p className="absolute left-5 mt-2 md:mt-0 sm:left-10 md:static text-[#969696] mb-5 text-[14px] md:text-[16px]">
                                 03.
                             </p>
-                            <AnimatedCounter
-                                end={95.9}
-                                suffix="k"
-                                duration={1000}
-                                className="text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
-                            />
+                            <div className="relative w-[80px] h-[60px]">
+                                <AnimatedCounter
+                                    end={95.9}
+                                    suffix="k"
+                                    duration={1000}
+                                    className="text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
+                                />
+                            </div>
                             <Button
                                 title="OVERALL REVENUE"
-                                className="bg-transparent !p-0 !md:text-[16px] !text-[#969696]"
+                                className="bg-transparent !p-0 !md:text-[16px] !text-[#969696] md:mt-5"
                             />
                         </div>
                     </div>

@@ -14,15 +14,17 @@ export default function Navbar() {
     return (
         <nav className="bg-white sticky top-0 z-10 [&>*]:border-[#E0E0E0] [&>*]:border-b-1 ">
             <div className="flex items-center justify-between px-5 py-3 lg:px-20 lg:py-5">
-                <div className="w-15 relative z-[1000]">
-                    <Image
-                        src="./warship.svg"
-                        alt="logo"
-                        width={100}
-                        height={100}
-                        className="relative z-[1000]"
-                    />
-                </div>
+                <Link href="/">
+                    <div className="w-15 relative z-[1000]">
+                        <Image
+                            src="./warship.svg"
+                            alt="logo"
+                            width={100}
+                            height={100}
+                            className="relative z-[1000]"
+                        />
+                    </div>
+                </Link>
 
                 {/*HAMBURGER*/}
                 <div className="lg:hidden flex items-center justify-between space-x-5 relative z-[1000]">
@@ -72,15 +74,7 @@ export default function Navbar() {
                             className="flex flex-col fixed inset-0 z-[50] bg-[#07E272] pt-30 pl-5 overflow-y-auto space-y-5 lg:hidden"
                         >
                             {/* your links */}
-                            <div>
-                                <Link
-                                    href="/"
-                                    onClick={() => setIsOpen(false)}
-                                    className="font-geistMono text-[50px] sm:text-[90px] font-light"
-                                >
-                                    HOME
-                                </Link>
-                            </div>
+
                             <Link
                                 href={Route.SERVICES}
                                 onClick={() => setIsOpen(false)}
@@ -130,12 +124,6 @@ export default function Navbar() {
                 {/* DESKTOP MENU  */}
 
                 <div className="hidden lg:flex lg:flex-row lg:space-x-7 xl:space-x-10">
-                    <Link
-                        href="/"
-                        className="animated-link font-geistMono text-[14px] font-light"
-                    >
-                        HOME
-                    </Link>
                     <Link
                         href={Route.SERVICES}
                         className="animated-link font-geistMono text-[14px] font-light"

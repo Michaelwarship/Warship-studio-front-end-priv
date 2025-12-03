@@ -45,18 +45,22 @@ export default function AboutPage() {
                                 01.
                             </p>
 
-                            <AnimatedCounter
-                                duration={1000}
-                                suffix=""
-                                prefix=""
-                                end={200}
-                                as="div"
-                                className="about-title text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
-                            ></AnimatedCounter>
+                            <div className="relative w-[80px] h-[60px]">
+                                <div className="inline-block min-w-[6ch] [font-variant-numeric:tabular-nums]">
+                                    <AnimatedCounter
+                                        duration={1000}
+                                        suffix=""
+                                        prefix=""
+                                        end={200}
+                                        as="div"
+                                        className="about-title text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
+                                    />
+                                </div>
+                            </div>
 
                             <Button
                                 title="PROJECTS"
-                                className="bg-transparent !p-0 !md:text-[16px] !text-[#969696]"
+                                className="bg-transparent !p-0 !md:text-[16px] !text-[#969696] md:mt-5"
                                 hoverColor="bg-none"
                             />
                         </div>
@@ -68,18 +72,22 @@ export default function AboutPage() {
                                 02.
                             </p>
 
-                            <AnimatedCounter
-                                duration={2000}
-                                suffix="+"
-                                prefix=""
-                                end={6}
-                                as="div"
-                                className="about-title text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
-                            ></AnimatedCounter>
+                            <div className="relative w-[80px] h-[60px]">
+                                <div className="inline-block min-w-[6ch] [font-variant-numeric:tabular-nums]">
+                                    <AnimatedCounter
+                                        duration={2000}
+                                        suffix="+"
+                                        prefix=""
+                                        end={6}
+                                        as="div"
+                                        className="about-title text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
+                                    />
+                                </div>
+                            </div>
 
                             <Button
                                 title="EXPERIENCE"
-                                className="bg-transparent !p-0 !md:text-[16px] !text-[#969696]"
+                                className="bg-transparent !p-0 !md:text-[16px] !text-[#969696] md:mt-5"
                                 hoverColor="bg-none"
                             />
                         </div>
@@ -90,19 +98,22 @@ export default function AboutPage() {
                             <p className="about-title absolute right-50 mt-2 md:mt-0 sm:right-80 md:static text-[#969696] mb-5 text-[14px] md:text-[16px]">
                                 03.
                             </p>
-
-                            <AnimatedCounter
-                                duration={4000}
-                                suffix="+"
-                                prefix=""
-                                end={15}
-                                as="div"
-                                className="about-title text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
-                            ></AnimatedCounter>
+                            <div className="relative w-[80px] h-[60px]">
+                                <div className="">
+                                    <AnimatedCounter
+                                        duration={3000}
+                                        suffix="+"
+                                        prefix=""
+                                        end={15}
+                                        as="div"
+                                        className="about-title text-[40px] md:text-[55px] text-[#0A231D] font-satoshi tracking-[-3]"
+                                    ></AnimatedCounter>
+                                </div>
+                            </div>
 
                             <Button
                                 title="EXPERT TEAM"
-                                className="bg-transparent !p-0 !md:text-[16px] !text-[#969696]"
+                                className="bg-transparent !p-0 !md:text-[16px] !text-[#969696] md:mt-5"
                                 hoverColor="bg-none"
                             />
                         </div>

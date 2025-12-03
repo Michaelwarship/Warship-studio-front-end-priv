@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import { Navbar, Footer } from '@/components'
+import { Navbar, Footer, Cursor } from '@/components'
 import { ReactLenis } from 'lenis/react'
 
 const satoshi = localFont({
@@ -41,6 +41,7 @@ export default async function RootLayout({
             <body
                 className={`${satoshi.variable} ${geistMono.variable} antialiased`}
             >
+                <Cursor />
                 <ReactLenis root />
                 <Navbar />
                 {children}

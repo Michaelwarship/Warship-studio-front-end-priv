@@ -18,7 +18,7 @@ export default function StudioVisionCard({
                     className="bg-transparent !px-0 !py-0 text-[12px] !text-[#969696] text-black mt-4 md:mt-5 lg:mt-5"
                 />
 
-                <p className="hyphens-auto break-words text-[#0A231D] text-[20px] leading-[20px] sm:text-[40px] sm:leading-[35px] md:leading-[25px] lg:leading-[30px] xl:leading-[45px] 2xl:leading-[25px] md:text-[20px] lg:text-[30px] xl:text-[45px] 2xl:text-[28px]">
+                <p className="hyphens-auto break-words text-[#0A231D] text-[20px] leading-[20px] sm:text-[40px] sm:leading-[35px] md:leading-[25px] lg:leading-[30px] xl:leading-[35px] 2xl:leading-[25px] md:text-[20px] lg:text-[30px] xl:text-[35px] 2xl:text-[28px]">
                     {description}
                 </p>
             </div>
