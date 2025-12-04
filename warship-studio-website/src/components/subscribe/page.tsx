@@ -3,7 +3,7 @@ export default function Subscribe() {
     return (
         <section>
             <div className="flex flex-col space-y-5">
-                <p className="font-geistMono text-[12px] md:text-[14px] text-[#969696]">
+                <p className="font-geistMono text-[10px] md:text-[14px] text-[#969696]">
                     SIGN UP TO OUR NEWSLETTER
                 </p>
                 <div className="flex space-x-5">
@@ -16,7 +16,7 @@ export default function Subscribe() {
                 </div>
 
                 <AnimateText>
-                    <p className="font-geistMono text-[12px] md:text-[14px] text-[#969696]">
+                    <p className="font-geistMono text-[10px] md:text-[14px] text-[#969696]">
                         BY CLICKING SEND, YOU AGREE TO RECIEVE MESSAGES.
                     </p>
                 </AnimateText>

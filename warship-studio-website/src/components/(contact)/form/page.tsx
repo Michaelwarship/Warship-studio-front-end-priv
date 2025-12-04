@@ -16,13 +16,13 @@ export default function ContactForm() {
                             <div className="flex flex-col">
                                 <p>Call or send us a message on WhatsApp</p>
                                 <Link
-                                    href=""
+                                    href="tel:+2348132912112"
                                     className="text-[14px] md:text-[18px] underline tracking-[-0.5]"
                                 >
                                     +234 813 291 2112
                                 </Link>
                                 <Link
-                                    href=""
+                                    href="tel:+17312364319"
                                     className="text-[14px] md:text-[18px] underline tracking-[-0.5]"
                                 >
                                     +1 (731) 236-4319
@@ -35,29 +35,43 @@ export default function ContactForm() {
                                 HATE CONTACT FORM
                             </p>
 
-                            <p className="text-[#0A231D] text-[18px] md:text-[18px]">
-                                studios@warshipstudio.com
+                            <p>
+                                <a
+                                    href="https://studios@warshipstudio.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[#0A231D] text-[18px] md:text-[18px]"
+                                >
+                                    studios@warshipstudio.com
+                                </a>
                             </p>
 
-                            <p className="text-[#0A231D] text-[18px] md:text-[18px]">
-                                @warshipstudio.com
+                            <p>
+                                <a
+                                    href="https://@warshipstudio.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[#0A231D] text-[18px] md:text-[18px]"
+                                >
+                                    @warshipstudio.com
+                                </a>
                             </p>
 
                             <div className="flex space-x-5">
                                 <Link
-                                    href="#"
+                                    href="https://www.instagram.com/warship_studios?igsh=MnJiajhndXFndXk4"
                                     className="font-geistMono text-[14px]"
                                 >
                                     INSTAGRAM
                                 </Link>
                                 <Link
-                                    href="#"
+                                    href="https://www.behance.net/warship_studios"
                                     className="font-geistMono text-[14px]"
                                 >
                                     BEHANCE
                                 </Link>
                                 <Link
-                                    href="#"
+                                    href="https://www.linkedin.com/company/warship-studios/"
                                     className="font-geistMono text-[14px]"
                                 >
                                     LINKEDIN
@@ -101,7 +115,10 @@ export default function ContactForm() {
                             <span className="text-[#AEAEAE]">
                                 If you’re talented and passionate about design,
                                 reach out to us at 
-                                <Link href="" className="underline">
+                                <Link
+                                    href="https://careers@warshipstudio.com"
+                                    className="underline"
+                                >
                                     careers@warshipstudio.com
                                 </Link>
                             </span>

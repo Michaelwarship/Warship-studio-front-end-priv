@@ -72,3 +72,7 @@ body {
         0
     ); /* On mouse leave, the line continues off to the right and disappears */
 }
+
+::-webkit-scrollbar {
+    display: none;
+}

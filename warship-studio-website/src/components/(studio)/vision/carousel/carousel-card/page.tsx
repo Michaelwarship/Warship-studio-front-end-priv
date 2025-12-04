@@ -17,7 +17,7 @@ export default function StudioCarouselCard({
             <div className="space-y-5">
                 <div className="bg-[#D7D7D7] w-[288px] h-[288px] sm:w-[200px] sm:h-[200px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] xl:w-[250px] xl:h-[250px] 2xl:w-[288px] 2xl:h-[288px] rounded-[5px] overflow-hidden group">
                     <img
-                        // src={image}
+                        src={image}
                         alt={buttonText}
                         className="w-full h-full object-cover"
                     />

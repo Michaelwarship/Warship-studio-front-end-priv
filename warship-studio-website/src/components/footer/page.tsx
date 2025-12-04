@@ -34,38 +34,42 @@ export default function Footer() {
                             </p>
                         </AnimateText>
 
-                        <div className="md:space-y-5">
+                        <div className="md:space-y-5 mb-10 md:mb-0">
                             <AnimateText>
                                 <p className="text-[25px] md:text-[28px] text-[#0A231D]">
-                                    studios@warshipstudio.com
+                                    <a href="https://studios@warshipstudio.com">
+                                        studios@warshipstudio.com
+                                    </a>
                                 </p>
                                 <p className="text-[25px] md:text-[28px] text-[#0A231D]">
-                                    @warshipstudio
+                                    <a href="https://@warshipstudio">
+                                        @warshipstudio
+                                    </a>
                                 </p>
                             </AnimateText>
                         </div>
 
-                        <div className="flex space-x-5">
+                        <div className="flex flex-col md:flex-row space-x-5">
                             <AnimateText>
                                 <Link
-                                    href="#"
-                                    className="font-geistMono text-[12px] md:text-[14px]"
+                                    href="https://www.instagram.com/warship_studios?igsh=MnJiajhndXFndXk4"
+                                    className="md:font-geistMono text-[20px] md:text-[14px]"
                                 >
                                     INSTAGRAM
                                 </Link>
                             </AnimateText>
                             <AnimateText>
                                 <Link
-                                    href="#"
-                                    className="font-geistMono text-[12px] md:text-[14px]"
+                                    href="https://www.behance.net/warship_studios"
+                                    className="md:font-geistMono text-[20px] md:text-[14px]"
                                 >
                                     BEHANCE
                                 </Link>
                             </AnimateText>
                             <AnimateText>
                                 <Link
-                                    href="#"
-                                    className="font-geistMono text-[12px] md:text-[14px]"
+                                    href="https://www.linkedin.com/company/warship-studios/"
+                                    className="md:font-geistMono text-[20px] md:text-[14px]"
                                 >
                                     LINKEDIN
                                 </Link>
@@ -80,56 +84,56 @@ export default function Footer() {
                             </p>
                         </AnimateText>
 
-                        <div className="flex flex-col space-y-2">
-                            <div className="space-x-8 md:space-x-5">
-                                <Link
+                        <div className="flex flex-col md:space-y-2">
+                            <div className="flex flex-col md:flex-row space-x-8 md:space-x-5">
+                                {/* <Link
                                     href="#"
                                     className="text-[12px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200 "
                                 >
-                                    HOME
-                                </Link>
+                                    BACK TO TOP
+                                </Link> */}
                                 <Link
-                                    href="#"
-                                    className="text-[12px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
+                                    href="/services"
+                                    className="text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
                                 >
                                     OUR SERVICES
                                 </Link>
                                 <Link
-                                    href="#"
-                                    className="text-[12px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
+                                    href="/studio"
+                                    className="text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
                                 >
                                     STUDIO
                                 </Link>
                                 <Link
-                                    href="#"
-                                    className="text-[12px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
+                                    href="/work"
+                                    className="text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
                                 >
                                     WORK
                                 </Link>
                             </div>
 
-                            <div className="space-x-8 md:space-x-5">
+                            <div className="flex flex-col md:flex-row space-x-8 md:space-x-5">
                                 <Link
-                                    href="#"
-                                    className="text-[12px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
+                                    href="#/mockup"
+                                    className="text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
                                 >
                                     MOCKUP
                                 </Link>
                                 <Link
-                                    href="#"
-                                    className="text-[12px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
+                                    href="/shop"
+                                    className="text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
                                 >
                                     SHOP
                                 </Link>
                                 <Link
-                                    href="#"
-                                    className="text-[12px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
+                                    href="career"
+                                    className="text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
                                 >
                                     CAREER
                                 </Link>
                                 <Link
-                                    href="#"
-                                    className="text-[12px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
+                                    href="/contact"
+                                    className="text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
                                 >
                                     CONTACT US
                                 </Link>
@@ -139,34 +143,34 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="space-x-5 md:space-x-20 lg:space-x-20 xl:space-x-14 2xl:flex 2xl:justify-between mt-10">
+            <div className="flex flex-col md:flex-row space-x-5 md:space-x-20 lg:space-x-20 xl:space-x-14 2xl:flex 2xl:justify-between mt-10">
                 <Link
                     href="#"
-                    className="text-[#969696] font-geistMono text-[12px] md:text-[14px]"
+                    className="text-[#969696] font-geistMono text-[10px] md:text-[14px]"
                 >
                     All RIGHTS RESERVED © 2025 WARSHIP STUDIOS LTD{' '}
                 </Link>
                 <Link
                     href="#"
-                    className="text-[#969696] font-geistMono text-[12px] md:text-[14px]"
+                    className="text-[#969696] font-geistMono text-[10px] md:text-[14px]"
                 >
                     COOKIES POLICY{' '}
                 </Link>
                 <Link
                     href="#"
-                    className="text-[#969696] font-geistMono text-[12px] md:text-[14px]"
+                    className="text-[#969696] font-geistMono text-[10px] md:text-[14px]"
                 >
                     COOKIES SETTINGS{' '}
                 </Link>
                 <Link
                     href="#"
-                    className="text-[#969696] font-geistMono text-[12px] md:text-[14px]"
+                    className="text-[#969696] font-geistMono text-[10px] md:text-[14px]"
                 >
                     COOKIES POLICY{' '}
                 </Link>
                 <Link
                     href="#"
-                    className="text-[#969696] font-geistMono text-[12px] md:text-[14px]"
+                    className="text-[#969696] font-geistMono text-[10px] md:text-[14px]"
                 >
                     TERMS OF USE{' '}
                 </Link>

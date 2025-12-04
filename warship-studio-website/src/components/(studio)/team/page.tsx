@@ -15,49 +15,56 @@ export default function StudioTeam() {
                         <StudioTeamCard
                             name="Michael Warship"
                             buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/kosi.jpg"
+                            image="/team/warship.png"
+                            className="object-cover object-top"
                         />
 
                         <StudioTeamCard
                             name="Michael Warship"
                             buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/kosi.jpg"
+                            image="/team/fola.png"
+                            className="object-top scale-110"
                         />
 
                         <StudioTeamCard
                             name="Michael Warship"
                             buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/kosi.jpg"
+                            image="/team/warship.png"
+                            className="object-cover object-top"
                         />
 
                         <StudioTeamCard
                             name="Michael Warship"
                             buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/kosi.jpg"
+                            image="/team/fola.png"
+                            className="object-top"
                         />
 
                         <StudioTeamCard
                             name="Michael Warship"
                             buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/kosi.jpg"
+                            image="/team/sharon.png"
                         />
 
                         <StudioTeamCard
                             name="Michael Warship"
                             buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/kosi.jpg"
+                            image="/team/fola.png"
+                            className="object-top"
                         />
 
                         <StudioTeamCard
                             name="Michael Warship"
                             buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/kosi.jpg"
+                            image="/team/warship.png"
+                            className="object-cover object-top"
                         />
 
                         <StudioTeamCard
                             name="Michael Warship"
                             buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/kosi.jpg"
+                            image="/team/fola.png"
+                            className="object-top"
                         />
                     </div>
                 </div>

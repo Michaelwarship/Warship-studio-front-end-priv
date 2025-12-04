@@ -1,7 +1,7 @@
 import { AnimateText } from '@/components'
 
 interface ButtonProps {
-    title: string
+    title: React.ReactNode
     className: string
     onClick?: () => void
     hoverColor?: string

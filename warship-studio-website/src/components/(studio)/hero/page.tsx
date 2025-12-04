@@ -1,4 +1,4 @@
-import { Button, AnimatedCounter } from '@/components'
+import { Button, AnimatedCounter, StaggeredTextContainer } from '@/components'
 
 export default function StudioHero() {
     return (
