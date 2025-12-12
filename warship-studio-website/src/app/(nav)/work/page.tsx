@@ -1,8 +1,11 @@
+import { WorkHero, WorkNavButton } from '@/components'
+
 export default function Work() {
     return (
         <section>
             <div>
-                <h1>hello work</h1>
+                <WorkHero />
+                <WorkNavButton />
             </div>
         </section>
     )

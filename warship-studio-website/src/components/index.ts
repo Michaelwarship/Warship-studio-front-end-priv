@@ -50,3 +50,16 @@ export { default as AnimatedCounter } from './count-animation/page'
 
 //Cursor
 export { default as Cursor } from './cursor/page'
+
+//work
+
+export { default as WorkHero } from './(work)/hero/page'
+export { default as WorkNavButton } from './(work)/nav-button/page'
+export { default as WorkNavButtonSingle } from './(work)/nav-button/nav-button-single/page'
+export { default as PortfolioCardSingle } from './(work)/portfolio-card/single/page'
+export { default as AllPortfolioCard } from './(work)/portfolio-card/all/page'
+export { default as BrandingPortfolioCard } from './(work)/portfolio-card/branding/page'
+export { default as UnrealEnginePortfolioCard } from './(work)/portfolio-card/unreal-engine/page'
+export { default as VfxPortfolioCard } from './(work)/portfolio-card/vfx/page'
+export { default as ProductPortfolioCard } from './(work)/portfolio-card/3d-product-visualization/page'
+export { default as RealEstatePortfolioCard } from './(work)/portfolio-card/real-estate/page'

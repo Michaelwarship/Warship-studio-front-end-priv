@@ -16,55 +16,48 @@ export default function StudioTeam() {
                             name="Michael Warship"
                             buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
                             image="/team/warship.png"
-                            className="object-cover object-top"
                         />
 
                         <StudioTeamCard
-                            name="Michael Warship"
-                            buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
+                            name="Mignonette Benjure"
+                            buttonText="[ CREATIVE WRITTER ]"
+                            image="/team/dibang.png"
+                        />
+
+                        <StudioTeamCard
+                            name="Daniel SAKA"
+                            buttonText="[ ART DIRECTOR ]"
+                            image="/team/saka.png"
+                        />
+
+                        <StudioTeamCard
+                            name="Fola Kolawole "
+                            buttonText="[ DIRECTOR OF PHOTOGRAPHY ]"
                             image="/team/fola.png"
-                            className="object-top scale-110"
                         />
 
                         <StudioTeamCard
-                            name="Michael Warship"
-                            buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/warship.png"
-                            className="object-cover object-top"
+                            name="Kosy Lilian"
+                            buttonText="[ PROJECT MANAGER ]"
+                            image="/team/lilian.png"
                         />
 
                         <StudioTeamCard
-                            name="Michael Warship"
-                            buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/fola.png"
-                            className="object-top"
-                        />
-
-                        <StudioTeamCard
-                            name="Michael Warship"
-                            buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
+                            name="Shalom Emmanuel"
+                            buttonText="[ ACCOUNT MANAGER ]"
                             image="/team/sharon.png"
                         />
 
                         <StudioTeamCard
-                            name="Michael Warship"
-                            buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/fola.png"
-                            className="object-top"
-                        />
-
-                        <StudioTeamCard
-                            name="Michael Warship"
-                            buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
+                            name="Eddie Achibong"
+                            buttonText="[ BUSINESS DEV.MANAGER ]"
                             image="/team/warship.png"
-                            className="object-cover object-top"
                         />
 
                         <StudioTeamCard
-                            name="Michael Warship"
-                            buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/fola.png"
-                            className="object-top"
+                            name="Barrister Dorcas Doosuur"
+                            buttonText="[ LEGAL ADVISOR ]"
+                            image="/team/lawyer.png"
                         />
                     </div>
                 </div>

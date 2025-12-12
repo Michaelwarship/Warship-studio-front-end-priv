@@ -9,10 +9,17 @@ export default function Footer() {
                 <div className="space-y-10 md:space-y-15">
                     <div>
                         <AnimateText>
-                            <div className="bg-[#D2FFE8] w-fit px-5 py-4 rounded-full mb-5">
+                            {/* <div className="bg-[#D2FFE8] w-fit px-5 py-4 rounded-full mb-5">
                                 <img
                                     src="/warship-logo.svg"
                                     className="w-full h-full object-cover"
+                                />
+                            </div> */}
+
+                            <div className="w-32">
+                                <img
+                                    src="logo-animation/white gif_1.gif"
+                                    className="w-full h-full object-cover mb-5"
                                 />
                             </div>
                         </AnimateText>
