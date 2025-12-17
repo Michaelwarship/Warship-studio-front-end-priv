@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export default function ContactForm() {
     return (
-        <section>
-            <StaggeredTextContainer className="px-5 py-15 lg:px-20 lg:py-15">
+        <section className="">
+            <StaggeredTextContainer className="px-5 py-15 lg:py-15 sm:px-10 md:px-10 lg:px-20 xl:px-20 2xl:px-30">
                 <div className="space-y-20 lg:space-y-0  lg:flex lg:justify-between">
                     <div className="space-y-5">
                         <div className="space-y-5">
@@ -37,7 +37,7 @@ export default function ContactForm() {
 
                             <p>
                                 <a
-                                    href="https://studios@warshipstudio.com"
+                                    href="mailto:studios@warshipstudio.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-[#0A231D] text-[18px] md:text-[18px]"
@@ -48,7 +48,7 @@ export default function ContactForm() {
 
                             <p>
                                 <a
-                                    href="https://@warshipstudio.com"
+                                    href="#"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-[#0A231D] text-[18px] md:text-[18px]"
@@ -80,35 +80,33 @@ export default function ContactForm() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="">
                         <SubmitForm />
                     </div>
                 </div>
             </StaggeredTextContainer>
 
             <StaggeredTextContainer className=" [&>*]:border-[#E0E0E0] [&>*]:border-b-1 ">
-                <div className="flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:space-x-80 px-5 py-10 md:pt-20 lg:px-20 lg:pb-25 lg:py-40">
+                <div className="flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:justify-between px-5 py-10 md:pt-20 lg:pb-25 lg:py-40 sm:px-10 md:px-15 lg:px-20 xl:px-20 2xl:px-30">
                     <p className="text-[#969696] text-[14px] md:text-[16px]">
                         //ADDRESS
                     </p>
 
-                    <div className="lg:flex lg:space-x-80">
-                        <p className="text-[#0A231D] text-[20px] md:text-[16px]">
-                            Cadastral Zone 2 Gwarimpa 1 AMAC, Abuja
-                        </p>
-                        <p className="text-[#0A231D] text-[20px] md:text-[16px]">
-                            30 N GOULD ST STE R SHERIDAN, WY 82801
-                        </p>
-                    </div>
+                    <p className="text-[#0A231D] text-[20px] md:text-[16px] hyphens-auto break-words">
+                        Cadastral Zone 2 Gwarimpa 1 AMAC, Abuja
+                    </p>
+                    <p className="text-[#0A231D] text-[20px] mt-20 md:text-[16px] hyphens-auto break-words">
+                        30 N Gould St, Sheridan, WY 82801, USA
+                    </p>
                 </div>
 
                 <div className="">
-                    <div className="lg:flex space-y-5 lg:space-y-0 lg:space-x-[-550px] px-5 py-10 lg:px-20 lg:py-20 lg:pr-25">
+                    <div className="lg:flex space-y-5 lg:space-y-0 lg:space-x-[-550px] px-5 py-10 lg:py-20 lg:pr-25 sm:px-10 md:px-15 lg:px-20 xl:px-20 2xl:px-30">
                         <p className="text-[#969696] text-[14px] md:text-[16px] flex-1">
                             //CAREERS
                         </p>
 
-                        <p className="hyphens-auto break-words text-[#0A231D] text-[20px] lg:text-[18px] flex-[1] leading-[1]">
+                        <p className="hyphens-auto break-words text-[#0A231D] text-[20px] lg:text-[18px] flex-[1] sm:leading-[25px] md:leading-[25px] lg:leading-[20px] xl:leading-[30px] 2xl:leading-[30px]">
                             We’re all about creating beautiful, meaningful work
                             that evokes the needed emotions, and we can’t do it
                             alone. We’d love to hear from you.{' '}
@@ -116,7 +114,7 @@ export default function ContactForm() {
                                 If you’re talented and passionate about design,
                                 reach out to us at 
                                 <Link
-                                    href="https://careers@warshipstudio.com"
+                                    href="mailto:https://careers@warshipstudio.com"
                                     className="underline"
                                 >
                                     careers@warshipstudio.com

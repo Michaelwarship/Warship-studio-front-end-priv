@@ -15,7 +15,7 @@ export default function Button({
 }: ButtonProps) {
     return (
         <section>
-            <AnimateText>
+            <AnimateText disabled>
                 <button
                     onClick={onClick}
                     className={`${className} group relative whitespace-nowrap font-geistMono bg-[#07E272] px-4 py-3 text-[12px] sm:px-7 sm:py-3 sm:text-[14px] rounded-[5px]  cursor-pointer`}

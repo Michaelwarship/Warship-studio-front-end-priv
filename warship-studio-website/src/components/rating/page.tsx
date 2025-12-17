@@ -3,7 +3,10 @@ import { RatingCard, StaggeredTextContainer } from '@/components'
 export default function Rating() {
     return (
         <section>
-            <StaggeredTextContainer className="overflow-hidden flex flex-col space-y-15 sm:space-y-10 md:space-y-0 md:flex-row justify-center md:border [&>*]:border-[#E0E0E0] [&>*:first-child]:border-b-0 [&>*:nth-child(2)]:border-b [&>*:nth-child(4)]:border-b [&>*:last-child]:border-b-1 md:border-[#E0E0E0] md:[&>*]:border-[#E0E0E0] md:[&>*]:border-r md:[&>*]:border-t-0 md:[&>*:first-child]:border-l md:[&>*:last-child]:border-r-1">
+            <StaggeredTextContainer
+                disabled
+                className="overflow-hidden flex flex-col space-y-15 sm:space-y-10 md:space-y-0 md:flex-row justify-center md:border [&>*]:border-[#E0E0E0] [&>*:first-child]:border-b-0 [&>*:nth-child(2)]:border-b [&>*:nth-child(4)]:border-b [&>*:last-child]:border-b-1 md:border-[#E0E0E0] md:[&>*]:border-[#E0E0E0] md:[&>*]:border-r md:[&>*]:border-t-0 md:[&>*:first-child]:border-l md:[&>*:last-child]:border-r-1"
+            >
                 <RatingCard
                     title={
                         <>

@@ -12,7 +12,7 @@ export default function LetsTalk() {
                         hoverColor="bg-none"
                     />
                     <AnimateText>
-                        <p className="text-[35px] text-[#0A231D] sm:text-[60px] leading-9 sm:leading-15 md:text-[70px] md:leading-20 lg:text-[70px] xl:text-[80px] 2xl:text-[80px]">
+                        <p className="text-[35px] text-[#0A231D] sm:text-[60px] leading-9 sm:leading-15 md:text-[50px] md:leading-15 lg:leading-20 lg:text-[70px] xl:text-[80px] 2xl:text-[80px]">
                             Now, let's talk about <br /> your project.
                         </p>
                     </AnimateText>
@@ -24,7 +24,7 @@ export default function LetsTalk() {
                     </Link>
                 </div>
 
-                <div className="hidden md:block w-20 sm:mt-64 md:mt-60 lg:w-30 lg:mt-60 xl:mt-60 2xl:mt-55">
+                <div className="hidden md:block w-20 sm:mt-64 md:mt-50 lg:w-30 lg:mt-60 xl:mt-60 2xl:mt-55">
                     <AnimateText>
                         <img
                             src="/warship-est.svg"

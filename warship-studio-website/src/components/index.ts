@@ -63,3 +63,6 @@ export { default as UnrealEnginePortfolioCard } from './(work)/portfolio-card/un
 export { default as VfxPortfolioCard } from './(work)/portfolio-card/vfx/page'
 export { default as ProductPortfolioCard } from './(work)/portfolio-card/3d-product-visualization/page'
 export { default as RealEstatePortfolioCard } from './(work)/portfolio-card/real-estate/page'
+
+//Active Link
+export { default as ActiveLink } from './active-link/page'

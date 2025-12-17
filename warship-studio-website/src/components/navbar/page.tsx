@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaBars, FaXmark } from 'react-icons/fa6'
 import { useState } from 'react'
-import { Button, AnimateText } from '@/components'
+import { Button, AnimateText, ActiveLink } from '@/components'
 import { Route } from '@/lib/route'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -13,7 +13,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <nav className="bg-white sticky top-0 z-10 [&>*]:border-[#E0E0E0] [&>*]:border-b-1 ">
-            <div className="flex items-center justify-between px-5 py-3 lg:px-20 lg:py-5">
+            <div className="flex items-center justify-between px-5 sm:px-10 md:px-15 py-3 lg:px-20 lg:py-5">
                 <Link href="/">
                     <div className="w-15 relative z-[1000]">
                         <Image
@@ -96,13 +96,13 @@ export default function Navbar() {
                             >
                                 WORK
                             </Link>
-                            <Link
+                            {/* <Link
                                 href={Route.MOCKUP}
                                 onClick={() => setIsOpen(false)}
                                 className="font-geistMono text-[50px] sm:text-[90px] font-light"
                             >
                                 MOCKUP
-                            </Link>
+                            </Link> */}
                             <Link
                                 href={Route.BLOG}
                                 onClick={() => setIsOpen(false)}
@@ -110,13 +110,13 @@ export default function Navbar() {
                             >
                                 BLOG
                             </Link>
-                            <Link
+                            {/* <Link
                                 href={Route.SHOP}
                                 onClick={() => setIsOpen(false)}
                                 className="font-geistMono text-[50px] sm:text-[90px] font-light"
                             >
                                 SHOP
-                            </Link>
+                            </Link> */}
                         </motion.div>
                     )}
                 </AnimatePresence>
@@ -124,48 +124,48 @@ export default function Navbar() {
                 {/* DESKTOP MENU  */}
 
                 <div className="hidden lg:flex lg:flex-row lg:space-x-7 xl:space-x-10">
-                    <Link
+                    <ActiveLink
                         href={Route.SERVICES}
                         className="animated-link font-geistMono text-[14px] font-light"
                     >
                         SERVICES
-                    </Link>
-                    <Link
+                    </ActiveLink>
+                    <ActiveLink
                         href={Route.STUDIO}
                         className="animated-link font-geistMono text-[14px] font-light"
                     >
                         STUDIO
-                    </Link>
-                    <Link
+                    </ActiveLink>
+                    <ActiveLink
                         href={Route.WORK}
                         className="animated-link font-geistMono text-[14px] font-light"
                     >
                         WORK
-                    </Link>
-                    <Link
+                    </ActiveLink>
+                    {/* <ActiveLink
                         href={Route.MOCKUP}
                         className="animated-link font-geistMono text-[14px] font-light"
                     >
                         MOCKUP
-                    </Link>
-                    <Link
+                    </ActiveLink> */}
+                    <ActiveLink
                         href={Route.BLOG}
                         className="animated-link font-geistMono text-[14px] font-light"
                     >
                         BLOG
-                    </Link>
-                    <Link
+                    </ActiveLink>
+                    {/* <ActiveLink
                         href={Route.SHOP}
                         className="animated-link font-geistMono text-[14px] font-light"
                     >
                         SHOP
-                    </Link>
-                    <Link
+                    </ActiveLink> */}
+                    <ActiveLink
                         href={Route.CONTACT}
                         className="animated-link font-geistMono text-[14px] font-light"
                     >
                         LET'S TALK
-                    </Link>
+                    </ActiveLink>
                 </div>
             </div>
         </nav>

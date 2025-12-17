@@ -1,35 +1,12 @@
-import { PortfolioCardSingle } from '@/components'
+import { PortfolioCardSingle, StaggeredTextContainer } from '@/components'
 
 export default function RealEstatePortfolioCard() {
     return (
         <section className="">
-            <div className="space-y-8 lg:space-y-5">
-                <div className="flex flex-col sm:flex-row justify-between space-y-8 xl:space-y-2 ">
+            <div className="">
+                <StaggeredTextContainer className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <PortfolioCardSingle
                         image="/carousel/carousel-1.png"
-                        title="Radiant -The new way of doing SOC"
-                        buttonText="Radiant company"
-                    />
-
-                    <PortfolioCardSingle
-                        image="/carousel/carousel-3.png"
-                        title="Radiant -The new way of doing SOC"
-                        buttonText="Radiant company"
-                    />
-                </div>
-
-                <div>
-                    <PortfolioCardSingle
-                        image="/carousel/carousel-1.png"
-                        title="Radiant -The new way of doing SOC"
-                        buttonText="Radiant company"
-                        imageWidth="!w-full"
-                    />
-                </div>
-
-                <div className="flex flex-col sm:flex-row justify-between space-y-8 xl:space-y-2 ">
-                    <PortfolioCardSingle
-                        image="/carousel/carousel-3.png"
                         title="Radiant -The new way of doing SOC"
                         buttonText="Radiant company"
                     />
@@ -39,16 +16,43 @@ export default function RealEstatePortfolioCard() {
                         title="Radiant -The new way of doing SOC"
                         buttonText="Radiant company"
                     />
-                </div>
 
-                <div>
                     <PortfolioCardSingle
                         image="/carousel/carousel-1.png"
                         title="Radiant -The new way of doing SOC"
                         buttonText="Radiant company"
-                        imageWidth="!w-full"
                     />
-                </div>
+
+                    <PortfolioCardSingle
+                        image="/carousel/carousel-1.png"
+                        title="Radiant -The new way of doing SOC"
+                        buttonText="Radiant company"
+                    />
+
+                    <PortfolioCardSingle
+                        image="/carousel/carousel-1.png"
+                        title="Radiant -The new way of doing SOC"
+                        buttonText="Radiant company"
+                    />
+
+                    <PortfolioCardSingle
+                        image="/carousel/carousel-1.png"
+                        title="Radiant -The new way of doing SOC"
+                        buttonText="Radiant company"
+                    />
+
+                    <PortfolioCardSingle
+                        image="/carousel/carousel-1.png"
+                        title="Radiant -The new way of doing SOC"
+                        buttonText="Radiant company"
+                    />
+
+                    <PortfolioCardSingle
+                        image="/carousel/carousel-1.png"
+                        title="Radiant -The new way of doing SOC"
+                        buttonText="Radiant company"
+                    />
+                </StaggeredTextContainer>
             </div>
         </section>
     )

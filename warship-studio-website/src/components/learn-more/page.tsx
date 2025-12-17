@@ -16,6 +16,7 @@ export default function LearnMore() {
                         </>
                     }
                     buttonText="[ LEARN MORE ]"
+                    path="/services"
                 />
 
                 <LearnMoreCard
@@ -27,6 +28,7 @@ export default function LearnMore() {
                         </>
                     }
                     buttonText="[ LEARN MORE ]"
+                    path="/services"
                 />
 
                 <LearnMoreCard
@@ -38,6 +40,7 @@ export default function LearnMore() {
                         </>
                     }
                     buttonText="[ LEARN MORE ]"
+                    path="/services"
                 />
             </StaggeredTextContainer>
 
@@ -45,7 +48,7 @@ export default function LearnMore() {
 
             {/* SM / MOBILE */}
 
-            <div className="md:hidden flex flex-col space-y-10 sm:space-y-15 mt-40 sm:mt-50 [&>*]:border-[#E0E0E0] [&>*:last-child]:border-b-1 [&>*:first-child]:border-t-1">
+            <div className="md:hidden flex flex-col space-y-10 sm:space-y-15 [&>*]:border-[#E0E0E0] [&>*:last-child]:border-b-1 ">
                 <div className="pt-20">
                     <LearnMoreCard
                         subText="01."
@@ -56,6 +59,7 @@ export default function LearnMore() {
                             </>
                         }
                         buttonText="[ LEARN MORE ]"
+                        path="/services"
                     />
                 </div>
 
@@ -69,6 +73,7 @@ export default function LearnMore() {
                             </>
                         }
                         buttonText="[ LEARN MORE ]"
+                        path="/services"
                     />
                 </div>
 
@@ -82,6 +87,7 @@ export default function LearnMore() {
                             </>
                         }
                         buttonText="[ LEARN MORE ]"
+                        path="/services"
                     />
                 </div>
             </div>

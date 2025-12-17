@@ -25,10 +25,10 @@ export default function AnimateText({
         })
 
         gsap.from(split.lines, {
-            y: 100,
+            y: 50,
             opacity: 0,
             stagger: 0.05,
-            duration: 2,
+            duration: 1,
             ease: 'power2.out',
             scrollTrigger: {
                 trigger: textRef.current,

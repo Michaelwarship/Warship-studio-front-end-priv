@@ -1,9 +1,9 @@
-import { Button, AnimateText } from '@/components'
+import { AnimateText, StaggeredTextContainer } from '@/components'
 
 export default function WorkHero() {
     return (
         <section className="py-20 px-5 sm:px-10 md:px-5 md:py-20 lg:py-20 lg:px-20 xl:px-20 border-b border-[#E0E0E0]">
-            <div className="flex flex-col space-y-5 md:space-y-0 md:flex-row md:justify-between md:items-center ">
+            <StaggeredTextContainer className="flex flex-col space-y-5 md:space-y-0 md:flex-row md:justify-between md:items-center ">
                 <div className="space-y-3">
                     <AnimateText className="about-title font-geistMono text-[14px] md:text-[16px] text-[#969696] mb-3 md:mb-3 lg:mb-0 flex-1">
                         //ABOUT
@@ -25,7 +25,7 @@ export default function WorkHero() {
                         />
                     </div>
                 </div>
-            </div>
+            </StaggeredTextContainer>
         </section>
     )
 }

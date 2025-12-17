@@ -17,17 +17,17 @@ export default function WorkNavButton() {
         <section className="py-5 px-5 sm:px-5 md:px-5 lg:px-20 xl:px-20">
             <div className="flex flex-wrap gap-2 md:space-x-1 lg:space-x-5 py-10">
                 <WorkNavButtonSingle
-                    title="ALL"
+                    title="All"
                     onClick={() => setSelectedCategory('ALL')}
                     selected={selectedCategory === 'ALL'}
                 />
                 <WorkNavButtonSingle
-                    title="BRANDING"
+                    title="Branding"
                     onClick={() => setSelectedCategory('BRANDING')}
                     selected={selectedCategory === 'BRANDING'}
                 />
                 <WorkNavButtonSingle
-                    title="UNREAL ENGINE"
+                    title="Unreal Engine"
                     onClick={() => setSelectedCategory('UNREAL ENGINE')}
                     selected={selectedCategory === 'UNREAL ENGINE'}
                 />
@@ -37,14 +37,14 @@ export default function WorkNavButton() {
                     selected={selectedCategory === 'VFX'}
                 />
                 <WorkNavButtonSingle
-                    title="3D PRODUCT VISUALISATION"
+                    title="3d Product Visualisation"
                     onClick={() =>
                         setSelectedCategory('3D PRODUCT VISUALISATION')
                     }
                     selected={selectedCategory === '3D PRODUCT VISUALISATION'}
                 />
                 <WorkNavButtonSingle
-                    title="REAL ESTATE"
+                    title="Real Estate"
                     onClick={() => setSelectedCategory('REAL ESTATE')}
                     selected={selectedCategory === 'REAL ESTATE'}
                 />

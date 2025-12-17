@@ -18,7 +18,7 @@ export default function StudioTeamCard({
     return (
         <section>
             <div className="flex flex-col items-center space-y-1 md:space-y-1 lg:space-y-2">
-                <div className="bg-[#FAFBD4] w-[288px] h-[288px] sm:w-[200px] sm:h-[200px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] xl:w-[250px] xl:h-[250px] 2xl:w-[288px] 2xl:h-[288px] rounded-[5px] overflow-hidden group">
+                <div className="bg-[#FAFBD4] w-full aspect-[3/3] overflow-hidden rounded-[5px] overflow-hidden group">
                     <img
                         src={image}
                         alt={name}
@@ -26,7 +26,7 @@ export default function StudioTeamCard({
                     />
                 </div>
 
-                <p className="text-[#0A231D] text-[14px] md:text-[18px] tracking-[-1]">
+                <p className="text-[#0A231D] text-[14px] md:text-[18px] ">
                     {name}
                 </p>
                 <Button

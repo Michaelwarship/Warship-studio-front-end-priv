@@ -5,12 +5,14 @@ interface LearnMoreCardProps {
     subText: string
     title: ReactNode
     buttonText: string
+    path?: string
 }
 
 export default function LearnMoreCard({
     subText,
     title,
     buttonText,
+    path,
 }: LearnMoreCardProps) {
     return (
         <section>
@@ -21,7 +23,7 @@ export default function LearnMoreCard({
                     </p>
                 </AnimateText>
                 <AnimateText>
-                    <p className="about-title font-satoshi text-[25px] tracking-[-1] sm:text-[50px] lg:text-[55px] md:text-[30px] md:leading-10 lg:leading-14 text-[#0A231D] md:mt-3">
+                    <p className="about-title font-satoshi text-[25px] tracking-[-1] sm:text-[50px] lg:text-[55px] md:text-[30px] md:leading-8 lg:leading-14 text-[#0A231D] md:mt-3">
                         {title}
                     </p>
                 </AnimateText>
@@ -29,6 +31,9 @@ export default function LearnMoreCard({
                 <Button
                     title={buttonText}
                     className="bg-transparent !px-0 !py-0 text-[12px] text-black mt-4 md:mt-5 lg:mt-5"
+                    onClick={
+                        path ? () => (window.location.href = path) : undefined
+                    }
                 />
             </div>
         </section>

@@ -3,7 +3,7 @@ import { Button, AnimateText } from '@/components'
 export default function ServiceHero() {
     return (
         <section className="[&>*]:border-[#E0E0E0] [&>*]:border-b-1 mt-10">
-            <div className="space-y-0 px-5 pt-15 sm:pt-20 md:pt-30 pb-20 lg:px-20">
+            <div className="space-y-0 px-5 pt-15 sm:pt-20 md:pt-30 pb-20 sm:px-10 md:px-15 lg:px-20 xl:px-30 2xl:px-40">
                 <Button
                     title="LETS WORK"
                     className="text-[#969696] bg-transparent md:!text-[16px] !p-0 "
