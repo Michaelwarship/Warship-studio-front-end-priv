@@ -6,7 +6,7 @@ import {
 export default function LearnMore() {
     return (
         <section className="">
-            <StaggeredTextContainer className="hidden justify-center items-center md:flex border border-[#E0E0E0] [&>*]:border-[#E0E0E0] [&>*]:border-r [&>*]:border-t-0 [&>*:first-child]:border-l [&>*:last-child]:border-r-1">
+            <StaggeredTextContainer className="hidden justify-center items-center md:flex border border-t-0 border-[#E0E0E0] [&>*]:border-[#E0E0E0] [&>*]:border-r [&>*:first-child]:border-l [&>*:last-child]:border-r-1">
                 <LearnMoreCard
                     subText="01."
                     title={
@@ -48,7 +48,7 @@ export default function LearnMore() {
 
             {/* SM / MOBILE */}
 
-            <div className="md:hidden flex flex-col space-y-10 sm:space-y-15 [&>*]:border-[#E0E0E0] [&>*:last-child]:border-b-1 ">
+            <div className="md:hidden flex flex-col space-y-10 sm:space-y-15 [&>*]:border-[#E0E0E0]  [&>*:last-child]:border-b-1 ">
                 <div className="pt-20">
                     <LearnMoreCard
                         subText="01."

@@ -6,6 +6,7 @@ import {
     StudioVision,
     StudioPartners,
     Rating,
+    Freelance,
 } from '@/components'
 
 export default function Studio() {
@@ -13,9 +14,10 @@ export default function Studio() {
         <section>
             <div>
                 <StudioHero />
-                <StudioTeam />
                 <StudioVisionTeam />
-                <StudioCarousel />
+                <StudioTeam />
+                <Freelance />
+                {/* <StudioCarousel /> */}
                 <StudioVision />
                 <StudioPartners />
                 <Rating />

@@ -34,11 +34,6 @@ export default function StudioTeamCard({
                     className="!p-0 bg-transparent text-[#969696] !text-[9px] md:!text-[7px] lg:!text-[9px] xl:!text-[12px]"
                     hoverColor="none"
                 />
-
-                <div
-                    className="absolute inset-0 pointer-events-auto"
-                    onContextMenu={(e) => e.preventDefault()}
-                ></div>
             </div>
         </section>
     )

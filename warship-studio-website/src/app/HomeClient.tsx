@@ -6,6 +6,7 @@ import {
     AboutPage,
     Projects,
     Rating,
+    ProjectReel,
 } from '@/components'
 
 export default function HomeClient() {
@@ -14,6 +15,7 @@ export default function HomeClient() {
             <HeroSection />
             <LearnMore />
             <AboutPage />
+            <ProjectReel />
             <Projects />
             <Rating />
         </main>

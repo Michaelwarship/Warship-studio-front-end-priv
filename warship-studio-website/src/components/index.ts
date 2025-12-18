@@ -33,6 +33,7 @@ export { default as SubmitForm } from './(contact)/form/submitform/page'
 // STUDIO
 
 export { default as StudioHero } from './(studio)/hero/page'
+export { default as OurIdentity } from './(studio)/our-identity/page'
 export { default as StudioTeam } from './(studio)/team/page'
 export { default as StudioTeamCard } from './(studio)/team/team-card/page'
 export { default as StudioVisionTeam } from './(studio)/vision/vision-hero/page'
@@ -42,6 +43,12 @@ export { default as StudioVisionCard } from './(studio)/vision/card/section/page
 export { default as StudioVision } from './(studio)/vision/card/page'
 export { default as StudioPartners } from './(studio)/partners/page'
 export { default as StudioPartnerCard } from './(studio)/partners/single/page'
+export { default as Freelance } from './(studio)/freelance/page'
+
+//SLIDESHOW
+
+export { default as SlideShowCard } from './(studio)/slideshow/single/page'
+export { default as SlideShow } from './(studio)/slideshow/page'
 
 //Animation
 export { default as AnimateText } from './animate-text/page'
@@ -66,3 +73,12 @@ export { default as RealEstatePortfolioCard } from './(work)/portfolio-card/real
 
 //Active Link
 export { default as ActiveLink } from './active-link/page'
+
+//Home Page show reel
+
+export { default as ProjectReelCard } from './project-showreel/single/page'
+export { default as ProjectReel } from './project-showreel/page'
+
+//Video Embedded
+
+export { default as VideoEmbed } from './video-embed/page'

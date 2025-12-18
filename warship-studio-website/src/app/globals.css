@@ -13,6 +13,14 @@
     animation: scroll 90s linear infinite;
 }
 
+.pause-zone:hover .animate-scroll {
+    animation-play-state: paused;
+}
+
+.pause-zone:active .animate-scroll {
+    animation-play-state: paused;
+}
+
 :root {
     --font-satoshi: 'Satoshi', sans-serif;
     --font-geistMono: 'GeistMono', sans-serif;

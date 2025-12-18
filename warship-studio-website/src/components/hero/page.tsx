@@ -4,30 +4,32 @@ import {
     PartnersRow,
     AnimateText,
     StaggeredTextContainer,
+    VideoEmbed,
 } from '@/components'
 
 export default function HeroSection() {
     return (
-        <section>
+        <section className="">
             <div>
-                <StaggeredTextContainer className="relative">
-                    <div
-                        data-no-anim
-                        className="w-full h-152 flex items-center z-0 sm:h-200 lg:h-150 xl:h-160 2xl:h-190"
-                    >
-                        <img
-                            src="/hero.png"
-                            alt="hero-image"
-                            className="w-full h-full object-cover"
-                        />
+                <StaggeredTextContainer className="relative ">
+                    <div className="overflow-hidden ">
+                        <div
+                            data-no-anim
+                            className="w-full aspect-[16/9] overflow-hidden"
+                        >
+                            <VideoEmbed
+                                src="https://youtu.be/QtAB86I_kLs?t=7"
+                                className="absolute inset-0 w-full h-full object-cover pointer-events-none "
+                                // allow="autoplay; fullscreen"
+                            />
+                        </div>
                     </div>
-
                     {/*TEXT AND BUTTONS*/}
 
-                    <div className="absolute top-95 left-0 right-0 px-5 sm:top-120 md:top-115 lg:top-65 lg:px-20 2xl:top-100">
+                    <div className="absolute bottom-0 left-0 w-full px-5 sm:px-10 md:px-15 lg:px-20 xl:px-20 2xl:px-20 pb-30">
                         <div>
                             <AnimateText>
-                                <p className="text-[45px] text-[#0A231D] sm:text-[70px] leading-14 sm:leading-22 md:text-[85px] md:leading-25 lg:text-[70px] xl:text-[85px] 2xl:text-[85px]">
+                                <p className="text-[45px] text-[#ffffff] sm:text-[70px] leading-14 sm:leading-22 md:text-[85px] md:leading-25 lg:text-[70px] xl:text-[85px] 2xl:text-[85px]">
                                     Pushing Pixels <br />
                                     with precision.
                                 </p>
@@ -43,13 +45,13 @@ export default function HeroSection() {
                                 />
                             </div>
 
-                            <div className="hidden sm:block w-20 lg:w-30 mt-10 ">
+                            {/* <div className="hidden sm:block w-20 lg:w-30 mt-10 ">
                                 <img
                                     src="/warship-est.svg"
                                     alt="warship-est"
                                     className="w-full object-cover"
                                 />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </StaggeredTextContainer>

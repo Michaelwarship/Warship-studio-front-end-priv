@@ -23,7 +23,7 @@ export default function LearnMoreCard({
                     </p>
                 </AnimateText>
                 <AnimateText>
-                    <p className="about-title font-satoshi text-[25px] tracking-[-1] sm:text-[50px] lg:text-[55px] md:text-[30px] md:leading-8 lg:leading-14 text-[#0A231D] md:mt-3">
+                    <p className="about-title font-satoshi text-[25px] tracking-[-1] sm:text-[50px] lg:text-[50px] xl:text-[55px] md:text-[30px] md:leading-8 lg:leading-14 text-[#0A231D] md:mt-3">
                         {title}
                     </p>
                 </AnimateText>
