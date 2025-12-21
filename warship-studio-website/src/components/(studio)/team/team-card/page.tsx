@@ -22,7 +22,7 @@ export default function StudioTeamCard({
                     <img
                         src={image}
                         alt={name}
-                        className={`${className} ${style} w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500 ease-in-out`}
+                        className={`${className} ${style} w-full h-full object-cover object-top grayscale `}
                     />
                 </div>
 

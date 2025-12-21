@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 
 export default function Cursor() {
     useEffect(() => {
-        const colors = ['#FF3600', '#FFAA00', '#0A231D', '#07E272', '#000000']
+        const colors = ['#07E272']
 
         const randomColor = () =>
             colors[Math.floor(Math.random() * colors.length)]

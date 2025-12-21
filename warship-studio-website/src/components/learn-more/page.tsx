@@ -6,43 +6,91 @@ import {
 export default function LearnMore() {
     return (
         <section className="">
-            <StaggeredTextContainer className="hidden justify-center items-center md:flex border border-t-0 border-[#E0E0E0] [&>*]:border-[#E0E0E0] [&>*]:border-r [&>*:first-child]:border-l [&>*:last-child]:border-r-1">
-                <LearnMoreCard
-                    subText="01."
-                    title={
-                        <>
-                            <span className="text-[#AEAEAE]">Strategy</span>{' '}
-                            <br /> R&D
-                        </>
-                    }
-                    buttonText="[ LEARN MORE ]"
-                    path="/services"
-                />
+            <div className="image-fade-right flex space-x-2 overflow-x-auto scrollbar-none h-fit border border-t-0 border-[#E0E0E0] md:pl-15 lg:pl-7 xl:pl-20 2xl:pl-20">
+                <StaggeredTextContainer className="hidden justify-center items-center md:flex border-0 [&>*]:border-[#E0E0E0] [&>*]:border-r [&>*:first-child]:border-l">
+                    <LearnMoreCard
+                        subText="01."
+                        title={
+                            <>
+                                <span className="text-[#AEAEAE]">Strategy</span>{' '}
+                                <br /> R&D
+                            </>
+                        }
+                        buttonText="[ LEARN MORE ]"
+                        path="/services"
+                    />
+                    <LearnMoreCard
+                        subText="02."
+                        title={
+                            <>
+                                <span className="text-[#AEAEAE]">Creative</span>{' '}
+                                <br /> Direction
+                            </>
+                        }
+                        buttonText="[ LEARN MORE ]"
+                        path="/services"
+                    />
+                    <LearnMoreCard
+                        subText="03."
+                        title={
+                            <>
+                                <span className="text-[#AEAEAE]">Vfx &</span>{' '}
+                                <br /> Animation
+                            </>
+                        }
+                        buttonText="[ LEARN MORE ]"
+                        path="/services"
+                    />
 
-                <LearnMoreCard
-                    subText="02."
-                    title={
-                        <>
-                            <span className="text-[#AEAEAE]">Creative</span>{' '}
-                            <br /> Direction
-                        </>
-                    }
-                    buttonText="[ LEARN MORE ]"
-                    path="/services"
-                />
+                    <LearnMoreCard
+                        subText="04."
+                        title={
+                            <>
+                                <span className="text-[#AEAEAE]">Strategy</span>{' '}
+                                <br /> R&D
+                            </>
+                        }
+                        buttonText="[ LEARN MORE ]"
+                        path="/services"
+                    />
 
-                <LearnMoreCard
-                    subText="03."
-                    title={
-                        <>
-                            <span className="text-[#AEAEAE]">Vfx &</span> <br />{' '}
-                            Animation
-                        </>
-                    }
-                    buttonText="[ LEARN MORE ]"
-                    path="/services"
-                />
-            </StaggeredTextContainer>
+                    <LearnMoreCard
+                        subText="05."
+                        title={
+                            <>
+                                <span className="text-[#AEAEAE]">Strategy</span>{' '}
+                                <br /> R&D
+                            </>
+                        }
+                        buttonText="[ LEARN MORE ]"
+                        path="/services"
+                    />
+
+                    <LearnMoreCard
+                        subText="06."
+                        title={
+                            <>
+                                <span className="text-[#AEAEAE]">Strategy</span>{' '}
+                                <br /> R&D
+                            </>
+                        }
+                        buttonText="[ LEARN MORE ]"
+                        path="/services"
+                    />
+
+                    <LearnMoreCard
+                        subText="07."
+                        title={
+                            <>
+                                <span className="text-[#AEAEAE]">Strategy</span>{' '}
+                                <br /> R&D
+                            </>
+                        }
+                        buttonText="[ LEARN MORE ]"
+                        path="/services"
+                    />
+                </StaggeredTextContainer>
+            </div>
 
             {/* <div className="hidden md:block w-full h-0.5 bg-[#E0E0E0]"></div> */}
 

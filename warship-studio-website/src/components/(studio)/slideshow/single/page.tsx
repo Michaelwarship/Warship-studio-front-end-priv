@@ -17,7 +17,7 @@ export default function SlideShowCard({ videoUrl }: CardProps) {
                     xl:w-[504px] 
                     2xl:w-[604px] 
                     aspect-[16/9]
-                    bg-[#999999]
+                    bg-[#ffffff]
                     rounded-[5px]
                     overflow-hidden
                 "

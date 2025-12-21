@@ -4,14 +4,12 @@ interface CardProps {
     tagLine: string
     videoUrl?: string
     title: string
-    buttonText: string
 }
 
 export default function ProjectReelCard({
     tagLine,
     videoUrl,
     title,
-    buttonText,
 }: CardProps) {
     return (
         <section>
@@ -30,10 +28,10 @@ export default function ProjectReelCard({
                     <p className="text-[28px] md:text-[28px] lg:text-[20px] xl:text-[28px] text-[#0A231D]">
                         {title}
                     </p>
-                    <Button
+                    {/* <Button
                         title={buttonText}
                         className="bg-transparent !p-0"
-                    />
+                    /> */}
                 </div>
             </div>
         </section>

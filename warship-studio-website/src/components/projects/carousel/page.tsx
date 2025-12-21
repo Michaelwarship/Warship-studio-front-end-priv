@@ -21,7 +21,7 @@ export default function Carousel() {
             <StaggeredTextContainer
                 disabled
                 ref={carouselRef}
-                className="flex space-x-2 overflow-x-auto scrollbar-none h-fit  "
+                className="flex space-x-2 overflow-x-auto scrollbar-none h-fit image-fade-right"
             >
                 <CarouselCard
                     image="/carousel/carousel-1.png"
@@ -74,7 +74,7 @@ export default function Carousel() {
                 <p className="hidden order-2 sm:order-1 pl-5 pt-5 sm:pl-0 sm:pt-0 sm:text-[30px] md:text-[30px] xl:text-[40px] text-[#969696] font-geistMono">
                     03/09
                 </p>
-                <div className="absolute top-5 sm:right-6 lg:top-[-300] xl:top-[-350] 2xl:top-[-400] -translate-y-1/2 z-[100]  mt-5 order-1 sm:order-2">
+                <div className="absolute top-5 sm:right-6 lg:top-[-300] xl:top-[-350] 2xl:top-[-400] -translate-y-1/2 z-[0]  mt-5 order-1 sm:order-2">
                     <div className="flex space-x-2">
                         <Button
                             title={
@@ -96,3 +96,5 @@ export default function Carousel() {
         </div>
     )
 }
+
+// lg:top-[-300] xl:top-[-350] 2xl:top-[-400]

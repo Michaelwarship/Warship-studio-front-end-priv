@@ -21,7 +21,7 @@ export default function Footer() {
 
                             <div className="w-32">
                                 <img
-                                    src="logo-animation/white gif_1.gif"
+                                    src="/logo-animation/white_gif_1.gif"
                                     className="w-full h-full object-cover mb-5"
                                 />
                             </div>

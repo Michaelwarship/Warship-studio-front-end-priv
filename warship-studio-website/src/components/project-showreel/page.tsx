@@ -9,25 +9,21 @@ export default function ProjectReel() {
                         videoUrl="https://vimeo.com/1090477326"
                         tagLine="3d garment design"
                         title="Fashion"
-                        buttonText="[ VIEW PROJECTS ]"
                     />
                     <ProjectReelCard
                         videoUrl="https://vimeo.com/1090477326"
                         tagLine="COSMETIC design"
                         title="Health & Beauty"
-                        buttonText="[ VIEW PROJECTS ]"
                     />
                     <ProjectReelCard
                         videoUrl="https://vimeo.com/1090477326"
                         tagLine="3d visualization"
                         title="Product viz"
-                        buttonText="[ VIEW PROJECTS ]"
                     />
                     <ProjectReelCard
                         videoUrl="https://vimeo.com/1090477326"
                         tagLine="APP animation"
                         title="SAAS"
-                        buttonText="[ VIEW PROJECTS ]"
                     />
                 </div>
             </div>

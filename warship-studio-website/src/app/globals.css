@@ -42,6 +42,10 @@ body {
     background-color: white;
 }
 
+/* * {
+    outline: 1px solid gold;
+} */
+
 /* html,
 body {
     cursor:
@@ -86,3 +90,19 @@ body {
 }
 
 /* grid-template-columns: repeat(auto-fit, minmax(Xpx, 1fr)) */
+
+/* CSS IMAGE MASKING */
+.image-fade-bottom {
+    mask-image: linear-gradient(to bottom, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent);
+}
+
+.image-fade-left {
+    mask-image: linear-gradient(to left, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to left, black 10%, transparent);
+}
+
+.image-fade-right {
+    mask-image: linear-gradient(to right, black 70%, transparent);
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent);
+}

@@ -2,6 +2,8 @@ import { AnimateText } from '@/components'
 
 interface ButtonProps {
     title: React.ReactNode
+    type?: string
+    disabled?: React.ReactNode
     className?: string
     onClick?: () => void
     hoverColor?: string
@@ -12,6 +14,8 @@ export default function Button({
     className,
     onClick,
     hoverColor = 'bg-[#FAFBD4]',
+    type,
+    disabled,
 }: ButtonProps) {
     return (
         <section>

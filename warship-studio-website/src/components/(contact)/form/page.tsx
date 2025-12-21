@@ -95,7 +95,7 @@ export default function ContactForm() {
                     <p className="text-[#0A231D] text-[20px] md:text-[16px] hyphens-auto break-words">
                         Cadastral Zone 2 Gwarimpa 1 AMAC, Abuja
                     </p>
-                    <p className="text-[#0A231D] text-[20px] mt-20 md:text-[16px] hyphens-auto break-words">
+                    <p className="text-[#0A231D] text-[20px]  md:text-[16px] hyphens-auto break-words">
                         30 N Gould St, Sheridan, WY 82801, USA
                     </p>
                 </div>

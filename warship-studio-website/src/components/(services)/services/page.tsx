@@ -58,7 +58,7 @@ export default function ServiceSection() {
                             </span>
                         </>
                     }
-                    buttonText="[ WATCH REEL ]"
+                    reel="https://vimeo.com/1090477326/2e6caf9f71?fl=ip&fe=ec"
                 />
 
                 <ServiceCard
@@ -115,7 +115,7 @@ export default function ServiceSection() {
                             </span>
                         </>
                     }
-                    buttonText="[ WATCH REEL ]"
+                    reel="https://vimeo.com/1090477326/2e6caf9f71?fl=ip&fe=ec"
                 />
 
                 <ServiceCard
@@ -172,7 +172,7 @@ export default function ServiceSection() {
                             </span>
                         </>
                     }
-                    buttonText="[ WATCH REEL ]"
+                    reel="https://vimeo.com/1090477326/2e6caf9f71?fl=ip&fe=ec"
                 />
 
                 <ServiceCard
@@ -229,7 +229,7 @@ export default function ServiceSection() {
                             </span>
                         </>
                     }
-                    buttonText="[ WATCH REEL ]"
+                    reel="https://vimeo.com/1090477326/2e6caf9f71?fl=ip&fe=ec"
                 />
 
                 <ServiceCard
@@ -302,7 +302,7 @@ export default function ServiceSection() {
                             </span>
                         </>
                     }
-                    buttonText="[ WATCH REEL ]"
+                    reel="https://vimeo.com/1090477326/2e6caf9f71?fl=ip&fe=ec"
                 />
             </StaggeredTextContainer>
         </section>

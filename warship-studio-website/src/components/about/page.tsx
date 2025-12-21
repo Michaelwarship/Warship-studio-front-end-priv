@@ -17,24 +17,26 @@ export default function AboutPage() {
                 </AnimateText>
 
                 <div className="flex-1">
-                    <AnimateText>
-                        <p className="about-title hyphens-auto break-words text-[#0A231D] text-[30px] font-satoshi leading-9">
-                            Warship Studios is a digital-first,
-                            multidisciplinary creative agency that helps
-                            forward-thinking brands make their innovation
-                            visually compelling.
-                            <span className="text-[#AEAEAE]">
-                                We brand world leading brands.
-                            </span>
-                        </p>
-                    </AnimateText>
+                    <p className="about-title hyphens-auto break-words text-[#0A231D] text-[30px] font-satoshi leading-9">
+                        Warship Studios is a digital-first, multidisciplinary
+                        creative agency that helps forward-thinking brands make
+                        their innovation visually compelling.
+                        <span className="text-[#AEAEAE]">
+                            We brand world leading brands.
+                        </span>
+                    </p>
 
                     <div className="flex space-x-5 mt-10">
                         <Link href="https://calendly.com/warshipstudioz/30min">
                             {' '}
                             <Button title="BOOK A STRATEGY CALL" className="" />
                         </Link>
-                        <Button title="GET A QUOTE" className="bg-[#E0E0E0]" />
+                        <Link href="https://docs.google.com/document/d/15lGHtvIyffGhGfAdhqWKCNx9rmqL8ChG0YHoF2__kr8/export?format=docx">
+                            <Button
+                                title="GET A QUOTE"
+                                className="bg-[#E0E0E0]"
+                            />
+                        </Link>
                     </div>
 
                     <StaggeredTextContainer className="mt-10 flex flex-col items-center ml-15 space-y-5 mt-20 [&>*]:border-[#E0E0E0] [&>*:nth-child(1)]:border-b [&>*:nth-child(3)]:border-b [&>*:nth-child(5)]:border-b md:[&>*]:border-0 md:flex-row md:ml-0 md:space-y-0 md:space-x-30 md:mt-20 lg:space-x-50">

@@ -14,7 +14,7 @@ export default function WorkNavButton() {
     const [selectedCategory, setSelectedCategory] = useState('ALL')
 
     return (
-        <section className="py-5 px-5 sm:px-5 md:px-5 lg:px-20 xl:px-20">
+        <section className="py-5 px-5 sm:px-10 md:px-15 lg:px-20 xl:px-30 2xl:px-40">
             <div className="flex flex-wrap gap-2 md:space-x-1 lg:space-x-5 py-10">
                 <WorkNavButtonSingle
                     title="All"

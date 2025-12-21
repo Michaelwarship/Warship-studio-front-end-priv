@@ -17,11 +17,12 @@ export default function Navbar() {
                 <Link href="/">
                     <div className="w-15 relative z-[1000]">
                         <Image
-                            src="./warship.svg"
+                            src="/warship.svg"
                             alt="logo"
                             width={100}
                             height={100}
                             className="relative z-[1000]"
+                            onClick={() => setIsOpen(false)}
                         />
                     </div>
                 </Link>
@@ -31,7 +32,10 @@ export default function Navbar() {
                     <div>
                         <AnimateText disabled={true}>
                             <button
-                                onClick={() => router.push(Route.CONTACT)}
+                                onClick={() => {
+                                    setIsOpen(false)
+                                    router.push(Route.CONTACT)
+                                }}
                                 className="bg-black text-white text-[12px] px-5 py-2  rounded-[5px]"
                             >
                                 Let's Talk!
@@ -78,21 +82,21 @@ export default function Navbar() {
                             <Link
                                 href={Route.SERVICES}
                                 onClick={() => setIsOpen(false)}
-                                className="font-geistMono text-[50px] sm:text-[90px] font-light"
+                                className="font-geistMono text-[#0A231D] text-[50px] sm:text-[90px] font-light"
                             >
                                 SERVICES
                             </Link>
                             <Link
                                 href={Route.STUDIO}
                                 onClick={() => setIsOpen(false)}
-                                className="font-geistMono text-[50px] sm:text-[90px] font-light"
+                                className="font-geistMono text-[#0A231D] text-[50px] sm:text-[90px] font-light"
                             >
                                 STUDIO
                             </Link>
                             <Link
                                 href={Route.WORK}
                                 onClick={() => setIsOpen(false)}
-                                className="font-geistMono text-[50px] sm:text-[90px] font-light"
+                                className="font-geistMono text-[#0A231D] text-[50px] sm:text-[90px] font-light"
                             >
                                 WORK
                             </Link>
@@ -103,13 +107,13 @@ export default function Navbar() {
                             >
                                 MOCKUP
                             </Link> */}
-                            <Link
+                            {/* <Link
                                 href={Route.BLOG}
                                 onClick={() => setIsOpen(false)}
-                                className="font-geistMono text-[50px] sm:text-[90px] font-light"
+                                className="font-geistMono text-[#0A231D] text-[50px] sm:text-[90px] font-light"
                             >
                                 BLOG
-                            </Link>
+                            </Link> */}
                             {/* <Link
                                 href={Route.SHOP}
                                 onClick={() => setIsOpen(false)}
@@ -126,19 +130,19 @@ export default function Navbar() {
                 <div className="hidden lg:flex lg:flex-row lg:space-x-7 xl:space-x-10">
                     <ActiveLink
                         href={Route.SERVICES}
-                        className="animated-link font-geistMono text-[14px] font-light"
+                        className="animated-link text-[#0A231D] font-geistMono text-[14px] font-light"
                     >
                         SERVICES
                     </ActiveLink>
                     <ActiveLink
                         href={Route.STUDIO}
-                        className="animated-link font-geistMono text-[14px] font-light"
+                        className="animated-link text-[#0A231D] font-geistMono text-[14px] font-light"
                     >
                         STUDIO
                     </ActiveLink>
                     <ActiveLink
                         href={Route.WORK}
-                        className="animated-link font-geistMono text-[14px] font-light"
+                        className="animated-link text-[#0A231D] font-geistMono text-[14px] font-light"
                     >
                         WORK
                     </ActiveLink>
@@ -148,12 +152,12 @@ export default function Navbar() {
                     >
                         MOCKUP
                     </ActiveLink> */}
-                    <ActiveLink
+                    {/* <ActiveLink
                         href={Route.BLOG}
-                        className="animated-link font-geistMono text-[14px] font-light"
+                        className="animated-link text-[#0A231D] font-geistMono text-[14px] font-light"
                     >
                         BLOG
-                    </ActiveLink>
+                    </ActiveLink> */}
                     {/* <ActiveLink
                         href={Route.SHOP}
                         className="animated-link font-geistMono text-[14px] font-light"
@@ -162,7 +166,7 @@ export default function Navbar() {
                     </ActiveLink> */}
                     <ActiveLink
                         href={Route.CONTACT}
-                        className="animated-link font-geistMono text-[14px] font-light"
+                        className="animated-link text-[#0A231D] font-geistMono text-[14px] font-light"
                     >
                         LET'S TALK
                     </ActiveLink>

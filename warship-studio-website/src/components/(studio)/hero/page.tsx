@@ -9,7 +9,7 @@ import {
 export default function StudioHero() {
     return (
         <section className="">
-            <StaggeredTextContainer className="px-5 py-10 lg:px-20 lg:pt-30 lg:pb-10 border-b-1 border-[#E0E0E0]">
+            <StaggeredTextContainer className="px-5 py-10 sm:px-10 md:px-15 lg:px-20 lg:pt-30 lg:pb-10 border-b-1 border-[#E0E0E0]">
                 <p className="font-geistMono text-[14px] md:text-[16px] text-[#969696] mb-3 md:mb-3 lg:mb-0 flex-1">
                     //OUR IDENTITY
                 </p>

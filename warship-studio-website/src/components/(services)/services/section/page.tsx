@@ -1,6 +1,13 @@
-import { Button, AnimateText, StaggeredTextContainer } from '@/components'
+'use client'
+
+import { useState } from 'react'
+import {
+    Button,
+    AnimateText,
+    StaggeredTextContainer,
+    VideoEmbed,
+} from '@/components'
 import { ReactNode } from 'react'
-// import Link from 'next/link'
 
 interface CardProps {
     number: string
@@ -12,7 +19,7 @@ interface CardProps {
     serviceFour: ReactNode
     serviceFive?: ReactNode
     serviceSix?: ReactNode
-    buttonText: string
+    reel?: string
     // path: string
 }
 
@@ -26,9 +33,12 @@ export default function ServiceCard({
     serviceFour,
     serviceFive,
     serviceSix,
-    buttonText,
+
+    reel,
     // path,
 }: CardProps) {
+    const [showVideo, setShowVideo] = useState(false)
+
     return (
         <section className=" [&>*]:border-[#E0E0E0] [&>*]:border-b-1 ">
             <StaggeredTextContainer className="space-y-10 md:space-y-7 lg:space-y-0 lg:flex justify-between px-5 py-15 sm:px-10 md:px-15 lg:px-20 xl:px-30 2xl:px-40 md:py-30">
@@ -44,11 +54,9 @@ export default function ServiceCard({
                 </div>
 
                 <div className="space-y-7 flex-1">
-                    <AnimateText>
-                        <p className="hyphens-auto break-words text-[25px] sm:leading-[35px] md:leading-[35px] lg:leading-[30px] xl:leading-[40px] 2xl:leading-[40px] md:text-[30px] lg:text-[25px] xl:text-[30px] text-[#0A231D]">
-                            {description}
-                        </p>
-                    </AnimateText>
+                    <p className="hyphens-auto break-words text-[25px] sm:leading-[35px] md:leading-[35px] lg:leading-[30px] xl:leading-[40px] 2xl:leading-[40px] md:text-[30px] lg:text-[25px] xl:text-[30px] text-[#0A231D]">
+                        {description}
+                    </p>
 
                     <div className="space-y-2 md:space-y-7 md:space-y-0">
                         <div className="space-y-2 md:flex md:space-x-5 md:space-y-0">
@@ -92,9 +100,20 @@ export default function ServiceCard({
                     </div>
 
                     <Button
-                        title={buttonText}
+                        onClick={() => setShowVideo((prev) => !prev)}
+                        title={showVideo ? '[ Hide Video ]' : '[ Watch Reel ]'}
                         className="text-[#0A231D] bg-transparent !p-0"
                     />
+
+                    {showVideo && (
+                        <div className="mt-8 aspect-video w-full animate-fadeIn">
+                            <VideoEmbed
+                                src={reel}
+                                controls
+                                className="w-full h-full"
+                            />
+                        </div>
+                    )}
                 </div>
             </StaggeredTextContainer>
         </section>

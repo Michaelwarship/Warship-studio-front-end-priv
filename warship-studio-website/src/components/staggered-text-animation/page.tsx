@@ -31,7 +31,7 @@ const StaggeredTextContainer = forwardRef<HTMLDivElement, Props>(
             gsap.from(items, {
                 y: 80,
                 opacity: 0,
-                stagger: 0.4,
+                stagger: 0.2,
                 duration: 1,
                 ease: 'power2.out',
                 scrollTrigger: {

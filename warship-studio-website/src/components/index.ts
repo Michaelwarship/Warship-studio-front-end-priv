@@ -82,3 +82,7 @@ export { default as ProjectReel } from './project-showreel/page'
 //Video Embedded
 
 export { default as VideoEmbed } from './video-embed/page'
+
+//Gif loader
+
+export { default as IntroOverlay } from './gif-loader/page'
