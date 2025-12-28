@@ -20,6 +20,7 @@ export default function WorkHero() {
 
                     <div className="w-full aspect-video">
                         <VideoEmbed
+                            controls
                             src="https://vimeo.com/1090477326/2e6caf9f71?fl=ip&fe=ec"
                             className="w-full h-full object-cover"
                         />

@@ -96,25 +96,25 @@ export default function Footer() {
                             <div className="flex flex-col md:flex-row space-x-8 md:space-x-5">
                                 <ActiveLink
                                     href="/"
-                                    className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
+                                    className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] animated-link"
                                 >
                                     HOME
                                 </ActiveLink>
                                 <ActiveLink
                                     href="/services"
-                                    className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
+                                    className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] animated-link"
                                 >
                                     SERVICES
                                 </ActiveLink>
                                 <ActiveLink
                                     href="/studio"
-                                    className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
+                                    className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] animated-link"
                                 >
                                     STUDIO
                                 </ActiveLink>
                                 <ActiveLink
                                     href="/work"
-                                    className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
+                                    className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] animated-link"
                                 >
                                     WORK
                                 </ActiveLink>
@@ -141,7 +141,7 @@ export default function Footer() {
                                 </ActiveLink> */}
                                 <ActiveLink
                                     href="/contact"
-                                    className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
+                                    className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] animated-link"
                                 >
                                     CONTACT US
                                 </ActiveLink>

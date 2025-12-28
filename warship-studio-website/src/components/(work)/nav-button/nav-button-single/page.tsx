@@ -14,7 +14,7 @@ export default function WorkNavButtonSingle({
     return (
         <button
             onClick={onClick}
-            className={`bg-[#F3F3F3] whitespace-nowrap font-geistMono text-[10px] lg:text-[12px] 2xl:text-[14px] w-fit px-3 py-2 rounded-md cursor-pointer ${selected ? 'bg-green-500 text-white' : 'text-[#0A231D]'}`}
+            className={`bg-[#F3F3F3] whitespace-nowrap font-geistMono text-[10px] lg:text-[12px] 2xl:text-[14px] w-fit px-3 py-2 rounded-[5px] cursor-pointer ${selected ? 'bg-green-500 text-white' : 'text-[#0A231D]'}`}
         >
             {title}
         </button>

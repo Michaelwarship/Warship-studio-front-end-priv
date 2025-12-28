@@ -7,6 +7,7 @@ import {
     Projects,
     Rating,
     ProjectReel,
+    OurStudio,
 } from '@/components'
 
 export default function HomeClient() {
@@ -18,6 +19,7 @@ export default function HomeClient() {
             <ProjectReel />
             <Projects />
             <Rating />
+            <OurStudio />
         </main>
     )
 }

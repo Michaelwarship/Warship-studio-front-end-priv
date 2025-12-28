@@ -14,9 +14,9 @@ export { default as LearnMoreCard } from './learn-more/section/page'
 export { default as PartnersRow } from './partners/page'
 export { default as CarouselCard } from './projects/carousel-card/page'
 export { default as Carousel } from './projects/carousel/page'
-
 export { default as RatingCard } from './rating/section/page'
 export { default as SingleCard } from './partners/single/page'
+export { default as OurStudio } from './our-studio/page'
 
 // SERVICES
 
