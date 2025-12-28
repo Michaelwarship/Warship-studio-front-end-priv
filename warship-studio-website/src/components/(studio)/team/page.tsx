@@ -57,7 +57,7 @@ export default function StudioTeam() {
                         <StudioTeamCard
                             name="Barrister Dorcas"
                             buttonText="[ LEGAL ADVISOR ]"
-                            image="/team/lawyer.png"
+                            image="/team/advisor.png"
                         />
                     </StaggeredTextContainer>
                 </div>
