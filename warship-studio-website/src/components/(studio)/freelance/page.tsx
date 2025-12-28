@@ -14,7 +14,7 @@ export default function Freelance() {
                         ever growing pool of the world’s best freelancers. for
                         every project, we handpick each artist to strategically
                         match the strength needed for the challenges ahead,{' '}
-                        <span className="text-[#E0E0E0]">
+                        <span className="text-[#AEAEAE]">
                             and build a team as dynamic and powerful as our work
                         </span>
                     </p>

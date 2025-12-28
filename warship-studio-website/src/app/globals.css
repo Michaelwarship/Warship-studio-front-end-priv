@@ -106,3 +106,8 @@ body {
     mask-image: linear-gradient(to right, black 70%, transparent);
     -webkit-mask-image: linear-gradient(to right, black 70%, transparent);
 }
+
+::selection {
+    color: #0a231d;
+    background-color: #07e272;
+}
