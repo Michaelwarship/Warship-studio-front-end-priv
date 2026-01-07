@@ -4,9 +4,16 @@ interface VideoEmbedProps {
     src?: string
     className?: string
     controls?: boolean
+    no_autoplay?: boolean
 }
 
-function toEmbedUrl(url: string, controls: boolean): string {
+function toEmbedUrl(
+    url: string,
+    controls: boolean,
+    noAutoplay: boolean
+): string {
+    const autoplay = noAutoplay ? 0 : 1
+
     // YouTube
     if (url.includes('youtu')) {
         let id = ''
@@ -26,7 +33,7 @@ function toEmbedUrl(url: string, controls: boolean): string {
             }
         }
 
-        return `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&controls=${
+        return `https://www.youtube.com/embed/${id}?autoplay=${autoplay}&mute=${autoplay ? 1 : 0}&controls=${
             controls ? 1 : 0
         }&playsinline=1&loop=1&playlist=${id}`
     }
@@ -38,11 +45,11 @@ function toEmbedUrl(url: string, controls: boolean): string {
 
         // Background-style (no controls)
         if (!controls) {
-            return `https://player.vimeo.com/video/${id}?background=1&autoplay=1&muted=1&loop=1`
+            return `https://player.vimeo.com/video/${id}?background=1&autoplay=${autoplay}&muted=1&loop=1`
         }
 
         // Normal Vimeo player with controls
-        return `https://player.vimeo.com/video/${id}`
+        return `https://player.vimeo.com/video/${id}?autoplay=${autoplay}`
     }
 
     return url
@@ -52,12 +59,13 @@ export default function VideoEmbed({
     src,
     className = '',
     controls = false,
+    no_autoplay = false,
 }: VideoEmbedProps) {
     if (!src) return null
 
     return (
         <iframe
-            src={toEmbedUrl(src, controls)}
+            src={toEmbedUrl(src, controls, no_autoplay)}
             className={`w-full h-full ${controls ? '' : 'pointer-events-none'} ${className}`}
             allow="autoplay; encrypted-media; picture-in-picture"
             allowFullScreen

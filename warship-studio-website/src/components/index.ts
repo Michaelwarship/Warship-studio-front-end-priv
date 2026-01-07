@@ -64,12 +64,7 @@ export { default as WorkHero } from './(work)/hero/page'
 export { default as WorkNavButton } from './(work)/nav-button/page'
 export { default as WorkNavButtonSingle } from './(work)/nav-button/nav-button-single/page'
 export { default as PortfolioCardSingle } from './(work)/portfolio-card/single/page'
-export { default as AllPortfolioCard } from './(work)/portfolio-card/all/page'
-export { default as BrandingPortfolioCard } from './(work)/portfolio-card/branding/page'
-export { default as UnrealEnginePortfolioCard } from './(work)/portfolio-card/unreal-engine/page'
-export { default as VfxPortfolioCard } from './(work)/portfolio-card/vfx/page'
-export { default as ProductPortfolioCard } from './(work)/portfolio-card/3d-product-visualization/page'
-export { default as RealEstatePortfolioCard } from './(work)/portfolio-card/real-estate/page'
+export { default as WorkSection } from './(work)/nav-button/page'
 
 //Active Link
 export { default as ActiveLink } from './active-link/page'
@@ -86,3 +81,13 @@ export { default as VideoEmbed } from './video-embed/page'
 //Gif loader
 
 export { default as IntroOverlay } from './gif-loader/page'
+
+//STRAPI IMAGE
+export { default as StrapiImage } from './strapi-image/page'
+export { default as MediaImages } from './media-images/page'
+
+//STRAPI VIDEO
+export { default as StrapiVideo } from './strapi-video/page'
+
+//STRAPI PORTFOLIO REQ
+export { default as StrapiPortfolioReq } from './strapi-portfolio-req/page'

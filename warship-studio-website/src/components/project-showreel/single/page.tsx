@@ -2,7 +2,7 @@ import { Button, VideoEmbed } from '@/components'
 
 interface CardProps {
     tagLine: string
-    videoUrl?: string
+    videoUrl?: React.ReactNode
     title: string
 }
 
@@ -15,10 +15,11 @@ export default function ProjectReelCard({
         <section>
             <div className="space-y-5">
                 <div className="relative w-[300px] sm:w-[350px] md:w-[300px] lg:w-[200px] xl:w-[250px] 2xl:w-[303px] aspect-[6/6] md:aspect-[10/12] lg:aspect-[10/12] xl:aspect-[10/12] 2xl:aspect-[10/12] bg-[#999999] rounded-[5px] overflow-hidden">
-                    <VideoEmbed
+                    {/* <VideoEmbed
                         src={videoUrl}
                         className="scale-200 md:scale-250 lg:scale-250"
-                    />
+                    /> */}
+                    {videoUrl}
                 </div>
 
                 <div className="space-y-2">

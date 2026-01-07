@@ -1,6 +1,25 @@
-import { StudioTeamCard, StaggeredTextContainer } from '@/components'
+'use client'
+import {
+    StudioTeamCard,
+    StaggeredTextContainer,
+    StrapiImage,
+} from '@/components'
+import { useState, useEffect } from 'react'
+import { api } from '@/lib/api'
+import { getStrapiVideo } from '@/lib/getStrapiVideo'
 
 export default function StudioTeam() {
+    const [teams, setTeams] = useState<any[]>([])
+
+    useEffect(() => {
+        api.get('/teams', { params: { populate: '*' } })
+            .then((res) => {
+                setTeams(res.data.data)
+            })
+            .catch(console.error)
+    }, [])
+
+    if (!teams.length) return null
     return (
         <section className="bg-[#F2FFF8] py-20 px-20 2xl:px-60 ">
             <div className="space-y-10">
@@ -11,55 +30,22 @@ export default function StudioTeam() {
                 </StaggeredTextContainer>
 
                 <div className="">
-                    <StaggeredTextContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-                        <StudioTeamCard
-                            name="Michael Warship"
-                            buttonText="[ FOUNDER, CREATIVE DIRECTOR ]"
-                            image="/team/warship.png"
-                        />
-
-                        <StudioTeamCard
-                            name="Mignonette Benjure"
-                            buttonText="[ CREATIVE WRITTER ]"
-                            image="/team/dibang.png"
-                        />
-
-                        <StudioTeamCard
-                            name="Daniel SAKA"
-                            buttonText="[ ART DIRECTOR ]"
-                            image="/team/saka.png"
-                        />
-
-                        <StudioTeamCard
-                            name="Fola Kolawole "
-                            buttonText="[ DIRECTOR OF PHOTOGRAPHY ]"
-                            image="/team/fola.png"
-                        />
-
-                        <StudioTeamCard
-                            name="Kosy Lilian"
-                            buttonText="[ PROJECT MANAGER ]"
-                            image="/team/lilian.png"
-                        />
-
-                        <StudioTeamCard
-                            name="Shalom Emmanuel"
-                            buttonText="[ ACCOUNT MANAGER ]"
-                            image="/team/sharon.png"
-                        />
-
-                        <StudioTeamCard
-                            name="Eddie Achibong"
-                            buttonText="[ BUSINESS DEV.MANAGER ]"
-                            image="/team/warship.png"
-                        />
-
-                        <StudioTeamCard
-                            name="Barrister Dorcas"
-                            buttonText="[ LEGAL ADVISOR ]"
-                            image="/team/advisor.png"
-                        />
-                    </StaggeredTextContainer>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                        {teams.map((member) => (
+                            <StudioTeamCard
+                                key={member.id}
+                                image={
+                                    <StrapiImage
+                                        image={member.Image}
+                                        format="medium"
+                                        className="grayscale"
+                                    />
+                                }
+                                name={member.Name}
+                                buttonText={member.Role}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

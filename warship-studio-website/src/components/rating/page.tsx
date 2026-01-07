@@ -1,10 +1,18 @@
 'use client'
-import { RatingCard, StaggeredTextContainer, Button } from '@/components'
+import {
+    RatingCard,
+    StaggeredTextContainer,
+    Button,
+    StrapiImage,
+} from '@/components'
 import { useRef } from 'react'
 import { FaArrowLeftLong, FaArrowRightLong } from 'react-icons/fa6'
+import { useState, useEffect } from 'react'
+import { api } from '@/lib/api'
 
 export default function Rating() {
     const carouselRef = useRef<HTMLDivElement>(null)
+    const [review, setReview] = useState<any[]>([])
 
     const scrollCarousel = (direction: 'left' | 'right') => {
         if (!carouselRef.current) return
@@ -17,163 +25,41 @@ export default function Rating() {
         })
     }
 
+    useEffect(() => {
+        api.get('/reviews', { params: { populate: '*' } })
+            .then((res) => {
+                setReview(res.data.data)
+            })
+            .catch(console.error)
+    }, [])
+
+    if (!review.length) return null
+
     return (
         <section className="relative">
             <div
                 ref={carouselRef}
                 className="md:flex space-x-2 overflow-x-auto scrollbar-none h-fit border border-[#E0E0E0] md:image-fade-right"
             >
-                <StaggeredTextContainer
-                    disabled
-                    className="flex flex-col space-y-15 sm:space-y-10 md:space-y-0 md:flex-row justify-center border-0 [&>*]:border-[#E0E0E0] [&>*]:border-r"
-                >
-                    <RatingCard
-                        title={
-                            <>
-                                Igor Chygrynov
-                                <br />{' '}
-                                <span className="text-[#AEAEAE]">
-                                    CEO at Bitoftrade
-                                </span>
-                            </>
-                        }
-                        description={
-                            <>
-                                "We like their work method, design skills, and
-                                the way they communicate."
-                            </>
-                        }
-                        image="/profile/user-1.png"
-                        buttonText="[ BITOFTRADE ]"
-                    />
-                    <div className="md:hidden w-200 border-b"></div>
-                    <RatingCard
-                        title={
-                            <>
-                                Igor Chygrynov
-                                <br />{' '}
-                                <span className="text-[#AEAEAE]">
-                                    CEO at Bitoftrade
-                                </span>
-                            </>
-                        }
-                        description={
-                            <>
-                                "The most impressive thing about the company is
-                                their sensibility to UI/UX, which is very clean
-                                and user-friendly."
-                            </>
-                        }
-                        image="/profile/user-1.png"
-                        buttonText="[ BITOFTRADE ]"
-                    />
-                    <div className="md:hidden w-200 border-b"></div>
-                    <RatingCard
-                        title={
-                            <>
-                                Igor Chygrynov
-                                <br />{' '}
-                                <span className="text-[#AEAEAE]">
-                                    CEO at Bitoftrade
-                                </span>
-                            </>
-                        }
-                        description={
-                            <>
-                                "The most impressive thing about the company is
-                                their sensibility to UI/UX, which is very clean
-                                and user-friendly."
-                            </>
-                        }
-                        image="/profile/user-1.png"
-                        buttonText="[ BITOFTRADE ]"
-                    />
-                    <div className="md:hidden w-200 border-b"></div>
-                    <RatingCard
-                        title={
-                            <>
-                                Igor Chygrynov
-                                <br />{' '}
-                                <span className="text-[#AEAEAE]">
-                                    CEO at Bitoftrade
-                                </span>
-                            </>
-                        }
-                        description={
-                            <>
-                                "The most impressive thing about the company is
-                                their sensibility to UI/UX, which is very clean
-                                and user-friendly."
-                            </>
-                        }
-                        image="/profile/user-1.png"
-                        buttonText="[ BITOFTRADE ]"
-                    />
-                    <div className="md:hidden w-200 border-b"></div>
-
-                    <RatingCard
-                        title={
-                            <>
-                                Igor Chygrynov
-                                <br />{' '}
-                                <span className="text-[#AEAEAE]">
-                                    CEO at Bitoftrade
-                                </span>
-                            </>
-                        }
-                        description={
-                            <>
-                                "We like their work method, design skills, and
-                                the way they communicate."
-                            </>
-                        }
-                        image="/profile/user-1.png"
-                        buttonText="[ BITOFTRADE ]"
-                    />
-                    <div className="md:hidden w-200 border-b"></div>
-
-                    <RatingCard
-                        title={
-                            <>
-                                Igor Chygrynov
-                                <br />{' '}
-                                <span className="text-[#AEAEAE]">
-                                    CEO at Bitoftrade
-                                </span>
-                            </>
-                        }
-                        description={
-                            <>
-                                "We like their work method, design skills, and
-                                the way they communicate."
-                            </>
-                        }
-                        image="/profile/user-1.png"
-                        buttonText="[ BITOFTRADE ]"
-                    />
-                    <div className="md:hidden w-200 border-b"></div>
-
-                    <RatingCard
-                        title={
-                            <>
-                                Igor Chygrynov
-                                <br />{' '}
-                                <span className="text-[#AEAEAE]">
-                                    CEO at Bitoftrade
-                                </span>
-                            </>
-                        }
-                        description={
-                            <>
-                                "We like their work method, design skills, and
-                                the way they communicate."
-                            </>
-                        }
-                        image="/profile/user-1.png"
-                        buttonText="[ BITOFTRADE ]"
-                    />
+                <div className="flex flex-col space-y-15 sm:space-y-10 md:space-y-0 md:flex-row justify-center border-0 [&>*]:border-[#E0E0E0] [&>*]:border-r">
+                    {review.map((review) => (
+                        <RatingCard
+                            key={review.id}
+                            title={review.Title}
+                            description={review.Review}
+                            buttonText={review.Company}
+                            name={review.Name}
+                            image={
+                                <StrapiImage
+                                    image={review.Picture}
+                                    format="thumbnail"
+                                    className="w-full h-full object-cover"
+                                />
+                            }
+                        />
+                    ))}
                     <div className="md:hidden w-200"></div>
-                </StaggeredTextContainer>
+                </div>
             </div>
 
             <div className="pointer-events-none absolute top-0 right-0 h-full w-[500px] bg-gradient-to-l from-white to-transparent hidden md:block" />

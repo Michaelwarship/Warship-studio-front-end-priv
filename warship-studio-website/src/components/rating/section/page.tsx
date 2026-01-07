@@ -4,8 +4,9 @@ import { Button, AnimateText } from '@/components'
 interface CardProps {
     buttonText: string
     description: ReactNode
-    image: string
+    image: React.ReactNode
     title: ReactNode
+    name: string
 }
 
 export default function RatingCard({
@@ -13,6 +14,7 @@ export default function RatingCard({
     description,
     image,
     buttonText,
+    name,
 }: CardProps) {
     return (
         <section>
@@ -32,16 +34,13 @@ export default function RatingCard({
                 <div className="flex space-x-3 md:flex-col md:space-y-5 md:space-x-0">
                     <AnimateText>
                         <div className="w-12 h-12 md:w-15 md:h-15 rounded-[50px] overflow-hidden">
-                            <img
-                                src={image}
-                                alt={buttonText}
-                                className="w-full h-full object-cover"
-                            />
+                            {image}
                         </div>
                     </AnimateText>
 
                     <AnimateText>
-                        <p className=" lg:text-[22px] text-[#0A231D]">
+                        <p className=" lg:text-[22px] text-[#0A231D]">{name}</p>
+                        <p className=" lg:text-[22px] text-[#AFAFAF]">
                             {title}
                         </p>
                     </AnimateText>

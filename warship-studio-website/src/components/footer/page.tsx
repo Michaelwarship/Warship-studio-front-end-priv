@@ -6,7 +6,7 @@ import { Subscribe, LetsTalk, AnimateText, ActiveLink } from '@/components'
 export default function Footer() {
     // const = [selected, setSelected] = useState(false);
     return (
-        <footer className="px-5 sm:px-10 md:px-15 lg:px-20 xl:px-20 py-10">
+        <footer className="px-5 sm:px-10 md:px-15 lg:px-20 xl:px-20 ">
             <LetsTalk />
             <div className="mt-40 mb-15 flex flex-col lg:flex-row md:space-x-30 lg:space-x-15 xl:space-x-50 2xl:space-x-80">
                 <div className="space-y-10 md:space-y-5">

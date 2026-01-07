@@ -7,6 +7,8 @@ interface ButtonProps {
     className?: string
     onClick?: () => void
     hoverColor?: string
+    textColor?: string
+    link?: string
 }
 
 export default function Button({
@@ -14,6 +16,7 @@ export default function Button({
     className,
     onClick,
     hoverColor = 'bg-[#FAFBD4]',
+    textColor = 'text-[#000000]',
     type,
     disabled,
 }: ButtonProps) {
@@ -24,9 +27,13 @@ export default function Button({
                     onClick={onClick}
                     className={`${className} group relative whitespace-nowrap font-geistMono bg-[#07E272] px-4 py-3 text-[12px] sm:px-7 sm:py-3 sm:text-[14px] rounded-[5px] uppercase cursor-pointer`}
                 >
-                    <span className="relative z-1 uppercase">{title}</span>
                     <span
-                        className={`${hoverColor} absolute inset-0 rounded-[4px] scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100`}
+                        className={`relative z-1 uppercase group-hover:text-[#0A231D]`}
+                    >
+                        {title}
+                    </span>
+                    <span
+                        className={`${hoverColor}  absolute inset-0 rounded-[4px] scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100`}
                     ></span>
                 </button>
             </AnimateText>

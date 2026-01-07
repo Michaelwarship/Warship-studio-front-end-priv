@@ -1,7 +1,7 @@
 'use client'
 import { Button } from '@/components'
 interface CardProps {
-    image: string
+    image: React.ReactNode
     name: string
     buttonText: string
     className?: string
@@ -19,11 +19,7 @@ export default function StudioTeamCard({
         <section>
             <div className="flex flex-col items-center space-y-1 md:space-y-1 lg:space-y-2">
                 <div className="bg-[#FAFBD4] w-full aspect-[3/3] overflow-hidden rounded-[5px] overflow-hidden group">
-                    <img
-                        src={image}
-                        alt={name}
-                        className={`${className} ${style} w-full h-full object-cover object-top grayscale `}
-                    />
+                    {image}
                 </div>
 
                 <p className="text-[#0A231D] text-[14px] md:text-[18px] ">

@@ -1,8 +1,29 @@
 'use client'
-import { Button, PartnersRow, AnimateText, VideoEmbed } from '@/components'
+import {
+    Button,
+    PartnersRow,
+    AnimateText,
+    VideoEmbed,
+    StrapiImage,
+    StrapiVideo,
+} from '@/components'
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import { api } from '@/lib/api'
 
 export default function HeroSection() {
+    const [heroVideo, setHeroVideo] = useState<any>(null)
+
+    useEffect(() => {
+        api.get('home-page', { params: { populate: '*' } })
+            .then((res) => {
+                setHeroVideo(res.data.data)
+            })
+            .catch(console.error)
+    }, [])
+
+    if (!heroVideo) return null
+
     return (
         <section>
             <div
@@ -10,19 +31,26 @@ export default function HeroSection() {
                 className="relative w-full h-[100vh] min-h-[700px] max-h-[900px] overflow-hidden bg-black"
             >
                 {/* <VideoEmbed
-                    src="https://vimeo.com/227896840"
-                    className="block absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                    src={heroVideo.Hero_Video.url}
+                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                 /> */}
 
-                <video
+                {/* <video
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                    src="/video/hero.mp4"
+                    src={heroVideo.Hero_Video.url}
                     autoPlay
                     muted
                     loop
                     playsInline
                     preload="metadata"
-                />
+                /> */}
+
+                {heroVideo?.Hero_Video && (
+                    <StrapiVideo
+                        video={heroVideo.Hero_Video.url}
+                        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                    />
+                )}
 
                 <div className="absolute inset-0 bg-black/20"></div>
 

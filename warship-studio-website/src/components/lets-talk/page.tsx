@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function LetsTalk() {
     return (
-        <section className="mt-40">
+        <section className="mt-30">
             <div className="flex justify-between">
                 <div className=" ">
                     <Button

@@ -41,11 +41,13 @@
 // }
 
 import { Button, AnimateText, StaggeredTextContainer } from '@/components'
+import Link from 'next/link'
+import React from 'react'
 
 interface CardProps {
     title: string
     buttonText: string
-    image: string
+    image: React.ReactNode
 }
 
 export default function PortfolioCardSingle({
@@ -56,11 +58,7 @@ export default function PortfolioCardSingle({
     return (
         <div className="cursor-pointer w-full">
             <div className="w-full aspect-[6/3] overflow-hidden bg-[#999999] rounded-[5px]">
-                <img
-                    src={image}
-                    alt={title}
-                    className="w-full h-full object-cover"
-                />
+                {image}
             </div>
 
             <div className="mt-3">

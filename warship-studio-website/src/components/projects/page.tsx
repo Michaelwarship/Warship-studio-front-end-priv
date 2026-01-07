@@ -1,3 +1,4 @@
+'use client'
 import {
     Button,
     CarouselCard,
@@ -5,8 +6,12 @@ import {
     StaggeredTextContainer,
     Carousel,
 } from '@/components'
+import { Route } from '@/lib/route'
+import { useRouter } from 'next/navigation'
 
 export default function Projects() {
+    const router = useRouter()
+
     return (
         <section className="pt-5 py-20 ">
             <div className="px-5 md:px-10 md:px-10 lg:px-20">
@@ -14,6 +19,8 @@ export default function Projects() {
                     title="[ VIEW MORE PROJECTS ]"
                     className="bg-transparent lg:text-[14px] !p-0 mb-5"
                     hoverColor="bg-none"
+                    onClick={() => router.push(Route.WORK)}
+                    textColor="text-black"
                 />
             </div>
 

@@ -1,10 +1,22 @@
 'use client'
-import { useRef } from 'react'
+
+import { useRef, useEffect, useState } from 'react'
 import { CarouselCard, StaggeredTextContainer, Button } from '@/components'
 import { FaArrowLeftLong, FaArrowRightLong } from 'react-icons/fa6'
+import { api } from '@/lib/api'
+import { StrapiImage } from '@/components'
+import Link from 'next/link'
 
 export default function Carousel() {
     const carouselRef = useRef<HTMLDivElement>(null)
+    const [projects, setProjects] = useState<any[]>([])
+
+    // Fetch portfolios from Strapi
+    useEffect(() => {
+        api.get('/portfolios', { params: { populate: '*' } })
+            .then((res) => setProjects(res.data.data))
+            .catch(console.error)
+    }, [])
 
     const scrollCarousel = (direction: 'left' | 'right') => {
         if (!carouselRef.current) return
@@ -16,85 +28,51 @@ export default function Carousel() {
             behavior: 'smooth',
         })
     }
+
     return (
-        <div className="">
-            <StaggeredTextContainer
-                disabled
+        <div className="relative">
+            {/* Carousel */}
+            <div
                 ref={carouselRef}
                 className="flex space-x-2 overflow-x-auto scrollbar-none h-fit image-fade-right"
             >
-                <CarouselCard
-                    image="/carousel/carousel-1.png"
-                    title="All in one hashit design"
-                    description="[ Hash it explainer ]"
-                />
-                <CarouselCard
-                    image="/carousel/carousel-2.png"
-                    title="All in one hashit design"
-                    description="[ Hash it explainer ]"
-                />
-                <CarouselCard
-                    image="/carousel/carousel-3.png"
-                    title="All in one hashit design"
-                    description="[ Hash it explainer ]"
-                />
-                <CarouselCard
-                    image="/carousel/carousel-3.png"
-                    title="All in one hashit design"
-                    description="[ Hash it explainer ]"
-                />
-                <CarouselCard
-                    image="/carousel/carousel-3.png"
-                    title="All in one hashit design"
-                    description="[ Hash it explainer ]"
-                />
-                <CarouselCard
-                    image="/carousel/carousel-3.png"
-                    title="All in one hashit design"
-                    description="[ Hash it explainer ]"
-                />
-                <CarouselCard
-                    image="/carousel/carousel-3.png"
-                    title="All in one hashit design"
-                    description="[ Hash it explainer ]"
-                />
-                <CarouselCard
-                    image="/carousel/carousel-2.png"
-                    title="All in one hashit design"
-                    description="[ Hash it explainer ]"
-                />
-                <CarouselCard
-                    image="/carousel/carousel-1.png"
-                    title="All in one hashit design"
-                    description="[ Hash it explainer ]"
-                />
-            </StaggeredTextContainer>
+                {projects.map((project) => (
+                    <Link
+                        key={project.id}
+                        href={`/work/portfolio/${project.id}`}
+                    >
+                        <CarouselCard
+                            image={
+                                <StrapiImage
+                                    image={project.Thumbnail}
+                                    format="large"
+                                    className="w-full h-full object-cover"
+                                />
+                            }
+                            title={project.Title}
+                            description={project.Company}
+                        />
+                    </Link>
+                ))}
+            </div>
 
-            <StaggeredTextContainer className="relative order-2 flex items-center sm:flex-col pl-5 sm:pr-10 sm:pl-0 sm:space-y-45 md:pr-5 lg:pr-10 md:space-y-35 lg:space-y-57 xl:space-y-67 2xl:space-y-75">
-                <p className="hidden order-2 sm:order-1 pl-5 pt-5 sm:pl-0 sm:pt-0 sm:text-[30px] md:text-[30px] xl:text-[40px] text-[#969696] font-geistMono">
-                    03/09
-                </p>
-                <div className="absolute top-5 sm:right-6 lg:top-[-300] xl:top-[-350] 2xl:top-[-400] -translate-y-1/2 z-[0]  mt-5 order-1 sm:order-2">
-                    <div className="flex space-x-2">
-                        <Button
-                            title={
-                                <FaArrowLeftLong className="text-[#0A231D] lg:text-[25px]" />
-                            }
-                            onClick={() => scrollCarousel('left')}
-                            className="bg-[#F2F2F2] px-5 py-5 sm:!px-4 sm:!py-4 md:px-4 md:py-4 lg:px-5 lg:py-5"
-                        />
-                        <Button
-                            title={
-                                <FaArrowRightLong className="text-[#0A231D] lg:text-[25px]" />
-                            }
-                            onClick={() => scrollCarousel('right')}
-                            className="bg-[#F2F2F2] px-5 py-5 sm:!px-4 sm:!py-4 md:px-4 md:py-4 lg:px-5 lg:py-5"
-                        />
-                    </div>
-                </div>
-            </StaggeredTextContainer>
+            {/* Navigation Arrows */}
+            <div className="absolute top-5 right-5 flex space-x-2 z-10">
+                <Button
+                    title={
+                        <FaArrowLeftLong className="text-[#0A231D] lg:text-[25px]" />
+                    }
+                    onClick={() => scrollCarousel('left')}
+                    className="bg-[#F2F2F2] px-5 py-5 sm:!px-4 sm:!py-4 md:px-4 md:py-4 lg:px-5 lg:py-5"
+                />
+                <Button
+                    title={
+                        <FaArrowRightLong className="text-[#0A231D] lg:text-[25px]" />
+                    }
+                    onClick={() => scrollCarousel('right')}
+                    className="bg-[#F2F2F2] px-5 py-5 sm:!px-4 sm:!py-4 md:px-4 md:py-4 lg:px-5 lg:py-5"
+                />
+            </div>
         </div>
     )
 }
-
-// lg:top-[-300] xl:top-[-350] 2xl:top-[-400]

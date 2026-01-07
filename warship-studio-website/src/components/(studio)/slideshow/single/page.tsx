@@ -1,7 +1,8 @@
 import { VideoEmbed } from '@/components'
+import React from 'react'
 
 interface CardProps {
-    videoUrl?: string
+    videoUrl?: React.ReactNode
 }
 
 export default function SlideShowCard({ videoUrl }: CardProps) {
@@ -10,7 +11,7 @@ export default function SlideShowCard({ videoUrl }: CardProps) {
             <div
                 className="
                     relative
-                    w-[300px]
+                    w-[400px]
                     sm:w-[400px]
                     md:w-[300px] 
                     lg:w-[404px] 
@@ -22,7 +23,7 @@ export default function SlideShowCard({ videoUrl }: CardProps) {
                     overflow-hidden
                 "
             >
-                <VideoEmbed src={videoUrl} />
+                {videoUrl}
             </div>
         </section>
     )
