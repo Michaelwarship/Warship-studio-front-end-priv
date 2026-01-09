@@ -58,7 +58,7 @@ export default function HeroSection() {
                     <div>
                         <p className="text-[45px] text-white sm:text-[70px] md:text-[85px] lg:text-[70px] xl:text-[85px] leading-14 sm:leading-22 md:leading-25">
                             Pushing Pixels <br />
-                            with precision.
+                            with Precision.
                         </p>
                     </div>
 

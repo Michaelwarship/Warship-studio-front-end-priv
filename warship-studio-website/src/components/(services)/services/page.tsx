@@ -17,12 +17,12 @@ export default function ServiceSection() {
                     }
                     description={
                         <>
-                            Our design services seamlessly blend beauty and{' '}
-                            practicality,{' '}
+                            Warship Studios helps brand see the bigger picture
+                            and bring it to life.
                             <span className="text-[#AEAEAE]">
-                                delivering digital experiences that captivate{' '}
-                                your audience while propelling your business to
-                                new heights.
+                                {''} Our creative direction ensures every idea,
+                                visual, and motion aligns with your brand's
+                                purpose
                             </span>
                         </>
                     }
@@ -74,12 +74,12 @@ export default function ServiceSection() {
                     }
                     description={
                         <>
-                            Our design services seamlessly blend beauty and{' '}
-                            practicality,{' '}
+                            Warhsip studios would meet your imagination with
+                            perfect execution.{' '}
                             <span className="text-[#AEAEAE]">
-                                delivering digital experiences that captivate{' '}
-                                your audience while propelling your business to
-                                new heights.
+                                We create visuals that compulsates autention:
+                                from 3D animation and motion graphics to
+                                cinmatic visual effects.
                             </span>
                         </>
                     }
@@ -119,81 +119,25 @@ export default function ServiceSection() {
                 />
 
                 <ServiceCard
-                    number="04"
+                    number="03"
                     title={
                         <>
-                            Strategy
+                            End-to-End
                             <br />
                             <span className="text-[#0A231D] font-satoshi">
-                                R&D
+                                Production
                             </span>
                         </>
                     }
                     description={
                         <>
-                            Our design services seamlessly blend beauty and{' '}
-                            practicality,{' '}
+                            We handle everything from the first idea to the
+                            final delivery. Strategy, Scripting, design
+                            animation, and post production, all under one roof.{' '}
                             <span className="text-[#AEAEAE]">
-                                delivering digital experiences that captivate{' '}
-                                your audience while propelling your business to
-                                new heights.
-                            </span>
-                        </>
-                    }
-                    serviceOne={
-                        <>
-                            01.{' '}
-                            <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
-                            </span>
-                        </>
-                    }
-                    serviceTwo={
-                        <>
-                            02.{' '}
-                            <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
-                            </span>
-                        </>
-                    }
-                    serviceThree={
-                        <>
-                            03.{' '}
-                            <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
-                            </span>
-                        </>
-                    }
-                    serviceFour={
-                        <>
-                            04.{' '}
-                            <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
-                            </span>
-                        </>
-                    }
-                    reel="https://vimeo.com/1090477326/2e6caf9f71?fl=ip&fe=ec"
-                />
-
-                <ServiceCard
-                    number="04"
-                    title={
-                        <>
-                            Branding &
-                            <br />
-                            <span className="text-[#0A231D] font-satoshi">
-                                Design
-                            </span>
-                        </>
-                    }
-                    description={
-                        <>
-                            Our design services seamlessly blend beauty and{' '}
-                            practicality,{' '}
-                            <span className="text-[#AEAEAE]">
-                                delivering digital experiences that captivate{' '}
-                                your audience while propelling your business to
-                                new heights.
+                                Our End-to-End proves keeps things seamlessly
+                                efficient & stress-free while ensuring the final
+                                results meet the highest creative standards
                             </span>
                         </>
                     }
@@ -239,18 +183,18 @@ export default function ServiceSection() {
                             Branding &
                             <br />
                             <span className="text-[#0A231D] font-satoshi">
-                                Design
+                                Web Design
                             </span>
                         </>
                     }
                     description={
                         <>
-                            Our design services seamlessly blend beauty and{' '}
-                            practicality,{' '}
+                            We create cohesive brand experiences that feel
+                            intentionaland authtentic.{' '}
                             <span className="text-[#AEAEAE]">
-                                delivering digital experiences that captivate{' '}
-                                your audience while propelling your business to
-                                new heights.
+                                Our goal is simple: to give your brand a clear
+                                personality and a strong visual voice that
+                                stands out everywhere it shows up.
                             </span>
                         </>
                     }
@@ -281,22 +225,6 @@ export default function ServiceSection() {
                     serviceFour={
                         <>
                             04.{' '}
-                            <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
-                            </span>
-                        </>
-                    }
-                    serviceFive={
-                        <>
-                            05.{' '}
-                            <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
-                            </span>
-                        </>
-                    }
-                    serviceSix={
-                        <>
-                            06.{' '}
                             <span className="text-[#0A231D] font-satoshi">
                                 Web & Mob apps
                             </span>

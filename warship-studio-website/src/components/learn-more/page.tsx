@@ -12,8 +12,8 @@ export default function LearnMore() {
                         subText="01."
                         title={
                             <>
-                                <span className="text-[#AEAEAE]">Strategy</span>{' '}
-                                <br /> R&D
+                                <span className="text-[#AEAEAE]">Creative</span>{' '}
+                                <br /> Direction
                             </>
                         }
                         buttonText="[ LEARN MORE ]"
@@ -23,8 +23,8 @@ export default function LearnMore() {
                         subText="02."
                         title={
                             <>
-                                <span className="text-[#AEAEAE]">Creative</span>{' '}
-                                <br /> Direction
+                                <span className="text-[#AEAEAE]">Vfx &</span>{' '}
+                                <br /> Animation
                             </>
                         }
                         buttonText="[ LEARN MORE ]"
@@ -34,8 +34,10 @@ export default function LearnMore() {
                         subText="03."
                         title={
                             <>
-                                <span className="text-[#AEAEAE]">Vfx &</span>{' '}
-                                <br /> Animation
+                                <span className="text-[#AEAEAE]">
+                                    End-to-End
+                                </span>{' '}
+                                <br /> Production
                             </>
                         }
                         buttonText="[ LEARN MORE ]"
@@ -46,44 +48,10 @@ export default function LearnMore() {
                         subText="04."
                         title={
                             <>
-                                <span className="text-[#AEAEAE]">Strategy</span>{' '}
-                                <br /> R&D
-                            </>
-                        }
-                        buttonText="[ LEARN MORE ]"
-                        path="/services"
-                    />
-
-                    <LearnMoreCard
-                        subText="05."
-                        title={
-                            <>
-                                <span className="text-[#AEAEAE]">Strategy</span>{' '}
-                                <br /> R&D
-                            </>
-                        }
-                        buttonText="[ LEARN MORE ]"
-                        path="/services"
-                    />
-
-                    <LearnMoreCard
-                        subText="06."
-                        title={
-                            <>
-                                <span className="text-[#AEAEAE]">Strategy</span>{' '}
-                                <br /> R&D
-                            </>
-                        }
-                        buttonText="[ LEARN MORE ]"
-                        path="/services"
-                    />
-
-                    <LearnMoreCard
-                        subText="07."
-                        title={
-                            <>
-                                <span className="text-[#AEAEAE]">Strategy</span>{' '}
-                                <br /> R&D
+                                <span className="text-[#AEAEAE]">
+                                    Branding &
+                                </span>{' '}
+                                <br /> Web Design
                             </>
                         }
                         buttonText="[ LEARN MORE ]"
@@ -102,8 +70,8 @@ export default function LearnMore() {
                         subText="01."
                         title={
                             <>
-                                <span className="text-[#AEAEAE]">Strategy</span>{' '}
-                                R&D
+                                <span className="text-[#AEAEAE]">Creative</span>{' '}
+                                Direction
                             </>
                         }
                         buttonText="[ LEARN MORE ]"
@@ -116,8 +84,24 @@ export default function LearnMore() {
                         subText="02."
                         title={
                             <>
-                                <span className="text-[#AEAEAE]">Creative</span>{' '}
-                                Direction
+                                <span className="text-[#AEAEAE]">Vfx &</span>{' '}
+                                Animation
+                            </>
+                        }
+                        buttonText="[ LEARN MORE ]"
+                        path="/services"
+                    />
+                </div>
+
+                <div>
+                    <LearnMoreCard
+                        subText="03."
+                        title={
+                            <>
+                                <span className="text-[#AEAEAE]">
+                                    End-to-End
+                                </span>{' '}
+                                Production
                             </>
                         }
                         buttonText="[ LEARN MORE ]"
@@ -127,11 +111,13 @@ export default function LearnMore() {
 
                 <div className="pb-20">
                     <LearnMoreCard
-                        subText="03."
+                        subText="04."
                         title={
                             <>
-                                <span className="text-[#AEAEAE]">Vfx &</span>{' '}
-                                Animation
+                                <span className="text-[#AEAEAE]">
+                                    Branding &
+                                </span>{' '}
+                                Web Design
                             </>
                         }
                         buttonText="[ LEARN MORE ]"

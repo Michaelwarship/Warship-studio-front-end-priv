@@ -25,7 +25,7 @@ export default function StudioTeam() {
             <div className="space-y-10">
                 <StaggeredTextContainer className="text-center ">
                     <p className="text-[20px] md:text-[30px] tracking-[-1]">
-                        The Warship team
+                        The Warship Team
                     </p>
                 </StaggeredTextContainer>
 

@@ -6,7 +6,7 @@ import { Button } from '@/components'
 
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
-export default function SubmitForm() {
+export default function ContactForm() {
     const [status, setStatus] = useState<Status>('idle')
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -17,7 +17,8 @@ export default function SubmitForm() {
             const form = e.currentTarget
             const formData = new FormData(form)
 
-            const templateParams = {
+            // Collect data from form
+            const formParams = {
                 full_name: formData.get('full_name')?.toString() || '',
                 company: formData.get('company')?.toString() || '',
                 email: formData.get('email')?.toString() || '',
@@ -26,17 +27,34 @@ export default function SubmitForm() {
                 message: formData.get('message')?.toString() || '',
             }
 
-            await emailjs.send(
+            // 1️⃣ Send the message to the company
+            const sendToCompany = emailjs.send(
                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-                templateParams,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, // template for company
+                formParams,
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
             )
+
+            // 2️⃣ Send acknowledgment to the user (EmailJS template handles the message)
+            const acknowledgmentParams = {
+                full_name: formParams.full_name,
+                email: formParams.email, // the recipient variable in EmailJS template
+            }
+
+            const sendToUser = emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_ACK_TEMPLATE_ID!, // template for acknowledgment
+                acknowledgmentParams,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+            )
+
+            // Wait for both emails to finish
+            await Promise.all([sendToCompany, sendToUser])
 
             setStatus('success')
             form.reset()
         } catch (err) {
-            console.error('Submit error:', err)
+            console.error('Form submission error:', err)
             setStatus('error')
         }
     }
@@ -47,6 +65,7 @@ export default function SubmitForm() {
                 onSubmit={handleSubmit}
                 className="flex flex-col justify-center"
             >
+                {/* Full Name & Company */}
                 <div className="flex flex-col space-y-10 md:space-y-0 md:flex-row md:space-x-10">
                     <div className="flex flex-col">
                         <label className="text-[14px] font-geistMono text-[#0A231D]">
@@ -72,6 +91,7 @@ export default function SubmitForm() {
                     </div>
                 </div>
 
+                {/* Email */}
                 <div className="flex flex-col pt-8">
                     <label className="text-[14px] font-geistMono text-[#0A231D]">
                         [ EMAIL ]
@@ -85,6 +105,7 @@ export default function SubmitForm() {
                     />
                 </div>
 
+                {/* Service & Budget */}
                 <div className="flex flex-col space-y-10 md:space-y-0 md:flex-row md:space-x-10 pt-8">
                     <div className="flex flex-col">
                         <label className="text-[14px] font-geistMono text-[#0A231D]">
@@ -109,6 +130,7 @@ export default function SubmitForm() {
                     </div>
                 </div>
 
+                {/* Message */}
                 <div className="flex flex-col pt-8">
                     <label className="text-[14px] font-geistMono text-[#0A231D]">
                         [ YOUR MESSAGE ]
@@ -121,6 +143,7 @@ export default function SubmitForm() {
                     />
                 </div>
 
+                {/* Submit */}
                 <div className="pt-8">
                     <Button
                         type="submit"
@@ -132,14 +155,13 @@ export default function SubmitForm() {
                     />
                 </div>
 
-                {/* ✅ SUCCESS / ERROR MESSAGE */}
+                {/* Status messages */}
                 {status === 'success' && (
                     <p className="mt-4 text-[13px] text-green-600 font-geistMono">
                         Message sent successfully. We’ll get back to you
                         shortly.
                     </p>
                 )}
-
                 {status === 'error' && (
                     <p className="mt-4 text-[13px] text-red-600 font-geistMono">
                         Something went wrong. Please try again.

@@ -41,7 +41,7 @@ export default async function RootLayout({
             <body
                 className={`${satoshi.variable} ${geistMono.variable} antialiased`}
             >
-                {/* <IntroOverlay /> */}
+                <IntroOverlay />
                 <Cursor />
                 <ReactLenis root />
                 <Navbar />

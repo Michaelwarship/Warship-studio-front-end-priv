@@ -13,6 +13,9 @@
     animation: scroll 90s linear infinite;
 }
 
+.animate-scroll:hover {
+    animation-play-state: paused; /* pause on hover */
+}
 .pause-zone:hover .animate-scroll {
     animation-play-state: paused;
 }

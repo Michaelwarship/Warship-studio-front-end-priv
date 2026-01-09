@@ -24,7 +24,10 @@ export default function PartnersRow() {
                         <SingleCard
                             key={brand.id}
                             image={
-                                <StrapiImage image={brand.url} className="" />
+                                <StrapiImage
+                                    image={brand.url}
+                                    className="w-full h-full"
+                                />
                             }
                         />
                     ))}

@@ -11,14 +11,14 @@ export default function StudioVision() {
 
                 <div className="md:hidden w-200"></div>
                 <StudioVisionCard
-                    buttonText="CLIENT-CENTRIC APPROACH"
-                    description="We value open communication and feedback, ensuring that your initial goals for the project are fulfilled. Our clear and smooth process guarantees that you are always informed of our progress, promoting transparency every step of the way."
+                    buttonText="Directed by the founder"
+                    description="Every project we take on is personally overseen and managed by Michael Obiekwe, The founder and creative director of Warship Studios. We ensure that each detail aligns with our vision and standards, guaranteeing a seamless and tailored experience for our clients."
                 />
 
                 <div className="md:hidden w-200"></div>
                 <StudioVisionCard
-                    buttonText="CLIENT-CENTRIC APPROACH"
-                    description="We value open communication and feedback, ensuring that your initial goals for the project are fulfilled. Our clear and smooth process guarantees that you are always informed of our progress, promoting transparency every step of the way."
+                    buttonText="World-class talent"
+                    description="Each project has its own set of needs and requirements. Once we form the project artistic style and tone, we tailor a team of world-class artists, with the perfect mix of skills needed  for the project."
                 />
                 <div className="md:hidden w-200"></div>
             </StaggeredTextContainer>

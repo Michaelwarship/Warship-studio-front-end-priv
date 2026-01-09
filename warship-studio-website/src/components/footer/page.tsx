@@ -5,6 +5,8 @@ import { Subscribe, LetsTalk, AnimateText, ActiveLink } from '@/components'
 
 export default function Footer() {
     // const = [selected, setSelected] = useState(false);
+    const CURRENT_YEAR = new Date().getFullYear()
+
     return (
         <footer className="px-5 sm:px-10 md:px-15 lg:px-20 xl:px-20 ">
             <LetsTalk />
@@ -156,10 +158,11 @@ export default function Footer() {
                     href="#"
                     className="text-[#969696] font-geistMono text-[14px] md:text-[12px] lg:text-[14px]"
                 >
-                    All RIGHTS RESERVED © 2025 WARSHIP STUDIOS LTD{' '}
+                    All RIGHTS RESERVED © {CURRENT_YEAR} WARSHIP STUDIOS
+                    LTD{' '}
                 </Link>
                 <Link
-                    href="#"
+                    href="/terms/privacy-policy"
                     className="text-[#969696] font-geistMono text-[14px] md:text-[12px] lg:text-[14px] whitespace-nowrap"
                 >
                     PRIVACY POLICY{' '}
@@ -171,7 +174,7 @@ export default function Footer() {
                     COOKIES SETTINGS{' '}
                 </Link> */}
                 <Link
-                    href="#"
+                    href="/terms/cookie-policy"
                     className="text-[#969696] font-geistMono text-[14px] md:text-[12px] lg:text-[14px] whitespace-nowrap"
                 >
                     COOKIES POLICY{' '}

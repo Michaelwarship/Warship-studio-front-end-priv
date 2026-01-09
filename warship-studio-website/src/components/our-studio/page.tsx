@@ -21,10 +21,10 @@ export default function OurStudio() {
 
                 <div className="2xl:flex-1 space-y-5">
                     <p className="about-title hyphens-auto break-words text-[#0A231D] text-[30px] font-satoshi leading-9">
-                        Since 2022 we have been working with the biggest startup
-                        around the globe,
+                        Since 2019, we have worked with some of the world's
+                        leading startups, powered by a
                         <span className="text-[#AEAEAE]">
-                            with the best professional team
+                            {''} highly experienced and dedicated team.
                         </span>
                     </p>
 
