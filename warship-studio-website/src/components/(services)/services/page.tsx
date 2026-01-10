@@ -30,7 +30,7 @@ export default function ServiceSection() {
                         <>
                             01.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Brand Strategy R&D
                             </span>
                         </>
                     }
@@ -38,7 +38,7 @@ export default function ServiceSection() {
                         <>
                             02.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Event Production
                             </span>
                         </>
                     }
@@ -46,7 +46,7 @@ export default function ServiceSection() {
                         <>
                             03.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Brand Messaging
                             </span>
                         </>
                     }
@@ -54,7 +54,7 @@ export default function ServiceSection() {
                         <>
                             04.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Logo Design& Brand Guidelines
                             </span>
                         </>
                     }
@@ -87,7 +87,7 @@ export default function ServiceSection() {
                         <>
                             01.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Product visualization
                             </span>
                         </>
                     }
@@ -95,7 +95,7 @@ export default function ServiceSection() {
                         <>
                             02.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                2D& 3D Motion Graphics
                             </span>
                         </>
                     }
@@ -103,7 +103,7 @@ export default function ServiceSection() {
                         <>
                             03.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Corporate Explainers
                             </span>
                         </>
                     }
@@ -111,7 +111,7 @@ export default function ServiceSection() {
                         <>
                             04.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                AIGC (AI-Generated Content)
                             </span>
                         </>
                     }
@@ -145,7 +145,7 @@ export default function ServiceSection() {
                         <>
                             01.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Mixed media & Live Action
                             </span>
                         </>
                     }
@@ -153,7 +153,7 @@ export default function ServiceSection() {
                         <>
                             02.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Animation + VFX
                             </span>
                         </>
                     }
@@ -161,7 +161,7 @@ export default function ServiceSection() {
                         <>
                             03.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Virtual Production
                             </span>
                         </>
                     }
@@ -169,7 +169,7 @@ export default function ServiceSection() {
                         <>
                             04.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Brand/TV Commercial
                             </span>
                         </>
                     }
@@ -202,7 +202,7 @@ export default function ServiceSection() {
                         <>
                             01.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Interactive websites
                             </span>
                         </>
                     }
@@ -210,7 +210,7 @@ export default function ServiceSection() {
                         <>
                             02.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Corporate websites
                             </span>
                         </>
                     }
@@ -218,7 +218,7 @@ export default function ServiceSection() {
                         <>
                             03.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                Brand tone
                             </span>
                         </>
                     }
@@ -226,11 +226,10 @@ export default function ServiceSection() {
                         <>
                             04.{' '}
                             <span className="text-[#0A231D] font-satoshi">
-                                Web & Mob apps
+                                UI/UX Design
                             </span>
                         </>
                     }
-                    reel="https://vimeo.com/1090477326/2e6caf9f71?fl=ip&fe=ec"
                 />
             </StaggeredTextContainer>
         </section>

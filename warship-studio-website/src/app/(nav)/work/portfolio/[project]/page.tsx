@@ -87,7 +87,7 @@ export default function PortfolioPage() {
                 </div>
 
                 {/* Thumbnail */}
-                <div className="bg-[#969696] w-full overflow-hidden aspect-[5/4] md:aspect-[10/4] rounded-[5px]">
+                <div className="w-full overflow-hidden aspect-[5/4] md:aspect-[10/4] rounded-[5px]">
                     <StrapiImage
                         image={portfolio.Thumbnail}
                         format="large"
@@ -109,7 +109,7 @@ export default function PortfolioPage() {
 
                 {/* Video */}
                 {portfolio.Video_Embed && (
-                    <div className="w-full aspect-video rounded-[5px] bg-pink-500">
+                    <div className="w-full aspect-video rounded-[5px]">
                         <VideoEmbed
                             controls
                             no_autoplay

@@ -61,12 +61,12 @@ export default function ServiceCard({
                     <div className="space-y-2 md:space-y-7 md:space-y-0">
                         <div className="space-y-2 md:flex md:space-x-5 md:space-y-0">
                             <AnimateText>
-                                <p className="text-[14px] md:text-[20px] font-geistMono text-[#969696]">
+                                <p className="whitespace-nowrap text-[14px] md:text-[20px] font-geistMono text-[#969696]">
                                     {serviceOne}
                                 </p>
                             </AnimateText>
                             <AnimateText>
-                                <p className="text-[14px] md:text-[20px] font-geistMono text-[#969696]">
+                                <p className="whitespace-nowrap text-[14px] md:text-[20px] font-geistMono text-[#969696]">
                                     {serviceTwo}
                                 </p>
                             </AnimateText>
@@ -74,12 +74,12 @@ export default function ServiceCard({
 
                         <div className="space-y-2 md:flex md:space-x-5 md:space-y-0">
                             <AnimateText>
-                                <p className="text-[14px] md:text-[20px] font-geistMono text-[#969696]">
+                                <p className="whitespace-nowrap text-[14px] md:text-[20px] font-geistMono text-[#969696]">
                                     {serviceThree}
                                 </p>
                             </AnimateText>
                             <AnimateText>
-                                <p className="text-[14px] md:text-[20px] font-geistMono text-[#969696]">
+                                <p className="whitespace-nowrap text-[14px] md:text-[20px] font-geistMono text-[#969696]">
                                     {serviceFour}
                                 </p>
                             </AnimateText>
@@ -102,7 +102,7 @@ export default function ServiceCard({
                     <Button
                         onClick={() => setShowVideo((prev) => !prev)}
                         title={showVideo ? '[ Hide Video ]' : '[ Watch Reel ]'}
-                        className="text-[#0A231D] bg-transparent !p-0"
+                        className="hidden text-[#0A231D] bg-transparent !p-0"
                     />
 
                     {showVideo && (

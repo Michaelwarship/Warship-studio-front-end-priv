@@ -10,7 +10,7 @@ interface Cardprops {
 export default function CarouselCard({ title, image, description }: Cardprops) {
     return (
         <section className="relative">
-            <div className="bg-pink-500 z-0 w-[300px] sm:w-[400px] md:w-[300px] h-[250px] lg:w-[404px] lg:h-[350px] xl:w-[504px] xl:h-[400px] 2xl:w-[604px] 2xl:h-[450px] ">
+            <div className="z-0 w-[300px] sm:w-[400px] md:w-[300px] h-[250px] lg:w-[404px] lg:h-[350px] xl:w-[504px] xl:h-[400px] 2xl:w-[604px] 2xl:h-[450px] ">
                 {image}
             </div>
 
