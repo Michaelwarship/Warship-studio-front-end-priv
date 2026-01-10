@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Button, AnimateText } from '@/components'
+import { Button } from '@/components'
 
 export default function Subscribe() {
     const [email, setEmail] = useState('')
@@ -14,17 +14,27 @@ export default function Subscribe() {
         setStatus('loading')
 
         try {
-            const res = await fetch('/api/subscribe', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email }),
-            })
+            const res = await fetch(
+                `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}`,
+                {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email,
+                        firstName: '', // optional, can add inputs if you want
+                        lastName: '',
+                        address: '',
+                        status: 'subscribed',
+                    }),
+                }
+            )
 
-            if (!res.ok) throw new Error()
+            if (!res.ok) throw new Error('Subscription failed')
 
             setStatus('success')
             setEmail('')
-        } catch {
+        } catch (err) {
+            console.error(err)
             setStatus('error')
         }
     }
@@ -55,16 +65,9 @@ export default function Subscribe() {
                     </button>
                 </div>
 
-                <AnimateText disabled>
-                    <p className="font-geistMono text-[12px] md:text-[14px] text-[#969696]">
-                        BY CLICKING SEND, YOU AGREE TO RECEIVE MESSAGES.
-                    </p>
-                </AnimateText>
-
                 {status === 'success' && (
                     <p className="text-green-600">Thanks for subscribing.</p>
                 )}
-
                 {status === 'error' && (
                     <p className="text-red-600">
                         Something went wrong. Try again.

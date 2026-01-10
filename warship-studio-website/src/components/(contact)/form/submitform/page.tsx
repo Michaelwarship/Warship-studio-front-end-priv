@@ -6,50 +6,62 @@ import { Button } from '@/components'
 
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
-export default function ContactForm() {
+export default function SubmitForm() {
     const [status, setStatus] = useState<Status>('idle')
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setStatus('loading')
 
+        const form = e.currentTarget
+        const formData = new FormData(form)
+
+        const formParams = {
+            full_name: formData.get('full_name')?.toString() || '',
+            company: formData.get('company')?.toString() || '',
+            email: formData.get('email')?.toString() || '',
+            service: formData.get('service')?.toString() || '',
+            budget: formData.get('budget')?.toString() || '',
+            message: formData.get('message')?.toString() || '',
+        }
+
         try {
-            const form = e.currentTarget
-            const formData = new FormData(form)
-
-            // Collect data from form
-            const formParams = {
-                full_name: formData.get('full_name')?.toString() || '',
-                company: formData.get('company')?.toString() || '',
-                email: formData.get('email')?.toString() || '',
-                service: formData.get('service')?.toString() || '',
-                budget: formData.get('budget')?.toString() || '',
-                message: formData.get('message')?.toString() || '',
-            }
-
-            // 1️⃣ Send the message to the company
+            // 1️⃣ Send message to company via EmailJS
             const sendToCompany = emailjs.send(
                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, // template for company
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
                 formParams,
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
             )
 
-            // 2️⃣ Send acknowledgment to the user (EmailJS template handles the message)
-            const acknowledgmentParams = {
-                full_name: formParams.full_name,
-                email: formParams.email, // the recipient variable in EmailJS template
-            }
-
+            // 2️⃣ Send acknowledgment to user via EmailJS
             const sendToUser = emailjs.send(
                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-                process.env.NEXT_PUBLIC_EMAILJS_ACK_TEMPLATE_ID!, // template for acknowledgment
-                acknowledgmentParams,
+                process.env.NEXT_PUBLIC_EMAILJS_ACK_TEMPLATE_ID!,
+                {
+                    full_name: formParams.full_name,
+                    email: formParams.email,
+                },
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
             )
 
-            // Wait for both emails to finish
-            await Promise.all([sendToCompany, sendToUser])
+            // 3️⃣ Add email to backend (WarshipStudio API)
+            const addToBackend = fetch(
+                `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}`,
+                {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: formParams.email,
+                        firstName: formParams.full_name.split(' ')[0] || '',
+                        lastName: formParams.full_name.split(' ')[1] || '',
+                        address: formParams.company || '',
+                        status: 'subscribed',
+                    }),
+                }
+            )
+
+            await Promise.all([sendToCompany, sendToUser, addToBackend])
 
             setStatus('success')
             form.reset()
@@ -78,7 +90,6 @@ export default function ContactForm() {
                             className="focus:outline-none placeholder-[#AEAEAE] placeholder:text-[25px] placeholder:opacity-50 text-[14px] px-2 pt-4 pb-3 border-[#E0E0E0] border-b-1 w-80 sm:w-150 md:w-80 lg:w-60 xl:w-80"
                         />
                     </div>
-
                     <div className="flex flex-col">
                         <label className="text-[14px] font-geistMono text-[#0A231D]">
                             [ COMPANY NAME ]
@@ -117,7 +128,6 @@ export default function ContactForm() {
                             className="focus:outline-none placeholder-[#AEAEAE] placeholder:text-[25px] placeholder:opacity-50 text-[14px] px-2 pt-4 pb-3 border-[#E0E0E0] border-b-1 w-80 sm:w-150 md:w-80 lg:w-60 xl:w-80"
                         />
                     </div>
-
                     <div className="flex flex-col">
                         <label className="text-[14px] font-geistMono text-[#0A231D]">
                             [ BUDGET ]
@@ -155,7 +165,6 @@ export default function ContactForm() {
                     />
                 </div>
 
-                {/* Status messages */}
                 {status === 'success' && (
                     <p className="mt-4 text-[13px] text-green-600 font-geistMono">
                         Message sent successfully. We’ll get back to you
