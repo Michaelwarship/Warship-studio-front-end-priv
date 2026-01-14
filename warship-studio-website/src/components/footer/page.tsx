@@ -137,6 +137,8 @@ export default function Footer() {
                                 </ActiveLink> */}
                                 <ActiveLink
                                     href="https://warshipstudio.blog/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
                                 >
                                     BLOG

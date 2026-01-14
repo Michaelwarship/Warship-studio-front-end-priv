@@ -91,3 +91,6 @@ export { default as StrapiVideo } from './strapi-video/page'
 
 //STRAPI PORTFOLIO REQ
 export { default as StrapiPortfolioReq } from './strapi-portfolio-req/page'
+
+//SCROLL TO TOP
+export { default as ScrollToTop } from './scroll-to-top/page'

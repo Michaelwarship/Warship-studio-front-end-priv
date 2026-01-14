@@ -109,6 +109,8 @@ export default function Navbar() {
                             </Link> */}
                             <Link
                                 href="https://warshipstudio.blog/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 onClick={() => setIsOpen(false)}
                                 className="font-geistMono text-[#0A231D] text-[50px] sm:text-[90px] font-light"
                             >
@@ -154,6 +156,8 @@ export default function Navbar() {
                     </ActiveLink> */}
                     <ActiveLink
                         href="https://warshipstudio.blog/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="animated-link text-[#0A231D] font-geistMono text-[14px] font-light"
                     >
                         BLOG

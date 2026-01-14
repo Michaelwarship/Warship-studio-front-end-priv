@@ -31,7 +31,7 @@ export default function AboutPage() {
                             {' '}
                             <Button title="BOOK A STRATEGY CALL" className="" />
                         </Link>
-                        <Link href="https://docs.google.com/document/d/15lGHtvIyffGhGfAdhqWKCNx9rmqL8ChG0YHoF2__kr8/export?format=docx">
+                        <Link href="https://tally.so/r/lbeP26">
                             <Button
                                 title="GET A QUOTE"
                                 className="bg-[#E0E0E0]"

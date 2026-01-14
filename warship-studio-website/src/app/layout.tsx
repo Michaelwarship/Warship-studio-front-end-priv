@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import { Navbar, Footer, Cursor, IntroOverlay } from '@/components'
+import { Navbar, Footer, Cursor, IntroOverlay, ScrollToTop } from '@/components'
 import { ReactLenis } from 'lenis/react'
 
 const satoshi = localFont({
@@ -44,6 +44,7 @@ export default async function RootLayout({
                 <IntroOverlay />
                 <Cursor />
                 <ReactLenis root />
+                <ScrollToTop />
                 <Navbar />
                 {children}
                 <Footer />

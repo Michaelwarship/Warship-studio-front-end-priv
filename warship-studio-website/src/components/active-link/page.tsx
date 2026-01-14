@@ -8,12 +8,16 @@ interface ActiveLinkProps {
     href: string
     children: React.ReactNode
     className?: string
+    target?: string
+    rel?: string
 }
 
 export default function ActiveLink({
     href,
     children,
     className,
+    target,
+    rel,
 }: ActiveLinkProps) {
     const pathname = usePathname()
     const isActive = pathname === href
@@ -21,6 +25,8 @@ export default function ActiveLink({
     return (
         <Link
             href={href}
+            target={target}
+            rel={rel}
             className={clsx(
                 className,
                 'transition-all duration-200',

@@ -26,10 +26,7 @@ export default function HeroSection() {
 
     return (
         <section>
-            <div
-                data-no-anim
-                className="relative w-full h-[100vh] min-h-[700px] max-h-[900px] overflow-hidden bg-black"
-            >
+            <div className="relative w-full h-[100vh] min-h-[700px] max-h-[900px] overflow-hidden bg-black">
                 {/* <VideoEmbed
                     src={heroVideo.Hero_Video.url}
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none"
@@ -57,7 +54,8 @@ export default function HeroSection() {
                 <div className="absolute bottom-0 left-0 w-full px-5 sm:px-10 md:px-15 lg:px-20 xl:px-20 pb-24">
                     <div>
                         <p className="text-[45px] text-white sm:text-[70px] md:text-[85px] lg:text-[70px] xl:text-[85px] leading-14 sm:leading-22 md:leading-25">
-                            Peller is <br />a Jarvis{' '}
+                            Pushing Pixels <br />
+                            with Precision.
                         </p>
                     </div>
 
@@ -66,10 +64,7 @@ export default function HeroSection() {
                             <Link href="/contact">
                                 <Button title="HIRE US TODAY" />
                             </Link>
-                            <Link
-                                href="https://docs.google.com/document/d/15lGHtvIyffGhGfAdhqWKCNx9rmqL8ChG0YHoF2__kr8/export?format=docx"
-                                download
-                            >
+                            <Link href="https://tally.so/r/lbeP26">
                                 <Button
                                     title="GET A QUOTE"
                                     className="bg-[#E0E0E0]"
