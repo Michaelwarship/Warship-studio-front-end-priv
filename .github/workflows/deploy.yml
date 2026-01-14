@@ -20,7 +20,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /var/www/my-project
+            cd /root/Warship-studio-front-end/warship-studio-website
             git pull origin main
-            npm install --production
-            pm2 restart all
+            npm install
+            pm2 restart next-js
