@@ -57,8 +57,7 @@ export default function HeroSection() {
                 <div className="absolute bottom-0 left-0 w-full px-5 sm:px-10 md:px-15 lg:px-20 xl:px-20 pb-24">
                     <div>
                         <p className="text-[45px] text-white sm:text-[70px] md:text-[85px] lg:text-[70px] xl:text-[85px] leading-14 sm:leading-22 md:leading-25">
-                            Pushing Pixels <br />
-                            with Precision.
+                            Peller is <br />a Jarvis{' '}
                         </p>
                     </div>
 
