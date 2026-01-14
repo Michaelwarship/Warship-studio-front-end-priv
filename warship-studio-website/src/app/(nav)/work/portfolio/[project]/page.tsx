@@ -142,8 +142,10 @@ export default function PortfolioPage() {
                 {/* Portrait Images */}
                 {portfolio.Portrait_Images && (
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-                        {portfolio.Portrait_Images.filter((item: any) =>
-                            item.mime?.startsWith('image/')
+                        {portfolio.Portrait_Images.filter(
+                            (item: any) =>
+                                item.mime?.startsWith('image/') ||
+                                item.mime?.startsWith('video/')
                         ).map((image: any, index: number) => (
                             <div
                                 key={image.id ?? index}
@@ -174,8 +176,10 @@ export default function PortfolioPage() {
                         {/* Breakdown Images */}
                         {portfolio.Breakdown?.length > 0 && (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-                                {portfolio.Breakdown.filter((item: any) =>
-                                    item.mime?.startsWith('image/')
+                                {portfolio.Breakdown.filter(
+                                    (item: any) =>
+                                        item.mime?.startsWith('image/') ||
+                                        item.mime?.startsWith('video/')
                                 ).map((image: any, index: number) => (
                                     <div
                                         key={image.id ?? index}

@@ -67,7 +67,7 @@ export default function HeroSection() {
                             <Link href="https://tally.so/r/lbeP26">
                                 <Button
                                     title="GET A QUOTE"
-                                    className="bg-pink-500"
+                                    className="bg-[#E0E0E0]"
                                 />
                             </Link>
                         </div>
