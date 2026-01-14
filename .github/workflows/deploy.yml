@@ -22,8 +22,11 @@ jobs:
           script: |
             cd /root/Warship-studio-front-end/warship-studio-website
             git pull
-            cat ~/.bashrc
+            echo "==================== Showing PATH after git pull ===================="
+            echo $PATH
             source ~/.bashrc
+            echo "==================== Showing PATH after sourcing ===================="
+            echo $PATH
             nvm use 24.12.0
             npm install
             npm run build
