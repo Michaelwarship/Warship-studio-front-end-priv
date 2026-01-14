@@ -135,12 +135,12 @@ export default function Footer() {
                                 >
                                     SHOP
                                 </ActiveLink> */}
-                                {/* <ActiveLink
-                                    href="career"
+                                <ActiveLink
+                                    href="https://warshipstudio.blog/"
                                     className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] hover:underline transition-all duration-200"
                                 >
-                                    CAREER
-                                </ActiveLink> */}
+                                    BLOG
+                                </ActiveLink>
                                 <ActiveLink
                                     href="/contact"
                                     className="font-geistMono text-[30px] md:text-[14px] transform hover:text-[#07E272] animated-link"

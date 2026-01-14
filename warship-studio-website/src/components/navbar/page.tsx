@@ -107,13 +107,13 @@ export default function Navbar() {
                             >
                                 MOCKUP
                             </Link> */}
-                            {/* <Link
-                                href={Route.BLOG}
+                            <Link
+                                href="https://warshipstudio.blog/"
                                 onClick={() => setIsOpen(false)}
                                 className="font-geistMono text-[#0A231D] text-[50px] sm:text-[90px] font-light"
                             >
                                 BLOG
-                            </Link> */}
+                            </Link>
                             {/* <Link
                                 href={Route.SHOP}
                                 onClick={() => setIsOpen(false)}
@@ -152,12 +152,12 @@ export default function Navbar() {
                     >
                         MOCKUP
                     </ActiveLink> */}
-                    {/* <ActiveLink
-                        href={Route.BLOG}
+                    <ActiveLink
+                        href="https://warshipstudio.blog/"
                         className="animated-link text-[#0A231D] font-geistMono text-[14px] font-light"
                     >
                         BLOG
-                    </ActiveLink> */}
+                    </ActiveLink>
                     {/* <ActiveLink
                         href={Route.SHOP}
                         className="animated-link font-geistMono text-[14px] font-light"
