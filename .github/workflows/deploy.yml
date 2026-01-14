@@ -27,8 +27,7 @@ jobs:
             source ~/.bashrc
             echo "==================== Showing PATH after sourcing ===================="
             echo $PATH
-            ls -la ~/.nvm
-            nvm use 24.12.0
+            ~/.nvm/nvm.sh use 24.12.0
             npm install
             npm run build
             pm2 restart next-js
