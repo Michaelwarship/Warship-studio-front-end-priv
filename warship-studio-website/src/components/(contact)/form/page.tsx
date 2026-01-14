@@ -53,7 +53,7 @@ export default function ContactForm() {
                                     rel="noopener noreferrer"
                                     className="text-[#0A231D] text-[18px] md:text-[18px]"
                                 >
-                                    @warshipstudio.com
+                                    @warshipstudio
                                 </a>
                             </p>
 
