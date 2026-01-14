@@ -55,7 +55,7 @@ export default function SlideShow() {
         const el = containerRef.current
         if (!el || duplicatedSlides.length === 0) return
 
-        const speed = 2
+        const speed = 1.7
         let x = 0
         let raf: number
 

@@ -159,6 +159,53 @@ export default function PortfolioPage() {
                     </div>
                 )}
 
+                {/* BREAKDOWN + WHAT WE DID */}
+                {(portfolio.Breakdown?.length > 0 || portfolio.WhatWeDid) && (
+                    <div className="space-y-10">
+                        {/* Breakdown Title */}
+                        {portfolio.Breakdown?.length > 0 && (
+                            <div>
+                                <AnimateText>
+                                    <p className="text-[48px]">Breakdown</p>
+                                </AnimateText>
+                            </div>
+                        )}
+
+                        {/* Breakdown Images */}
+                        {portfolio.Breakdown?.length > 0 && (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                                {portfolio.Breakdown.filter((item: any) =>
+                                    item.mime?.startsWith('image/')
+                                ).map((image: any, index: number) => (
+                                    <div
+                                        key={image.id ?? index}
+                                        className="w-full rounded-[5px] aspect-[8/10] overflow-hidden"
+                                    >
+                                        <StrapiImage
+                                            image={image}
+                                            format="large"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        {/* What We Did */}
+                        {portfolio.WhatWeDid && (
+                            <div className="space-y-5">
+                                <AnimateText className="about-title uppercase font-geistMono text-[14px] md:text-[16px] text-[#969696]">
+                                    What we did
+                                </AnimateText>
+
+                                <p className="hyphens-auto break-words text-[14px] md:text-[16px] text-[#0A231D]">
+                                    {portfolio.WhatWeDid}
+                                </p>
+                            </div>
+                        )}
+                    </div>
+                )}
+
                 {/* Credits */}
                 <div className="py-10">
                     <div className="flex flex-col space-y-5 lg:flex-row lg:justify-between lg:space-y-0">

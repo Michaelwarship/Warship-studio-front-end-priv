@@ -46,7 +46,7 @@ export default function Carousel() {
                                 <StrapiImage
                                     image={project.Thumbnail}
                                     format="large"
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover transform transition duration-500 hover:scale-105"
                                 />
                             }
                             title={project.Title}

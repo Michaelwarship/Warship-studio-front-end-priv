@@ -60,7 +60,7 @@ export default function PartnersRow() {
         const el = containerRef.current
         if (!el || duplicatedPartners.length === 0) return
 
-        const speed = 2
+        const speed = 1
         let x = 0
         let raf: number
 

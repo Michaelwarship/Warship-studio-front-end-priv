@@ -77,9 +77,9 @@ export default function ServiceSection() {
                             Warhsip studios would meet your imagination with
                             perfect execution.{' '}
                             <span className="text-[#AEAEAE]">
-                                We create visuals that compulsates autention:
+                                We create visuals that compulsates attention:
                                 from 3D animation and motion graphics to
-                                cinmatic visual effects.
+                                cinematic visual effects.
                             </span>
                         </>
                     }
@@ -132,7 +132,7 @@ export default function ServiceSection() {
                     description={
                         <>
                             We handle everything from the first idea to the
-                            final delivery. Strategy, Scripting, design
+                            final delivery. Strategy, scripting, design
                             animation, and post production, all under one roof.{' '}
                             <span className="text-[#AEAEAE]">
                                 Our End-to-End proves keeps things seamlessly
@@ -190,7 +190,7 @@ export default function ServiceSection() {
                     description={
                         <>
                             We create cohesive brand experiences that feel
-                            intentionaland authtentic.{' '}
+                            intentional and authtentic.{' '}
                             <span className="text-[#AEAEAE]">
                                 Our goal is simple: to give your brand a clear
                                 personality and a strong visual voice that

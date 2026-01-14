@@ -11,7 +11,7 @@ export default function Freelance() {
                 <div className="flex-1 space-y-5 md:space-y-10">
                     <p className="hyphens-auto break-words text-[#0A231D] text-[30px] font-satoshi leading-9">
                         We’re a small but nimble talented core team backed by an
-                        ever growing pool of the world’s best freelancers. for
+                        ever growing pool of the world’s best freelancers. For
                         every project, we handpick each artist to strategically
                         match the strength needed for the challenges ahead,{' '}
                         <span className="text-[#AEAEAE]">
