@@ -27,7 +27,7 @@ jobs:
             source ~/.bashrc
             echo "==================== Showing PATH after sourcing ===================="
             echo $PATH
-            ls -la ~/.nwm
+            ls -la ~/.nvm
             nvm use 24.12.0
             npm install
             npm run build
