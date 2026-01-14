@@ -22,7 +22,7 @@ jobs:
           script: |
             cd /root/Warship-studio-front-end/warship-studio-website
             git pull
-            nvm use lts
+            nvm use 24.12.0
             npm install
             npm run build
             pm2 restart next-js
