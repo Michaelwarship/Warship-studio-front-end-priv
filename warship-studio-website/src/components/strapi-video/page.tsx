@@ -1,13 +1,17 @@
+import React from 'react'
 import { getStrapiVideo } from '@/lib/getStrapiVideo'
 
 type Props = {
-    video?: any
+    video?: string
     className?: string
     autoPlay?: boolean
     muted?: boolean
     loop?: boolean
     playsInline?: boolean
     preload?: 'auto' | 'metadata' | 'none'
+    onCanPlay?: React.VideoHTMLAttributes<HTMLVideoElement>['onCanPlay']
+    onLoadedData?: React.VideoHTMLAttributes<HTMLVideoElement>['onLoadedData']
+    onError?: React.VideoHTMLAttributes<HTMLVideoElement>['onError']
 }
 
 export default function StrapiVideo({
@@ -18,6 +22,9 @@ export default function StrapiVideo({
     loop = true,
     playsInline = true,
     preload = 'metadata',
+    onCanPlay,
+    onLoadedData,
+    onError,
 }: Props) {
     if (!video) return null
 
@@ -33,6 +40,9 @@ export default function StrapiVideo({
             loop={loop}
             playsInline={playsInline}
             preload={preload}
+            onCanPlay={onCanPlay}
+            onLoadedData={onLoadedData}
+            onError={onError}
         />
     )
 }

@@ -94,3 +94,7 @@ export { default as StrapiPortfolioReq } from './strapi-portfolio-req/page'
 
 //SCROLL TO TOP
 export { default as ScrollToTop } from './scroll-to-top/page'
+
+//LOTTIE
+export { default as LottiePlayer } from './lottie-player/page'
+

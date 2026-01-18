@@ -38,8 +38,9 @@
 // }
 
 'use client'
+
 import { SingleCard, StrapiImage } from '@/components'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { api } from '@/lib/api'
 
 export default function PartnersRow() {
@@ -47,36 +48,67 @@ export default function PartnersRow() {
     const containerRef = useRef<HTMLDivElement | null>(null)
     const userInteracting = useRef(false)
 
+    const DUPES = 5
+    const touchOpts: AddEventListenerOptions = { passive: true }
+
     useEffect(() => {
-        api.get('/home-page', { params: { populate: '*' } })
-            .then((res) => setPartners(res.data.data.Brand_Logos))
+        api.get('home-page', {
+            params: {
+                fields: ['id'],
+                populate: {
+                    Brand_Logos: {
+                        fields: [
+                            'url',
+                            'formats',
+                            'width',
+                            'height',
+                            'alternativeText',
+                        ],
+                    },
+                },
+            },
+        })
+            .then((res) => setPartners(res.data.data.Brand_Logos || []))
             .catch(console.error)
     }, [])
 
-    // duplicate enough to fill scroll and prevent jump
-    const duplicatedPartners = Array.from({ length: 5 }).flatMap(() => partners)
+    // Duplicate enough to fill scroll and prevent jump (memoized)
+    const duplicatedPartners = useMemo(() => {
+        return Array.from({ length: DUPES }).flatMap(() => partners)
+    }, [partners])
 
     useEffect(() => {
         const el = containerRef.current
         if (!el || duplicatedPartners.length === 0) return
 
-        const speed = 1
-        let x = 0
-        let raf: number
+        const speed = 0.6
+        let x = el.scrollLeft
+        let raf = 0
+        let visible = true
 
-        const onMouseDown = () => (userInteracting.current = true)
-        const onMouseUp = () => (userInteracting.current = false)
-        el.addEventListener('mousedown', onMouseDown)
-        el.addEventListener('mouseup', onMouseUp)
-        el.addEventListener('mouseleave', onMouseUp)
-        el.addEventListener('touchstart', onMouseDown)
-        el.addEventListener('touchend', onMouseUp)
+        const onDown = () => (userInteracting.current = true)
+        const onUp = () => (userInteracting.current = false)
+
+        el.addEventListener('mousedown', onDown)
+        el.addEventListener('mouseup', onUp)
+        el.addEventListener('mouseleave', onUp)
+        el.addEventListener('touchstart', onDown, touchOpts)
+        el.addEventListener('touchend', onUp)
+
+        const io = new IntersectionObserver(
+            ([entry]) => {
+                visible = entry.isIntersecting
+            },
+            { threshold: 0.01 }
+        )
+
+        io.observe(el)
 
         const loop = () => {
-            if (!userInteracting.current) {
+            if (visible && !userInteracting.current) {
                 x += speed
-                // modulus trick ensures smooth wrap-around
-                el.scrollLeft = x % (el.scrollWidth / 5) // total width of one set
+                const oneSetWidth = el.scrollWidth / DUPES
+                el.scrollLeft = x % oneSetWidth
             }
             raf = requestAnimationFrame(loop)
         }
@@ -85,13 +117,15 @@ export default function PartnersRow() {
 
         return () => {
             cancelAnimationFrame(raf)
-            el.removeEventListener('mousedown', onMouseDown)
-            el.removeEventListener('mouseup', onMouseUp)
-            el.removeEventListener('mouseleave', onMouseUp)
-            el.removeEventListener('touchstart', onMouseDown)
-            el.removeEventListener('touchend', onMouseUp)
+            io.disconnect()
+
+            el.removeEventListener('mousedown', onDown)
+            el.removeEventListener('mouseup', onUp)
+            el.removeEventListener('mouseleave', onUp)
+            el.removeEventListener('touchstart', onDown, touchOpts)
+            el.removeEventListener('touchend', onUp)
         }
-    }, [duplicatedPartners])
+    }, [duplicatedPartners.length])
 
     if (!partners.length) return null
 
@@ -102,16 +136,17 @@ export default function PartnersRow() {
             style={{ scrollBehavior: 'auto' }}
         >
             <div
-                className="flex shrink-0 border-0 border-[#E0E0E0] 
-                   [&>*]:border-t [&>*]:border-r [&>*]:border-b-1  
-                   [&>*]:border-[#E0E0E0] [&>*:last-child]:border-r-0 w-max"
+                className="flex shrink-0 border-0 border-[#E0E0E0]
+                [&>*]:border-t [&>*]:border-r [&>*]:border-b-1
+                [&>*]:border-[#E0E0E0] [&>*:last-child]:border-r-0 w-max"
             >
                 {duplicatedPartners.map((brand, i) => (
                     <SingleCard
-                        key={i}
+                        key={`${brand?.id ?? 'brand'}-${i}`}
                         image={
                             <StrapiImage
-                                image={brand.url}
+                                image={brand} // pass the whole object (like Hero_Image)
+                                format="thumbnail"
                                 className="w-full h-full"
                             />
                         }
