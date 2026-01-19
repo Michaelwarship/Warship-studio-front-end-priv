@@ -57,7 +57,7 @@ export default function Carousel() {
             </div>
 
             {/* Navigation Arrows */}
-            <div className="absolute top-5 right-5 flex space-x-2 z-10">
+            <div className="absolute top-5 right-5 flex space-x-2 z-5">
                 <Button
                     title={
                         <FaArrowLeftLong className="text-[#0A231D] lg:text-[25px]" />

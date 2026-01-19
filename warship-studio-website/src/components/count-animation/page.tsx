@@ -36,7 +36,7 @@ export default function AnimatedCounter({
             if (!startTime) startTime = timestamp
 
             const progress = Math.min((timestamp - startTime) / duration, 1)
-            const currentValue = Number((progress * end).toFixed(1))
+            const currentValue = Math.round(progress * end)
             setValue(currentValue)
 
             if (progress < 1) requestAnimationFrame(animate)

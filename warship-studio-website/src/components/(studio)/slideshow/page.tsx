@@ -32,14 +32,18 @@
 //     )
 // }
 
-
 'use client'
 
 import { SlideShowCard } from '@/components'
 import { useEffect, useState } from 'react'
 import { api } from '@/lib/api'
 import { StrapiVideo, LottiePlayer } from '@/components'
-import { useEffect as useReactEffect, useRef, useState as useReactState } from 'react'
+import {
+    useEffect as useReactEffect,
+    useRef,
+    useState as useReactState,
+} from 'react'
+import mouseScrollDown from '@/lottie/mouse-scroll-down.json'
 
 function LazyVideo({ src }: { src: string }) {
     const ref = useRef<HTMLDivElement | null>(null)
@@ -100,17 +104,22 @@ export default function SlideShow() {
 
     return (
         <section>
-            <div className="overflow-x-auto whitespace-nowrap py-5">
+            <LottiePlayer
+                animationData={mouseScrollDown}
+                className="w-10 h-10 lg:w-20 top-61 right-2 lg:h-20 rotate-90 absolute md:top-68 lg:top-82 lg:right-5"
+            />
+
+            <div className="overflow-x-auto whitespace-nowrap mt-10 py-5">
                 <div className="flex w-max space-x-5">
-                <div className="flex shrink-0 space-x-5">
-                    {slideShow.map((slide) => (
-                        <SlideShowCard
-                            key={slide.id}
-                            videoUrl={<LazyVideo src={slide.url} />}
-                        />
-                    ))}
+                    <div className="flex shrink-0 space-x-5">
+                        {slideShow.map((slide) => (
+                            <SlideShowCard
+                                key={slide.id}
+                                videoUrl={<LazyVideo src={slide.url} />}
+                            />
+                        ))}
+                    </div>
                 </div>
-            </div>
             </div>
         </section>
     )

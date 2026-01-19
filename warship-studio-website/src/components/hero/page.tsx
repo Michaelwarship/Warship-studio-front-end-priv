@@ -38,7 +38,7 @@
 //                             'transition-opacity duration-500',
 //                             videoReady ? 'opacity-0' : 'opacity-100',
 //                         ].join(' ')}
-                        
+
 //                     />
 //                 )}
 
@@ -88,7 +88,6 @@
 //     )
 // }
 
-
 'use client'
 
 import Link from 'next/link'
@@ -106,7 +105,13 @@ export default function HeroSection() {
                 fields: ['id'],
                 populate: {
                     Hero_Image: {
-                        fields: ['url', 'formats', 'width', 'height', 'alternativeText'],
+                        fields: [
+                            'url',
+                            'formats',
+                            'width',
+                            'height',
+                            'alternativeText',
+                        ],
                     },
                     Hero_Video: {
                         fields: ['url'],
@@ -130,12 +135,12 @@ export default function HeroSection() {
 
     return (
         <section>
-            <div className="relative w-full h-[100vh] min-h-[700px] max-h-[900px] overflow-hidden bg-black">
+            <div className="relative w-full h-[100vh] min-h-[700px] max-h-[900px] overflow-hidden">
                 {/* Image first */}
                 {heroImage && (
                     <StrapiImage
                         image={heroImage}
-                        format="large" // switch to "medium" or "thumbnail" if you want even faster first paint
+                        format="small" // switch to "medium" or "thumbnail" if you want even faster first paint
                         className={[
                             'absolute inset-0 w-full h-full object-cover pointer-events-none',
                             'transition-opacity duration-500',
@@ -178,7 +183,10 @@ export default function HeroSection() {
                             </Link>
 
                             <Link href="https://tally.so/r/lbeP26">
-                                <Button title="GET A QUOTE" className="bg-[#E0E0E0]" />
+                                <Button
+                                    title="GET A QUOTE"
+                                    className="bg-[#E0E0E0]"
+                                />
                             </Link>
                         </div>
                     </div>

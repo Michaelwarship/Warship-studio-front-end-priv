@@ -22,7 +22,7 @@ export default function WorkHero() {
                         <VideoEmbed
                             controls
                             no_autoplay
-                            src="https://vimeo.com/1090477326/2e6caf9f71?fl=ip&fe=ec"
+                            src="https://vimeo.com/1155787075?share=copy&fl=sv&fe=ci"
                             className="w-full h-full object-cover"
                         />
                     </div>

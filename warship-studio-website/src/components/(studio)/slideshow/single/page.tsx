@@ -13,8 +13,8 @@ export default function SlideShowCard({ videoUrl }: CardProps) {
                     relative
                     w-[400px]
                     sm:w-[400px]
-                    md:w-[300px] 
-                    lg:w-[404px] 
+                    md:w-[500px] 
+                    lg:w-[500px] 
                     xl:w-[504px] 
                     2xl:w-[604px] 
                     aspect-[16/9]

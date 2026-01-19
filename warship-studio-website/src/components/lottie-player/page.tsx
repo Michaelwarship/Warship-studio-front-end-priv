@@ -3,14 +3,14 @@
 import Lottie from 'lottie-react'
 
 type Props = {
-    animationPath: string
+    animationData: object
     className?: string
 }
 
-export default function LottiePlayer({ animationPath, className }: Props) {
+export default function LottiePlayer({ animationData, className }: Props) {
     return (
         <Lottie
-            animationData={require(`@/public/${animationPath}`)}
+            animationData={animationData}
             loop
             autoplay
             className={className}

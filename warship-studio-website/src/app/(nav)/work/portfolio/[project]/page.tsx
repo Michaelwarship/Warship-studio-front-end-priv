@@ -122,8 +122,10 @@ export default function PortfolioPage() {
                 {/* Landscape Images */}
                 {portfolio.Landscape_Images && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                        {portfolio.Landscape_Images.filter((item: any) =>
-                            item.mime?.startsWith('image/')
+                        {portfolio.Landscape_Images.filter(
+                            (item: any) =>
+                                item.mime?.startsWith('image/') ||
+                                item.mime?.startsWith('video/')
                         ).map((image: any, index: number) => (
                             <div
                                 key={image.id ?? index}
