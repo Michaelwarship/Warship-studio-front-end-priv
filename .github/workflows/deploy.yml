@@ -21,6 +21,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /root/Warship-studio-front-end/warship-studio-website
+            git stash push -m "discard local changes"
             git pull
             export NVM_DIR="$HOME/.nvm"
             . "$NVM_DIR/nvm.sh"
