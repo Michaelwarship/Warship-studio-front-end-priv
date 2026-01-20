@@ -1,17 +1,10 @@
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
+    const baseUrl =
+        process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://warshipstudio.com'
 
-    const routes = [
-        '',
-        '/about',
-        '/studio',
-        '/contact',
-        '/projects',
-        // add whatever you actually have in /app
-    ]
-
+    const routes = ['', '/about', '/studio', '/contact', '/projects']
     const now = new Date()
 
     return routes.map((path) => ({
