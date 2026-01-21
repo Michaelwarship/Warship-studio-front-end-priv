@@ -4,7 +4,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl =
         process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://warshipstudio.com'
 
-    const routes = ['', '/about', '/studio', '/contact', '/projects']
+    const routes = [
+        '',
+        '/about',
+        '/studio',
+        '/contact',
+        '/services',
+        '/terms/privacy-policy',
+        '/terms/cookie-policy',
+    ]
     const now = new Date()
 
     return routes.map((path) => ({
