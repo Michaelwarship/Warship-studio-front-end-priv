@@ -27,6 +27,8 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://warshipstudio.com'),
+
     title: 'Warship Studios',
     description:
         'We are a digital-first, multidisciplinary creative agency that helps forward-thinking brands make their innovation visually compelling.',
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
         siteName: 'Warship Studios',
         images: [
             {
-                url: '/preview.png',
+                url: '/preview.png', // Next will resolve to https://warshipstudio.com/preview.png
                 width: 1200,
                 height: 630,
                 alt: 'Warship Studios',
