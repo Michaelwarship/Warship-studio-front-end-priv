@@ -28,7 +28,33 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
     title: 'Warship Studios',
-    description: 'Warship Studio a creative agency',
+    description:
+        'We are a digital-first, multidisciplinary creative agency that helps forward-thinking brands make their innovation visually compelling.',
+
+    openGraph: {
+        title: 'Warship Studios',
+        description:
+            'We are a digital-first, multidisciplinary creative agency that helps forward-thinking brands make their innovation visually compelling.',
+        url: 'https://warshipstudio.com',
+        siteName: 'Warship Studios',
+        images: [
+            {
+                url: '/preview.svg',
+                width: 1200,
+                height: 630,
+                alt: 'Warship Studios',
+            },
+        ],
+        type: 'website',
+    },
+
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Warship Studios',
+        description:
+            'We are a digital-first, multidisciplinary creative agency that helps forward-thinking brands make their innovation visually compelling.',
+        images: ['/preview.svg'],
+    },
 }
 
 export default async function RootLayout({
