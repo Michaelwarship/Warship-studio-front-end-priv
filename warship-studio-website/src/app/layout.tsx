@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         siteName: 'Warship Studios',
         images: [
             {
-                url: '/preview.svg',
+                url: '/preview.png',
                 width: 1200,
                 height: 630,
                 alt: 'Warship Studios',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         title: 'Warship Studios',
         description:
             'We are a digital-first, multidisciplinary creative agency that helps forward-thinking brands make their innovation visually compelling.',
-        images: ['/preview.svg'],
+        images: ['/preview.png'],
     },
 }
 
