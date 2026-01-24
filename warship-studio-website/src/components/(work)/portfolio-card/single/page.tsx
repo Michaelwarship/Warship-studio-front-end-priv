@@ -57,7 +57,7 @@ export default function PortfolioCardSingle({
 }: CardProps) {
     return (
         <div className="cursor-pointer w-full">
-            <div className="w-full aspect-[6/3] overflow-hidden bg-[#999999] rounded-[5px]">
+            <div className="w-full aspect-[6/3] overflow-hidden rounded-[5px]">
                 {image}
             </div>
 

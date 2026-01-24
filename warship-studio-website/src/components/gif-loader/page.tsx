@@ -75,7 +75,7 @@ export default function IntroOverlay() {
             <img
                 src="/logo-animation/white_gif_1.gif"
                 alt="Intro"
-                className="w-[200px] h-auto"
+                className="w-[100px] h-auto md:w-[200px] md:h-auto"
             />
         </div>
     )

@@ -13,7 +13,14 @@ export default function Carousel() {
 
     // Fetch portfolios from Strapi
     useEffect(() => {
-        api.get('/portfolios', { params: { populate: '*' } })
+        // api.get('/portfolios', { params: { populate: '*' } })
+        api.get('/portfolios', {
+            params: {
+                populate: '*',
+                sort: 'Date:desc',
+            },
+        })
+
             .then((res) => setProjects(res.data.data))
             .catch(console.error)
     }, [])

@@ -28,7 +28,14 @@ export default function WorkSection() {
             .then((res) => setCategories(res.data.data))
             .catch(console.error)
 
-        api.get('/portfolios', { params: { populate: '*' } })
+        // api.get('/portfolios', { params: { populate: '*' } })
+        api.get('/portfolios', {
+            params: {
+                populate: '*',
+                sort: 'Date:desc',
+            },
+        })
+
             .then((res) => setProjects(res.data.data))
             .catch(console.error)
     }, [])
