@@ -1,10 +1,42 @@
+// import type { MetadataRoute } from 'next'
+
+// export default function sitemap(): MetadataRoute.Sitemap {
+//     const baseUrl =
+//         process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://warshipstudio.com'
+
+//     const routes = [
+//         '',
+//         '/about',
+//         '/studio',
+//         '/contact',
+//         '/services',
+//         '/terms/privacy-policy',
+//         '/terms/cookie-policy',
+//     ]
+//     const now = new Date()
+
+//     return routes.map((path) => ({
+//         url: `${baseUrl}${path}`,
+//         lastModified: now,
+//         changeFrequency: 'weekly',
+//         priority: path === '' ? 1 : 0.7,
+//     }))
+// }
+
 import type { MetadataRoute } from 'next'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+type StrapiListResponse<T> = {
+    data: T[]
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl =
         process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://warshipstudio.com'
 
-    const routes = [
+    const now = new Date()
+
+    // Static routes
+    const staticRoutes = [
         '',
         '/about',
         '/studio',
@@ -12,13 +44,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/services',
         '/terms/privacy-policy',
         '/terms/cookie-policy',
-    ]
-    const now = new Date()
-
-    return routes.map((path) => ({
+    ].map((path) => ({
         url: `${baseUrl}${path}`,
         lastModified: now,
-        changeFrequency: 'weekly',
+        changeFrequency: 'weekly' as const,
         priority: path === '' ? 1 : 0.7,
     }))
+
+    // Get Strapi base URL from your env
+    const strapiBase = process.env.NEXT_PUBLIC_BASE_URL?.replace(/\/$/, '')
+    if (!strapiBase) return staticRoutes
+
+    // Fetch portfolio slugs
+    const res = await fetch(
+        `${strapiBase}/portfolios?fields[0]=slug&pagination[pageSize]=1000`,
+        { next: { revalidate: 3600 } }
+    )
+
+    if (!res.ok) return staticRoutes
+
+    const json: StrapiListResponse<{ slug?: string }> = await res.json()
+
+    const portfolioRoutes = (json.data || [])
+        .map((item) => item.slug)
+        .filter(Boolean)
+        .map((slug) => ({
+            url: `${baseUrl}/work/portfolio/${slug}`,
+            lastModified: now,
+            changeFrequency: 'weekly' as const,
+            priority: 0.7,
+        }))
+
+    return [...staticRoutes, ...portfolioRoutes]
 }
