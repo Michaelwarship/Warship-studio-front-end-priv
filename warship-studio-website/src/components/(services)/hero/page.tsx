@@ -1,4 +1,5 @@
 import { Button, AnimateText } from '@/components'
+import Link from 'next/link'
 
 export default function ServiceHero() {
     return (
@@ -17,8 +18,16 @@ export default function ServiceHero() {
                 </AnimateText>
 
                 <div className="flex space-x-5">
-                    <Button title="HIRE US TODAY" className="" />
-                    <Button title="GET A QUOTE" className="bg-[#E0E0E0]" />
+                    {/* <Button title="HIRE US TODAY" className="" />
+                    <Button title="GET A QUOTE" className="bg-[#E0E0E0]" /> */}
+
+                    <Link href="/contact">
+                        <Button title="HIRE US TODAY" />
+                    </Link>
+
+                    <Link href="https://tally.so/r/lbeP26">
+                        <Button title="GET A QUOTE" className="bg-[#E0E0E0]" />
+                    </Link>
                 </div>
             </div>
         </section>

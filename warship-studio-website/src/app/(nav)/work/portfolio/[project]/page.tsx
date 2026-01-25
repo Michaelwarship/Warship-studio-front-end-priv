@@ -8,6 +8,7 @@ import { Credits } from '@/lib/credit'
 import Link from 'next/link'
 
 export default function PortfolioPage() {
+    const [activeImage, setActiveImage] = useState<any | null>(null)
     const [portfolio, setPortfolio] = useState<any>(undefined)
     const [allProjects, setAllProjects] = useState<any[]>([]) // all projects to compute nextProject
     const params = useParams()
@@ -121,7 +122,7 @@ export default function PortfolioPage() {
 
                 {/* Landscape Images */}
                 {portfolio.Landscape_Images && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full cursor-pointer">
                         {portfolio.Landscape_Images.filter(
                             (item: any) =>
                                 item.mime?.startsWith('image/') ||
@@ -135,6 +136,7 @@ export default function PortfolioPage() {
                                     image={image}
                                     format="large"
                                     className="w-full h-full object-cover"
+                                    onClick={() => setActiveImage(image)}
                                 />
                             </div>
                         ))}
@@ -143,7 +145,7 @@ export default function PortfolioPage() {
 
                 {/* Portrait Images */}
                 {portfolio.Portrait_Images && (
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full cursor-pointer">
                         {portfolio.Portrait_Images.filter(
                             (item: any) =>
                                 item.mime?.startsWith('image/') ||
@@ -152,6 +154,7 @@ export default function PortfolioPage() {
                             <div
                                 key={image.id ?? index}
                                 className="w-full rounded-[5px] aspect-[7/10] overflow-hidden"
+                                onClick={() => setActiveImage(image)}
                             >
                                 <StrapiImage
                                     image={image}
@@ -177,7 +180,7 @@ export default function PortfolioPage() {
 
                         {/* Breakdown Images */}
                         {portfolio.Breakdown?.length > 0 && (
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full cursor-pointer">
                                 {portfolio.Breakdown.filter(
                                     (item: any) =>
                                         item.mime?.startsWith('image/') ||
@@ -186,6 +189,7 @@ export default function PortfolioPage() {
                                     <div
                                         key={image.id ?? index}
                                         className="w-full rounded-[5px] aspect-[8/10] overflow-hidden"
+                                        onClick={() => setActiveImage(image)}
                                     >
                                         <StrapiImage
                                             image={image}
@@ -268,6 +272,24 @@ export default function PortfolioPage() {
                     </Link>
                 )}
             </div>
+
+            {activeImage && (
+                <div
+                    className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
+                    onClick={() => setActiveImage(null)}
+                >
+                    <div
+                        className="max-w-[90vw] max-h-[90vh]"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <StrapiImage
+                            image={activeImage}
+                            format="large"
+                            className="object-contain max-w-[90vw] max-h-[90vh]"
+                        />
+                    </div>
+                </div>
+            )}
         </section>
     )
 }

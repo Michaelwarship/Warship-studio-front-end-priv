@@ -59,6 +59,7 @@ type Props = {
     muted?: boolean
     playsInline?: boolean
     preload?: 'none' | 'metadata' | 'auto'
+    onClick?: () => void
 }
 
 const FORMAT_FALLBACKS = {
@@ -102,6 +103,7 @@ export default function StrapiImage({
     muted = true,
     playsInline = true,
     preload = 'metadata',
+    onClick,
 }: Props) {
     if (!image) return null
 
@@ -147,7 +149,7 @@ export default function StrapiImage({
     if (!src) return null
 
     return (
-        <div className="w-full h-full">
+        <div onClick={onClick} className="w-full h-full">
             <img src={src} alt={alt} className={className} />
         </div>
     )
