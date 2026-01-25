@@ -1,13 +1,10 @@
 import type { MetadataRoute } from 'next'
 
-type StrapiListResponse<T> = { data: T[] }
-
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl =
         process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://warshipstudio.com'
-    const now = new Date()
 
-    const staticRoutes: MetadataRoute.Sitemap = [
+    const routes = [
         '',
         '/about',
         '/studio',
@@ -15,37 +12,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/services',
         '/terms/privacy-policy',
         '/terms/cookie-policy',
-    ].map((path) => ({
+    ]
+    const now = new Date()
+
+    return routes.map((path) => ({
         url: `${baseUrl}${path}`,
         lastModified: now,
         changeFrequency: 'weekly',
         priority: path === '' ? 1 : 0.7,
     }))
-
-    const strapiBase =
-        process.env.STRAPI_API_URL?.replace(/\/$/, '') ||
-        process.env.NEXT_PUBLIC_BASE_URL?.replace(/\/$/, '')
-
-    if (!strapiBase) return staticRoutes
-
-    const res = await fetch(
-        `${strapiBase}/portfolios?fields[0]=slug&pagination[pageSize]=1000`,
-        { next: { revalidate: 3600 } }
-    )
-
-    if (!res.ok) return staticRoutes
-
-    const json: StrapiListResponse<{ slug?: string }> = await res.json()
-
-    const portfolioRoutes: MetadataRoute.Sitemap = (json.data || [])
-        .map((item) => item.slug)
-        .filter((slug): slug is string => Boolean(slug))
-        .map((slug) => ({
-            url: `${baseUrl}/work/portfolio/${slug}`,
-            lastModified: now,
-            changeFrequency: 'weekly',
-            priority: 0.7,
-        }))
-
-    return [...staticRoutes, ...portfolioRoutes]
 }

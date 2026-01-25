@@ -90,7 +90,7 @@ export default function WorkSection() {
                     {filteredProjects.map((project) => (
                         <Link
                             key={project.id}
-                            href={`/work/portfolio/${project.slug}`}
+                            href={`/work/portfolio/${project.id}`}
                         >
                             <PortfolioCardSingle
                                 title={project.Title}

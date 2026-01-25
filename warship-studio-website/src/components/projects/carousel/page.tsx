@@ -46,7 +46,7 @@ export default function Carousel() {
                 {projects.map((project) => (
                     <Link
                         key={project.id}
-                        href={`/work/portfolio/${project.slug}`}
+                        href={`/work/portfolio/${project.id}`}
                     >
                         <CarouselCard
                             image={
