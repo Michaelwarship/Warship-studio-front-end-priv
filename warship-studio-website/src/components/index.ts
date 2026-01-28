@@ -98,3 +98,6 @@ export { default as ScrollToTop } from './scroll-to-top/page'
 //LOTTIE
 export { default as LottiePlayer } from './lottie-player/page'
 
+//COOKIES
+export { default as CookieBanner } from './cookie-banner/page'
+export { default as AnalyticsLoader } from './analytics-loader/page'

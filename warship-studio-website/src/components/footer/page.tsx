@@ -181,6 +181,18 @@ export default function Footer() {
                 >
                     COOKIES POLICY{' '}
                 </Link>
+
+                <button
+                    onClick={() => {
+                        localStorage.removeItem('cookie_consent_v1')
+                        window.dispatchEvent(
+                            new Event('cookie-consent-changed')
+                        )
+                    }}
+                    className="text-[#969696] font-geistMono text-[14px] md:text-[12px] lg:text-[14px] whitespace-nowrap underline"
+                >
+                    Cookie settings
+                </button>
                 {/* <Link
                     href="#"
                     className="text-[#969696] font-geistMono text-[10px] xl:text-[14px]"
